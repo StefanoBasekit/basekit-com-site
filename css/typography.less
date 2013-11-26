@@ -1,0 +1,186 @@
+/* ===============================
+   TYPOGRAPHY
+   =============================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+    padding: 0;
+    /*-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;*/
+}
+
+h1 {
+	font-family:@font-swatch1-font-family;
+	font-weight: @font-swatch1-font-weight;
+	color:@font-swatch1-color;
+	line-height:@font-swatch1-line-height;
+	letter-spacing: @font-swatch1-letter-spacing;
+	font-size: @font-swatch1-font-size;
+}
+
+h2
+{
+	font-family:@font-swatch2-font-family;
+	font-size: @font-swatch2-font-size;
+	font-weight: @font-swatch2-font-weight;
+	line-height:@font-swatch2-line-height;
+	color: @font-swatch2-color;
+	letter-spacing: @font-swatch2-letter-spacing;
+	padding-bottom: 90px;
+
+	&.h2sub {
+		color: #c0c0c0;
+		font-size: 24px;
+		line-height: 34px;
+		letter-spacing: 0;
+		margin-top: 0.7em;
+		padding-bottom: 0;
+	}
+	&.h2-36nopad {
+		padding-bottom: px;
+	}
+}
+
+h3
+{
+	font-family:@font-swatch3-font-family;
+	font-size:@font-swatch3-font-size;
+	font-weight: @font-swatch3-font-weight;
+	color: @font-swatch3-color;
+	line-height:@font-swatch3-line-height;
+	letter-spacing: @font-swatch3-letter-spacing;
+	margin-bottom: 26px;
+
+	&.h3feat {
+		color: #c0c0c0;
+		font-size: 18px;
+		letter-spacing: 0;
+		margin-bottom: 0;
+		line-height: 40px;
+		span {
+			color: @color-swatch1;
+		}
+	}
+	span {
+		color: #b6b6b6;
+	}
+	&.h3upsize {
+		font-size: 28px;
+		margin-bottom: 90px;
+	}
+}
+
+h4
+{
+	font-family:@font-swatch4-font-family;
+	font-size:@font-swatch4-font-size;
+	font-weight:@font-swatch4-font-weight;
+	line-height:@font-swatch4-line-height;
+	color:@font-swatch4-color;
+	letter-spacing: @font-swatch4-letter-spacing;
+	display: inline-block;
+	padding-bottom: 6px;
+	border-bottom: 2px solid #f2f2f2;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+
+	&.h4light {
+		color: darken(@lightGrey,30%);
+		border-bottom: 2px solid #e9e9e9;
+	}
+	&.h4white {
+		color: @color-swatch1;
+		font-size: 13px;
+		line-height: 60px;
+		border-bottom: 0;
+		margin-bottom: 0;
+		padding-bottom: 0;
+
+		&.upsize {
+			font-size: 15px;
+			line-height: inherit;
+		}
+		&.upsize2 {
+			font-size: 17px;
+			letter-spacing: 2px;
+			line-height: 32px;
+		}
+	}
+	&.h4dark {
+		font-family: 'proxima-nova-semibold';
+
+		border-bottom: 0;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+h5 {
+	font-family:@font-swatch5-font-family;
+	font-weight: @font-swatch5-font-weight;
+	color: @font-swatch5-color;
+	letter-spacing: @font-swatch5-letter-spacing;
+	font-size: 18px;
+	line-height: 32px;
+	.text-shadow;
+
+	&.h5dark {
+		font-family: 'proxima-nova-semibold';
+		color: @color-swatch4;
+		line-height: 24px;
+	}
+}
+
+p {
+	font-family:@font-swatch5-font-family;
+	font-size:@font-swatch5-font-size;
+	font-weight: @font-swatch5-font-weight;
+	line-height:@font-swatch5-line-height;
+	color:@font-swatch5-color;
+	letter-spacing: @font-swatch5-letter-spacing;
+
+	&.psub {
+		font-size: 15px;
+		line-height: 24px;
+		color: darken(@lightGrey,30%);
+	}
+	&.psub14 {
+		font-size: 14px;
+	}
+}
+
+/* ADDITIONAL STYLES */
+
+b {
+	font-family: 'proxima-nova-semibold';
+	font-weight: normal;
+
+	&.underline {
+		text-decoration: underline;
+	}
+}
+
+.nopad {
+	padding: 0 0 6px;
+}
+
+.hwhite {
+	color: @color-swatch1;
+	padding: 0;
+	margin: 0;
+}
+
+span.orange {
+	color: @color-swatch2;
+}
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+/* ===============================
+   BUTTONS
+   =============================== */
+
+.button {
+	background-color: @font-swatch7-background-color;
+	font-family: @font-swatch7-font-family;
+	letter-spacing: @font-swatch7-letter-spacing;
+	color: @font-swatch1-color;
+	text-decoration: none;
+	.rounded-corners;
+
+	&:hover {
+		color: @color-swatch1;
+	}
+
+	/* GREEN */
+	&.green {
+		box-shadow: 0 3px 0 darken(@color-swatch3,10%);
+		text-shadow: 0 1px 1px darken(@color-swatch3,15%);
+		
+		&:hover { background-color: darken(@font-swatch7-background-color,10%) }
+		&:active { background-color: darken(@font-swatch7-background-color,10%); box-shadow: 0 3px 0 darken(@color-swatch3,10%), inset 0 4px 3px darken(@color-swatch3,17%) }
+	}
+
+	/* ORANGE */
+	&.orange {
+		box-shadow: 0 3px 0 darken(@color-swatch2,7%);
+		text-shadow: 0 1px 1px darken(@color-swatch2,12%);
+		background-color: @color-swatch2;
+
+		&:hover { background-color: darken(@color-swatch2,10%) }
+		&:active { background-color: darken(@color-swatch2,10%); box-shadow: 0 3px 0 darken(@color-swatch2,10%), inset 0 4px 3px darken(@color-swatch2,17%) }
+	}
+
+	/* MAIN BUTTON */
+	&.main-btn {
+		padding: 17px 26px;
+		font-size: @font-swatch7-font-size;
+	}
+
+	/* STANDARD BUTTON */
+	&.stan-btn {
+		padding: 14px 20px 12px;
+		font-size: 18px;
+	}
+
+	/* SMALL BUTTON */
+	&.small-btn {
+		padding: 8px 10px 7px;
+		text-transform: uppercase;
+		text-shadow: 0 1px 3px darken(@color-swatch2,15%);
+	}
+
+	/* TRANSPARENT BUTTON */
+	&.trans-btn  {
+		padding: 18px 28px;
+		background-color: transparent;
+		text-transform: uppercase;
+		&.trans-grey {
+			margin-right: 16px;
+			border: 2px solid hsla(hue(@lightGrey), saturation(@lightGrey), lightness(@lightGrey), 0.4); 
+			&:hover {
+				border-color: @color-swatch1;
+			}
+		}
+		&.trans-green {
+			border: 2px solid hsla(hue(@color-swatch3), saturation(@color-swatch3), lightness(@color-swatch3), 0.7); 
+			&:hover {
+				border: 2px solid @color-swatch3;
+			}
+		}
+	}
+}

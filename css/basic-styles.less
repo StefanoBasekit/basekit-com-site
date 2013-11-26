@@ -1,0 +1,85 @@
+/* ===============================
+   CSS RESETS / BASIC SETTINGS
+   =============================== */
+
+body {
+  background-color: @color-swatch1;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+	width: 100%;
+	padding: 6em 0;
+}
+
+li {
+	list-style: none;
+}
+
+button {
+	border: 0;
+	margin: 0;
+	padding: 0;
+
+	&:hover {
+		cursor: pointer;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	font-family: 'proxima-nova-semibold';
+	color: @color-swatch3;
+	text-decoration: underline;
+}
+
+a:hover {
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+
+/* WRAPPER */
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+
+/* FULL WIDTH WRAPPER */
+
+@media only screen and (min-width: 1140px) {
+  .wrapper {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+
+/* CLEARFIX */
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}

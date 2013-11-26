@@ -1,44 +1,307 @@
-<!doctype html>
-<!--[if lt IE 7]>
-	<html class="no-js ie6 oldie" lang="en">
-<![endif]-->
-<!--[if IE 7]>
-	<html class="no-js ie7 oldie" lang="en">
-<![endif]-->
-<!--[if IE 8]>
-	<html class="no-js ie8 oldie" lang="en">
-<![endif]-->
-<!--[if gt IE 8]><!-->
-	<html class="no-js" lang="{{ page.seoLang }}">
-<!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
-	<title>{{ page.title }}</title>
-	<meta name="keywords" content="{{ page.keywords }}" />
-	<meta name="description" content="{{ page.description }}" />
-	<meta http-equiv="content-language" content="{{ page.seoLang }}" />
+{% extends "layout.twig" %}
 
-	{% if site.favicon %}
-		<link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
-		<link rel="SHORTCUT ICON" href="{{ site.favicon['thumbnail'] }}?v={{ "now"|date("U") }}" type="image/x-icon" />
-	{% endif %}
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+{% block content %}
 
-	{% include basekit.headScript %}
-</head>
-<body class="{{ page.backgroundClass }}">
-	<header>
-	{{widget('companyheader', 'companyheader', {"defaultlogo": asset('yelaudio/images/logo.png')})|raw}}
-	{{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
-	</header>
+<header>
+    <div class="wrapper clearfix">
+        <div class="res-col columns span-20-80">
+            <div class="column span-20">
+                <div class="logo">
+                    <a href="#"><img src="{{asset('/images/logo.png')}}" class="bk-logo"></a>
+                </div>
+            </div>
+            <div class="column span-80">
+                <nav class="nav-desktop clearfix">
+                    <ul>
+                        <li><a href="#" class="selected">Partners</a></li>
+                        <li><a href="#">Tour</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#" class="button small-btn orange">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
 
-	{{zone('main')|raw}}
+<!-- SUB NAV BAR !-->
+<section class="partners-subnav">
+    <div class="wrapper">
+        <div class="res-col columns span-20-80">
+            <div class="column span-20">
+                {{widget('content', 'partners-subnavcontent1', {"content":'<h2 class="hwhite">Partners</h2>'})|raw}}
+            </div>
+            <div class="column span-80">
+                <ul class="clearfix">
+                    <li class="selected">{{widget('content', 'partners-subnavcontent1', {"content":'<h5><a href="#"><i class="fa fa-keyboard-o"></i>Partner Signup</a></h5>'})|raw}}</li>
+                    <li>{{widget('content', 'partners-subnavcontent2', {"content":'<h5><a href="#"><i class="fa fa-question"></i>Why BaseKit</a></h5>'})|raw}}</li>
+                    <li>{{widget('content', 'partners-subnavcontent3', {"content":'<h5><a href="#"><i class="fa fa-power-off"></i>Get Started</a></h5>'})|raw}}</li>
+                    <li>{{widget('content', 'partners-subnavcontent4', {"content":'<h5><a href="#"><i class="fa fa-comments-o"></i>Testimonials</a></h5>'})|raw}}</li>
+            </div>
+        </div>
+    </div>
+</section>
 
-	<footer>
-	{{widget('companyaddress', 'companyaddressfooter', {})|raw}}
-	</footer>
+<!-- SIGNUP FORM !-->
+<section class="signup-form">
+    <div class="wrapper">
+        <div class="res-col columns span-30-70">
+            <div class="column span-30">
+                {{widget('content', 'signupform-title', {"content":'<h3 class="hwhite upsize">Partner Signup Form</h3>'})|raw}}
+            </div>
+            <div class="column span-70">
+                <ul class="points">
+                    <li>{{widget('content', 'signupform-point1', {"content":'<h4 class="h4white upsize2">EASY TO DEPLOY</h4>'})|raw}}</li>
+                    <li><i class="fa fa-circle"></i></li>
+                    <li>{{widget('content', 'signupform-point2', {"content":'<h4 class="h4white upsize2">NO UP-FRONT COST</h4>'})|raw}}</li>
+                    <li><i class="fa fa-circle"></i></li>
+                    <li>{{widget('content', 'signupform-point3', {"content":'<h4 class="h4white upsize2">HIGH ARPU</h4>'})|raw}}</li>
+                </ul>
+            </div>
+        </div>
+        <!-- FORM CONTAINER !-->
+        <div class="form-container">
+            <div class="res-col columns span-70-30">
+                <div class="column span-70">
+                    <!-- FORM !-->
+                    <form id="partner-signup">
+                        <div class="res-col columns span-50-50">
+                            <div class="column span-two">
+                                <!-- NAME - TELEPHONE !-->
+                                <fieldset>
+                                    {{widget('content', 'partnersignupfieldset1content1', {"content":'<p><b>Enter your <span class="orange">contact details</span> below.</b></p>'})|raw}}
+                                    <label>{{widget('content', 'partnersignupfieldset1content2', {"content":'<h4 class="h4dark">FULL NAME</h4>'})|raw}}</label>
+                                    <input id="partneraccount_full_name" type="text" placeholder="Enter your full name...">
+                                    <label>{{widget('content', 'partnersignupfieldset1content3', {"content":'<h4 class="h4dark">TELEPHONE</h4>'})|raw}}</label>
+                                    <input id="partneraccount_telephone" type="text" placeholder="Enter your telephone number...">
+                                </fieldset>
+                            </div>
+                            <div class="column span-two">
+                                <!-- COMPANY - WEBSITE !-->
+                                <fieldset>
+                                    {{widget('content', 'partnersignupfieldset12ontent1', {"content":'<p><b>Enter your <span class="orange">company information</span> below.</b></p>'})|raw}}
+                                    <label>{{widget('content', 'partnersignupfieldset2content2', {"content":'<h4 class="h4dark">COMPANY NAME</h4>'})|raw}}</label>
+                                    <input id="partneraccount_company_name" type="text" placeholder="Enter your company name...">
+                                    <label>{{widget('content', 'partnersignupfieldset2content3', {"content":'<h4 class="h4dark">WEBSITE</h4>'})|raw}}</label>
+                                    <input id="partneraccount_website" type="text" placeholder="Enter your company website...">
+                                </fieldset>
+                            </div>
+                        </div>
+                        <!-- EMAIL ADDRESS !-->
+                        <fieldset>
+                            <label>{{widget('content', 'partnersignupfieldset3content1', {"content":'<h4 class="h4dark">EMAIL ADDRESS</h4>'})|raw}}</label>
+                            <input id="partneraccount_email" type="text" placeholder="Enter your email address..." class="email-address">
+                        </fieldset>
+                        <!-- USER BASE FIELDS !-->
+                        <div class="userbase-fields">
+                            {{widget('content', 'partnersignupfieldyuserbase', {"content":'<p><b>Extra info about your company.</b></p>'})|raw}}
+                            <div class="res-col columns span-50-50">
+                                <div class="column span-two">
+                                    <fieldset>
+                                        <label>{{widget('content', 'partnersignupfieldset4content2', {"content":'<h4 class="h4dark">NUMBER OF PUBLISHED SITES</h4>'})|raw}}</label>
+                                        <input id="partneraccount_users" type="text" placeholder="Number of published user sites...">
+                                    </fieldset>
+                                </div>
+                                <div class="column span-two">
+                                    <fieldset>
+                                        <label>{{widget('content', 'partnersignupfieldset5content1', {"content":'<h4 class="h4dark">PRIMARY LANGUAGE</h4>'})|raw}}</label>
+                                        <input id="partneraccount_language" type="text" placeholder="Enter your users primary language...">
+                                    </fieldset>
+                                    <button id="submit" type="submit" class="button stan-btn green">SUBMIT</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="column span-30">
+                    <div class="right-content">
+                        {{widget('content', 'partnersignuprightcontent1', {"content":'<h5 class="h5dark">You&#39;re in good company</h5><p class="psub14">More than 900 companies in over 20 countries already rely on BaseKit:</p>'})|raw}}
+                        <img src="{{asset('/images/partner-logos/logos4-sml.png')}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-	{% include basekit.bodyScript %}
-</body>
-</html>
+<!-- WHY BASEKIT !-->
+<section class="why-basekit">
+    <div class="wrapper">
+        <div class="formaddon-container clearfix">
+        </div>
+        {{widget('content', 'whybasekit-title', {"content":'<h3>Why Partner with BaseKit?</h3>'})|raw}}
+        <!-- INFO BLOCKS !-->
+        <div class="info-blocks">
+            <div class="res-col columns span-30-31-30">
+                <div class="column span-three-left">
+                    {{widget('content', 'whybasekit-3block1', {"content":'<i class="fa fa-bullseye"></i><h4>Low Churn, High Value</h4><p>Your customer&#39;s sites can grow at any time so they won&#39;t cancel when they need more features.</p>'})|raw}}
+                </div>
+                <div class="column span-three-middle">
+                    {{widget('content', 'whybasekit-3block2', {"content":'<i class="fa fa-signal"></i><h4>Increased ARPU</h4><p>Don&#39;t settle for a poor website builder, offer your customers stunning sites in a intiutive builder. </p>'})|raw}}
+                </div>
+                <div class="column span-three-right">
+                    {{widget('content', 'whybasekit-3block3', {"content":'<i class="fa fa-magic"></i><h4>Easy, Fast Deployment</h4><p>Within an hour you could have Basekit integrated putting you ahead of your competitors.</p>'})|raw}}
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <!-- CONVERSION GRAPH !-->
+        <div class="bkconversion">
+            <div class="res-col columns span-30-31-30">
+                <div class="column span-three-left">
+                    <div class="conversion-left">
+                        {{widget('content', 'bkconversion-3block1', {"content":'<h4>Great Conversion Rates</h4><p>Our partners get conversion rates of 10% <br>- 30% or more depending on customer demographics. Lorem ipsum dolor sit am consectetur adipisicing elit, sed do eius.</p>'})|raw}}
+                    </div>
+                </div>
+                <div class="column span-three-middle">
+                    <div class="conversion-circle">
+                        {{widget('content', 'bkconversion-3block2', {"content":'<h5>30%</h5><p>conversion or more depending on demographics</p>'})|raw}}
+                    </div>
+                </div>
+                <div class="column span-three-right">
+                    <div class="conversion-right">
+                        {{widget('content', 'bkconversion-3block3content1', {"content":'<h4>Expert Assistance Included</h4><p>Our dedicated support team is here to provide valuable advice about optimising your conversion rates.</p>'})|raw}}
+                        {{widget('content', 'bkconversion-3block3content2', {"content":'<h4 style="margin-top: 2.5em">Customer Support</h4><p>We provide support documentation and front-line issue resolution at no extra charge</p>'})|raw}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BECOME A PARTNER !-->
+<section class="become-partner LightGrey">
+    <div class="wrapper">
+        {{widget('content', 'becomepartnertitle', {"content":'<h2 class="h2nopad">How to get started as a BaseKit Partner</h2><h5>As soon you complete the <a href="#">partner registration</a> form, you can make BaseKit available to your customers<br> without the need for complex technical or contractual setups.</h5>'})|raw}}
+        <!-- PARTNER STEPS !-->
+        <div class="partner-steps">
+            <div class="res-col columns span-30-31-30">
+                <div class="column span-three-left">
+                    <div class="step">
+                        <div class="number">1</div>
+                        {{widget('content', 'becomepartnerstep1content1', {"content":'<h3 class="hwhite">Become a Partner</h3>'})|raw}}
+                        <img src="{{asset('/images/step1.png')}}">
+                    </div>
+                </div>
+                <div class="column span-three-middle">
+                    <div class="step">
+                        <div class="number">2</div>
+                        {{widget('content', 'becomepartnerstep2content1', {"content":'<h3 class="hwhite">Download &amp; Deploy</h3>'})|raw}}
+                        <img src="{{asset('/images/step2.png')}}">
+                    </div>
+                </div>
+                <div class="column span-three-right">
+                    <div class="step">
+                        <div class="number">3</div>
+                        {{widget('content', 'becomepartnerstep3content1', {"content":'<h3 class="hwhite">Earn Revenue</h3>'})|raw}}
+                        <img src="{{asset('/images/step3.png')}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="become-partner-sub">
+    <div class="wrapper">
+        <div class="res-col columns span-30-31-30">
+            <div class="column span-three-left">
+                {{widget('content', 'becomepartnersubstep1', {"content":'<h4>Simple Signup Process</h4><p>Use our simple <a href="#">partner signup form</a> to become a partner in just a few minutes.</p>'})|raw}}
+            </div>
+            <div class="column span-three-middle">
+                {{widget('content', 'becomepartnersubstep1', {"content":'<h4>Simple Signup Process</h4><p>Download our <b class="underline">plugin</b> from partner central to get started - or use our <b class="underline">embed code</b>.</p>'})|raw}}
+            </div>
+            <div class="column span-three-right">
+                {{widget('content', 'becomepartnersubstep1', {"content":'<h4>Receive Monthly Revenue</h4><p>Receive attractive revenue-shares on all upgrades and app sales.</p>'})|raw}}
+            </div>
+        </div>
+        <div class="divider"></div>
+        <!-- SUB SIGNUP BAR !-->
+        <div class="subsignup">
+            <div class="res-col columns span-70-30">
+                <div class="column span-70">
+                    {{widget('content', 'subsignupcontent1', {"content":'<h2 class="nopad">Become a BaseKit Partner</h2><h5>Signup to access our partner portal and get a <a href="#">free trial</a> site.</h5>'})|raw}}
+                </div>
+                <div class="column span-30">
+                    <a href="#" class="button main-btn green">Signup Today</a>
+                </div>
+            </div>
+        </div>  
+    </div>
+</section>
+
+<!-- DEVICE SWITCHER !-->
+<section class="device-switcher">
+    <div class="wrapper">
+        {{widget('content', 'deviceswitchertitle', {"content":'<h2 class="hwhite" style="text-align: center">Every customer gets a beautiful, responsive site.</h2>'})|raw}}
+    </div>
+</section>
+
+<!-- PARTNER BAR !-->
+<section class="partner-bar LightGrey">
+    <div class="wrapper">
+        <div class="res-col columns span-12-21x3-27">
+            <div class="column span-five-first">
+                {{widget('content', 'partnerbar1content1', {"content":'<h4 class="h4light">Proud to<br> Partner With</h4>'})|raw}}
+            </div>
+            <div class="column span-five">
+                <img src="{{asset('/images/partner-logos/host-europe.png')}}">
+            </div>
+            <div class="column span-five">
+                <img src="{{asset('/images/partner-logos/123-reg.png')}}" class="reg-logo">
+            </div>
+            <div class="column span-five">
+                <img src="{{asset('/images/partner-logos/enom.png')}}" class="enom-logo">
+            </div>
+            <div class="column span-five-last">
+                <a href="#" class="button main-btn green">Become a Partner</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER !-->
+<footer>
+    <div class="wrapper">
+        <div class="res-col columns span-25x4">
+            <div class="column span-four">
+                {{widget('content', 'footercolumn1content1', {"content":'<h4 class="h4white upsize">BaseKit Platform</h3>'})|raw}}
+                <ul class="footer-menu">
+                    <li>{{widget('content', 'footercolumn1content2', {"content":'<p><a href="#">Partners</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn1content3', {"content":'<p><a href="#">Tour</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn1content4', {"content":'<p><a href="#">About</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn1content5', {"content":'<p><a href="#">Community</a></p>'})|raw}}</li>
+                </ul>
+            </div>
+            <div class="column span-four">
+                {{widget('content', 'footercolumn2content1', {"content":'<h4 class="h4white upsize">Company</h3>'})|raw}}
+                <ul class="footer-menu">
+                    <li>{{widget('content', 'footercolumn2content2', {"content":'<p><a href="#">Terms &amp; Conditions</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn2content3', {"content":'<p><a href="#">Jobs</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn2content4', {"content":'<p><a href="#">Contact</a></p>'})|raw}}</li>
+                </ul>
+            </div>
+            <div class="column span-four">
+                {{widget('content', 'footercolumn3content1', {"content":'<h4 class="h4white upsize">Developers</h3>'})|raw}}
+                <ul class="footer-menu">
+                    <li>{{widget('content', 'footercolumn3content2', {"content":'<p><a href="#">Documentation<i class="fa fa-external-link"></i></a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn3content3', {"content":'<p><a href="#">Join the Community</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn3content4', {"content":'<p><a href="#">Support</a></p>'})|raw}}</li>
+                </ul>
+            </div>
+            <div class="column span-four">
+                {{widget('content', 'footercolumn3content1', {"content":'<h4 class="h4white upsize">Newsletter</h3>'})|raw}}
+            </div>
+        </div>
+        <div class="footer2 clearfix">
+            <div class="left">
+                {{widget('content', 'footer2content1', {"content":'<p>Copyright &copy; BaseKit Platform 2013. All Rights Reserved.</p>'})|raw}}
+            </div>
+            <div class="right">
+                {{widget('content', 'footer2content2', {"content":'<p>VAT Registration Number 339 0727 47 | Company Number 06669087</p>'})|raw}}
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}

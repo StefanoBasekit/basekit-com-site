@@ -1,0 +1,173 @@
+.res-col
+{
+	width: 100%;
+	display:block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.res-col .column
+{
+	display:block;
+	float:left;
+	min-height: 40px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.res-col:before,
+.res-col:after {
+  content: " ";
+  display: table;
+}
+.res-col:after {
+  clear: both;
+}
+.res-col {
+  *zoom: 1;
+}
+
+
+/*  ==============================
+	TWO COLUMNS
+	============================== */
+
+    /* === 20 x 80 === */
+
+	.columns.span-20-80 .column.span-20 {
+		width: 20%;
+	}
+
+	.columns.span-20-80 .column.span-80 {
+		width: 80%;
+	}
+
+	/* === 30 x 70 === */
+
+	.columns.span-30-70 .column.span-30 {
+		width: 30%;
+	}
+
+	.columns.span-30-70 .column.span-70 {
+		width: 70%;
+	}
+
+	/* === 70 x 30 === */
+
+	.columns.span-70-30 .column.span-70 {
+		width: 70%;
+	}
+
+	.columns.span-70-30 .column.span-30 {
+		width: 30%;
+	}
+
+	/* === 50 x 50 === */
+
+	.columns.span-50-50 .column.span-two {
+		width: 50%;
+	}
+
+	/* === 55 x 45 === */
+
+	.columns.span-55-45 .column.span-two-left {
+		width: 50%;
+		margin-right: 5%;
+	}
+
+	.columns.span-55-45 .column.span-two-right {
+		width: 40%;
+		margin-left: 5%;
+	}
+
+
+/*  ==============================
+	THREE COLUMNS
+	============================== */
+
+	/* === 30 x 31 x 30 === */
+
+	.columns.span-30-31-30 .column.span-three-left,
+	.columns.span-30-31-30 .column.span-three-right {
+		width: 29%;
+	}
+
+	.columns.span-30-31-30 .column.span-three-middle {
+		width: 30%;
+		margin-left: 5.5%;
+		margin-right: 5.5%;
+	}
+
+	/* === 40 x 30 x 30 === */
+
+	.columns.span-50-25-25 .column.span-three-left {
+		width: 35%;
+		margin-right: 7%;
+	}
+
+	.columns.span-50-25-25 .column.span-three-middle {
+		width: 25%;
+		margin-right: 5%;
+	}
+
+	.columns.span-50-25-25 .column.span-three-right {
+		width: 25%;
+	}
+
+
+/*  ==============================
+	FOUR COLUMNS
+	============================== */
+
+	/* === 25 x 4 === */
+
+	.columns.span-25x4 .column.span-four {
+		width: 25%;
+	}
+
+
+/*  ==============================
+	FIVE COLUMNS
+	============================== */
+
+	/* === 20 x 5 === */
+
+	.columns.span-20x5 .column.span-five-first {
+		width: 15%;
+	}
+
+	.columns.span-20x5 .column.span-five {
+		width: 21.2%;
+	}
+
+	.columns.span-20x5 .column.span-last {
+		width: 25%;
+	}
+
+	/* === 13 x 20x3 x 27 === */
+
+	.columns.span-12-21x3-27 .column.span-five-first {
+		width: 13%;
+	}
+
+	.columns.span-12-21x3-27 .column.span-five {
+		width: 20%;
+	}
+
+	.columns.span-12-21x3-27 .column.span-five-last {
+		width: 27%;
+	}
+
+
+
+
+
+
+
+
+
+
+
