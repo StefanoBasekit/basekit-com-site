@@ -65,16 +65,16 @@
             <div class="res-col columns span-70-30">
                 <div class="column span-70">
                     <!-- FORM !-->
-                    <form id="partner-signup">
+                    <form id="partner-signup" method="post" action="http://partners.basekit.com/sign-up">
                         <div class="res-col columns span-50-50">
                             <div class="column span-two">
                                 <!-- NAME - TELEPHONE !-->
                                 <fieldset>
                                     {{widget('content', 'partnersignupfieldset1content1', {"content":'<p><b>Enter your <span class="orange">contact details</span> below.</b></p>'})|raw}}
                                     <label>{{widget('content', 'partnersignupfieldset1content2', {"content":'<h4 class="h4dark">FULL NAME</h4>'})|raw}}</label>
-                                    <input id="partneraccount_full_name" type="text" placeholder="Enter your full name...">
+                                    <input name="fullname" id="fullname" type="text" placeholder="Enter your full name...">
                                     <label>{{widget('content', 'partnersignupfieldset1content3', {"content":'<h4 class="h4dark">TELEPHONE</h4>'})|raw}}</label>
-                                    <input id="partneraccount_telephone" type="text" placeholder="Enter your telephone number...">
+                                    <input name="telephone" id="telephone" type="text" placeholder="Enter your telephone number...">
                                 </fieldset>
                             </div>
                             <div class="column span-two">
@@ -82,9 +82,9 @@
                                 <fieldset>
                                     {{widget('content', 'partnersignupfieldset12ontent1', {"content":'<p><b>Enter your <span class="orange">company information</span> below.</b></p>'})|raw}}
                                     <label>{{widget('content', 'partnersignupfieldset2content2', {"content":'<h4 class="h4dark">COMPANY NAME</h4>'})|raw}}</label>
-                                    <input id="partneraccount_company_name" type="text" placeholder="Enter your company name...">
+                                    <input name="name" id="name" type="text" placeholder="Enter your company name...">
                                     <label>{{widget('content', 'partnersignupfieldset2content3', {"content":'<h4 class="h4dark">WEBSITE</h4>'})|raw}}</label>
-                                    <input id="partneraccount_website" type="text" placeholder="Enter your company website...">
+                                    <input name="website" id="website" type="text" placeholder="Enter your company website...">
                                 </fieldset>
                             </div>
                         </div>
@@ -100,13 +100,13 @@
                                 <div class="column span-two">
                                     <fieldset>
                                         <label>{{widget('content', 'partnersignupfieldset4content2', {"content":'<h4 class="h4dark">NUMBER OF PUBLISHED SITES</h4>'})|raw}}</label>
-                                        <input id="partneraccount_users" type="text" placeholder="Number of published user sites...">
+                                        <input name="noofusers" id="noofusers" type="text" placeholder="Number of published user sites...">
                                     </fieldset>
                                 </div>
                                 <div class="column span-two">
                                     <fieldset>
                                         <label>{{widget('content', 'partnersignupfieldset5content1', {"content":'<h4 class="h4dark">PRIMARY LANGUAGE</h4>'})|raw}}</label>
-                                        <input id="partneraccount_language" type="text" placeholder="Enter your users primary language...">
+                                        <input name="language" id="language" type="text" placeholder="Enter your users primary language...">
                                     </fieldset>
                                     <button id="submit" type="submit" class="button stan-btn green">SUBMIT</button>
                                 </div>
