@@ -16,8 +16,11 @@
                         <li><a href="#">Partners</a></li>
                         <li><a href="#">Tour</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#" class="button small-btn orange">Login</a></li>
+                        <li>
+                            <a href="#" class="fade-out">Community</a>
+                            <div class="arrow_box"><h4 class="h4white">Coming Soon</h4></div>
+                        </li>
+                        <!-- <li><a href="#" class="button small-btn orange">Login</a></li> -->
                     </ul>
                 </nav>
             </div>
@@ -38,7 +41,7 @@
                     </ul>
                 </div>
                 <div class="main-cta">
-                    <a href="#" class="button trans-btn trans-grey">Build a Website</a>
+                    <!-- <a href="#" class="button trans-btn trans-grey">Build a Website</a> -->
                     <a href="#" class="button trans-btn trans-green">Become a Partner</a>
                 </div>
             </div>
@@ -88,9 +91,12 @@
         <div class="divider"></div>
         <div class="res-col columns span-55-45">
             <div class="column span-two-left">
-                {{widget('content', 'introcontent1', {"content":'<h3>Desktop. Tablet. Mobile. <span>Preview on all devices.</span></h3><p>Use our instant preview mode to view and edit your website on desktop, tablet and mobile screen widths. Easily change and edit the appearance of your site by changing colours, fonts and layouts.</p>'})|raw}}
+                {{widget('content', 'introsubcontent1', {"content":'<h3>Desktop. Tablet. Mobile. <span>Preview on all devices.</span></h3><p>Use our instant preview mode to view and edit your website on desktop, tablet and mobile screen widths. Easily change and edit the appearance of your site by changing colours, fonts and layouts.</p>'})|raw}}
             </div>
             <div class="column span-two-right">
+                <div class="language-info">
+                    {{widget('content', 'introsubcontent2', {"content":'<h3>Available in 8 languages</h3><p>Editor 7 is available in English (British), Spanish, Polish, German, French, Italian, Dutch, Brazilian Portuguese, Swedish. Russian and Greek will be available soon.</p>'})|raw}}
+                </div>
             </div>
         </div>
     </div>
@@ -192,10 +198,10 @@
             <div class="res-col columns span-30-31-30">
                 <div class="column span-three-left">
                     <article>
-                        {{widget('content', 'featurelistcolumn1content1', {"content":'<h4>Search Engine Optimisation</h4><p class="psub">Every site has everything you need to<br> get found on Google and other search engines.</p>'})|raw}}
+                        {{widget('content', 'featurelistcolumn1content1', {"content":'<h4>Search Engine Optimisation</h4><p class="psub">Every site has everything you need to get found on Google and other search engines.</p>'})|raw}}
                     </article>
                     <article>
-                        {{widget('content', 'featurelistcolumn1content2', {"content":'<h4>Facebook Publishing</h4><p class="psub">Publish your site to your Facebook page and bring a social dimension to<br> your business website.</p>'})|raw}}
+                        {{widget('content', 'featurelistcolumn1content2', {"content":'<h4>Facebook Publishing</h4><p class="psub">Publish your site to your Facebook page and bring a social dimension to your business website.</p>'})|raw}}
                     </article>
                     <article>
                         {{widget('content', 'featurelistcolumn1content3', {"content":'<h4>Drop Down Menus</h4><p class="psub">Built-in drop down menus take care of navigation for any size of site on any kind of device.</p>'})|raw}}
@@ -214,10 +220,10 @@
                 </div>
                 <div class="column span-three-right">
                     <article>
-                        {{widget('content', 'featurelistcolumn3content1', {"content":'<h4>Search Engine Optimisation</h4><p class="psub">Every site has everything you need to<br> get found on Google and other search engines.</p>'})|raw}}
+                        {{widget('content', 'featurelistcolumn3content1', {"content":'<h4>Search Engine Optimisation</h4><p class="psub">Every site has everything you need to get found on Google and other search engines.</p>'})|raw}}
                     </article>
                     <article>
-                        {{widget('content', 'featurelistcolumn3content2', {"content":'<h4>Facebook Publishing</h4><p class="psub">Publish your site to your Facebook page and bring a social dimension to<br> your business website.</p>'})|raw}}
+                        {{widget('content', 'featurelistcolumn3content2', {"content":'<h4>Facebook Publishing</h4><p class="psub">Publish your site to your Facebook page and bring a social dimension to your business website.</p>'})|raw}}
                     </article>
                     <article>
                         {{widget('content', 'featurelistcolumn3content3', {"content":'<h4>Drop Down Menus</h4><p class="psub">Built-in drop down menus take care of navigation for any size of site on any kind of device.</p>'})|raw}}
