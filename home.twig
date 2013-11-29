@@ -89,11 +89,11 @@
             </div>
         </div>
         <div class="divider"></div>
-        <div class="res-col columns span-55-45">
-            <div class="column span-two-left">
+        <div class="res-col columns span-50-50">
+            <div class="column span-two">
                 {{widget('content', 'introsubcontent1', {"content":'<h3>Desktop. Tablet. Mobile. <span>Preview on all devices.</span></h3><p>Use our instant preview mode to view and edit your website on desktop, tablet and mobile screen widths. Easily change and edit the appearance of your site by changing colours, fonts and layouts.</p>'})|raw}}
             </div>
-            <div class="column span-two-right">
+            <div class="column span-two">
                 <div class="language-info">
                     {{widget('content', 'introsubcontent2', {"content":'<h3>Available in 8 languages</h3><p>Editor 7 is available in English (British), Spanish, Polish, German, French, Italian, Dutch, Brazilian Portuguese, Swedish. Russian and Greek will be available soon.</p>'})|raw}}
                 </div>
@@ -111,38 +111,54 @@
         <div class="js-preview-interface preview-interface">
             <div class="view-toolbar clearfix" role="menu">
                 <div class="wrapper">
-                    <h4 class="h4white">Select a Device</h4>
-                    <ul class="js-view-controls view-controls">
-                        <li class="auto-item">
-                            <button class="js-device-switch js-auto view-control view-control-auto selected">
-                                <span class="device-icon device-icon-auto"></span>
-                                <span class="text">Auto</span>
-                            </button>
-                        </li>
-                        <li class="tablet-item">
-                            <button class="js-device-switch js-tablet view-control view-control-tablet">
-                                <span class="device-icon device-icon-tablet"></span>
-                                <span class="text">Tablet preview</span>
-                            </button>
-                        </li>
-                        <li class="iphone-item">
-                            <button class="js-device-switch js-iphone view-control view-control-iphone">
-                                <span class="device-icon-iphone">
-                            </button>
-                        </li>
-                    </ul>
-                    <form class="preview-selector-form js-preview-selector preview-selector">
-                        <h4 class="h4white">Preview Template</h4>
-                        <label for="option1"><input name="site-url" type="radio" id="option1" value="http://003.basekit.com">Option 1</label>
-                        <label for="option2"><input name="site-url" type="radio" id="option2" value="http://imgur.com/a/ERwuS">Option 2</label>
-                        <label for="option3"><input name="site-url" type="radio" id="option3" value="http://news.layervault.com">Option 3</label>
-                    </form>
+                    <div class="device-left clearfix">
+                        <h4 class="h4white">Select a Device</h4>
+                        <ul class="js-view-controls view-controls">
+                            <li class="auto-item">
+                                <button class="js-device-switch js-auto view-control view-control-auto selected">
+                                    <span class="device-icon device-icon-auto"></span>
+                                </button>
+                            </li>
+                            <li class="tablet-item">
+                                <button class="js-device-switch js-tablet view-control view-control-tablet">
+                                    <span class="device-icon device-icon-tablet"></span>
+                                </button>
+                            </li>
+                            <li class="iphone-item">
+                                <button class="js-device-switch js-iphone view-control view-control-iphone">
+                                    <span class="device-icon-iphone">
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="preview-lang clearfix">
+                        <form class="preview-selector-form js-preview-selector preview-selector">
+                            <h4 class="h4white">Preview a Template Language</h4>
+                            <ul>
+                                <li>
+                                    <label for="option1"><h4 class="h4circle yellow">EN</h4></label>
+                                    <input name="site-url" type="radio" id="option1" value="http://003.basekit.com" class="preview-input">
+                                    <span class="preview-option"></span>
+                                </li>
+                                <li>
+                                    <label for="option2"><h4 class="h4circle blue">ES</h4></label>
+                                    <input name="site-url" type="radio" id="option2" value="http://imgur.com/a/ERwuS" class="preview-input">
+                                    <span class="preview-option"></span>
+                                </li>
+                                <li>
+                                    <label for="option3"><h4 class="h4circle green">FR</h4></label>
+                                    <input name="site-url" type="radio" id="option3" value="http://news.layervault.com" class="preview-input">
+                                    <span class="preview-option"></span>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="js-preview-container preview-container no-transition auto">
                 <div class="screen-border">
                     <div class="site-preview screen">
-                        <iframe class="js-preview-site"></iframe>
+                        <iframe src="http://003.basekit.com" class="js-preview-site"></iframe>
                     </div>
                 </div>
             </div>
@@ -223,7 +239,7 @@
             <div class="res-col columns span-30-31-30">
                 <div class="column span-three-left">
                     <article>
-                        {{widget('content', 'featurelistcolumn1content1', {"content":'<h4>Search Engine Optimisation</h4><p class="psub">Every site has everything you need to get found on Google and other search engines.</p>'})|raw}}
+                        {{widget('content', 'featurelistcolumn1content1', {"content":'<h4>SEO</h4><p class="psub">Every site has everything you need to get found on Google and other search engines.</p>'})|raw}}
                     </article>
                     <article>
                         {{widget('content', 'featurelistcolumn1content2', {"content":'<h4>Facebook Publishing</h4><p class="psub">Publish your site to your Facebook page and bring a social dimension to your business website.</p>'})|raw}}
@@ -245,13 +261,13 @@
                 </div>
                 <div class="column span-three-right">
                     <article>
-                        {{widget('content', 'featurelistcolumn3content1', {"content":'<h4>Search Engine Optimisation</h4><p class="psub">Every site has everything you need to get found on Google and other search engines.</p>'})|raw}}
+                        {{widget('content', 'featurelistcolumn3content1', {"content":'<h4>PayPal Button</h4><p class="psub">You can be ready to sell your first items online in just a few minutes with rapid setup PayPal button.</p>'})|raw}}
                     </article>
                     <article>
-                        {{widget('content', 'featurelistcolumn3content2', {"content":'<h4>Facebook Publishing</h4><p class="psub">Publish your site to your Facebook page and bring a social dimension to your business website.</p>'})|raw}}
+                        {{widget('content', 'featurelistcolumn3content2', {"content":'<h4>Image Editing</h4><p class="psub">Change the size, look and framing of any image. Use custom styles to make your images stand out.</p>'})|raw}}
                     </article>
                     <article>
-                        {{widget('content', 'featurelistcolumn3content3', {"content":'<h4>Drop Down Menus</h4><p class="psub">Built-in drop down menus take care of navigation for any size of site on any kind of device.</p>'})|raw}}
+                        {{widget('content', 'featurelistcolumn3content3', {"content":'<h4>Image Slideshow</h4><p class="psub">Create a slideshow (or slider) with ease by simply selecting your images and choosing the timing.</p>'})|raw}}
                     </article>
                 </div>
         </div>
