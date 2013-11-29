@@ -40,7 +40,7 @@ var SitePreview = (function () {
     }
 
     function handleURLSwitch (evt) {
-        var URL = evt.currentTarget.value;
+        var URL = $(evt.currentTarget).find('[name="site-url"]:checked').val();
 
         setURL(URL);
     }

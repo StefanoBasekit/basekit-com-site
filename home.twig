@@ -131,20 +131,18 @@
                             </button>
                         </li>
                     </ul>
-                    <form class="preview-selector-form">
+                    <form class="preview-selector-form js-preview-selector preview-selector">
                         <h4 class="h4white">Preview Template</h4>
-                        <select id="preview-selector" class="js-preview-selector preview-selector">
-                            <option value="http://001.basekit.com">Option 1</option>
-                            <option value="http://imgur.com/a/ERwuS">Option 2</option>
-                            <option value="http://news.layervault.com">Option 3</option>
-                        </select>
+                        <label for="option1"><input name="site-url" type="radio" id="option1" value="http://003.basekit.com">Option 1</label>
+                        <label for="option2"><input name="site-url" type="radio" id="option2" value="http://imgur.com/a/ERwuS">Option 2</label>
+                        <label for="option3"><input name="site-url" type="radio" id="option3" value="http://news.layervault.com">Option 3</label>
                     </form>
                 </div>
             </div>
             <div class="js-preview-container preview-container no-transition auto">
                 <div class="screen-border">
                     <div class="site-preview screen">
-                        <iframe src="http://001.basekit.com" class="js-preview-site"></iframe>
+                        <iframe class="js-preview-site"></iframe>
                     </div>
                 </div>
             </div>
