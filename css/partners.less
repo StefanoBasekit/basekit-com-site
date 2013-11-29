@@ -299,6 +299,7 @@ section.become-partner-sub {
 }
 
 .subsignup {
+	margin: 6em 0 0;
 	background-color: @lightGrey;
 	border: 1px solid darken(@lightGrey,10%);
 	padding: 3em 3em 2.5em;
@@ -318,15 +319,56 @@ section.become-partner-sub {
    =============================== */
 
 section.device-switcher {
+	padding: 6em 0 0;
 	background-color: @color-swatch7;
+
+	.device-content {
+		margin: 6em 0 0;
+
+		img.tablet {
+			position: relative;
+			left: -368px;
+			bottom: -4px;
+			max-width: inherit;
+		}
+
+		.right-text {
+			margin: 3em 0 0;
+		}
+	}
 
 }
 
 
+/* ===============================
+   TESTIMONIALS
+   =========================== */
 
+section.tesimonials {
 
+	ul.carousel {
 
+		.roundabout-holder {
+			list-style: none;
+			padding: 6em 0;
+			margin: 0;
+			height: 5em;
+			width: 5em;
 
+			.roundabout-moveable-item {
+				background-color: @lightGrey;
+				height: 4em;
+				width: 4em;
+				cursor: pointer;
+				background-color: #ccc;
+				border: 1px solid #999;
+			}
+			.roundabout-in-focus {
+				cursor: auto;
+			}
+		}
+	}
+}
 
 
 
