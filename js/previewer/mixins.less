@@ -1,0 +1,48 @@
+.transition(@arguments) {
+    -webkit-transition: @arguments;
+       -moz-transition: @arguments;
+         -o-transition: @arguments;
+            transition: @arguments;
+}
+
+.transform(@arguments) {
+    -webkit-transform: @arguments;
+       -moz-transform: @arguments;
+        -ms-transform: @arguments;
+         -o-transform: @arguments;
+            transform: @arguments;
+}
+
+.transform-origin(@arguments) {
+    -webkit-transform-origin: @arguments;
+       -moz-transform-origin: @arguments;
+        -ms-transform-origin: @arguments;
+         -o-transform-origin: @arguments;
+            transform-origin: @arguments;
+}
+
+.border-radius(@arguments) {
+    -webkit-border-radius: @arguments;
+            border-radius: @arguments;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    &:focus,
+    &:active {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }   
+}
+

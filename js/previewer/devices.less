@@ -1,0 +1,181 @@
+.css-device() {
+    position: relative;
+    display: inline-block;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+    }
+    &.rotate {
+        .transform(rotate(90deg));
+        .transform(rotate3d(0,0,1,90deg));
+        .screen {
+            .transform(rotate(-90deg));
+            .transform(rotate3d(0,0,1,-90deg));
+        }
+    }
+    .screen-border {
+        overflow: hidden;
+    }
+    .screen {
+        display: block;
+    }
+}
+
+.device-iphone {
+	width: 22.8571em;
+	height: 40.5714em;
+	background: #272a2a;
+	padding: 7.4285em 1.2857em;
+	border-radius: 4em;
+	border: 0.5714em solid lighten(#272a2a, 1.8%);
+	.css-device();
+	&:before {
+		width: 4.7857em;
+		height: 1.1428em;
+		border-radius: 7.1428em;
+		background: darken(#272a2a, 1.8%);
+		top: 3.8571em;
+		left: 10.1428em;
+	}
+	&:after {
+		width: 4.7142em;
+		height: 4.7142em;
+		border-radius: 7.1428em;
+		background: darken(#272a2a, 1.8%);
+		top: 49.4285em;
+		left: 10.3571em;
+	}
+	&.rotate {
+		.screen {
+		    top: 0;
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+		    width: 40.5714em;
+		    height: 22.8571em;
+		}
+	}
+	.screen-border {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 22.8571em;
+		height: 40.5714em;
+        background: #232222;
+	}
+	.screen {
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    width: 22.8571em;
+	    height: 40.5714em;
+	    .transform-origin(20.25em 20.25em);
+	}
+}
+
+.device-iphone-inverse {
+    .device-iphone;
+    background: #fdfcfc;
+}
+
+.device-tablet {
+	height: 73.1428em;
+	width: 54.8571em;
+	background: #272a2a;
+	padding: 8.7857em 7.5714em;
+	border-radius: 4em;
+	border: 0.2142em solid lighten(#272a2a, 1.8%);
+	.css-device();
+	&:before {
+		width: 1.0714em;
+		height: 1.0714em;
+		border-radius: 7.1428em;
+		background: darken(#272a2a, 1.8%);
+		top: 4.1428em;
+		left: 34.5em;
+	}
+	&:after {
+		width: 5.1428em;
+		height: 5.1428em;
+		border-radius: 100px;
+		background: darken(#272a2a, 1.8%);
+		top: 83.7142em;
+		left: 32.4285em;
+	}
+	&.rotate {
+		.screen {
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 73.1428em;
+			height: 54.8571em;
+		}
+	}
+	.screen-border {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 54.8571em;
+		height: 73.1428em;
+        background: #232222;
+	}
+	.screen {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 54.8571em;
+		height: 73.1428em;
+		.transform-origin(36.55em 36.55em);
+	}
+}
+
+.device-tablet-inverse {
+    .device-tablet;
+    background: #fdfcfc;
+}
+
+.device-macbookair {
+    width: 73.1428em;
+    height: 54.8571em;
+    background: #272a2a;
+    padding: 7.5714em 8.7857em;
+    border-radius: 4em 4em 0 0;
+    border: 0.2142em solid lighten(#272a2a, 1.8%);
+    .css-device();
+    &:after {
+        background: #f4f5f7;
+        bottom: -3.5em;
+        height: 5.5em;
+        border-radius: 0 0 5em 5em;
+        left: -16em;
+        right: -16em;
+    }
+    .screen {
+    	top: 7.5714em;
+    	right: 8.7857em;
+    	bottom: 7.5714em;
+    	left: 7.5714em;
+    	left: 8.7857em;
+    	height: 54.8571em;
+    	width: 73.1428em;
+    	.transform-origin(37.7142em 36.571em);
+    }
+    &.rotate {
+        .transform(none);
+        .screen {
+            .transform(none);
+        }
+    }
+}
+
+.device-macbookair-inverse {
+    .device-macbookair;
+    background: #fdfcfc;
+}
+

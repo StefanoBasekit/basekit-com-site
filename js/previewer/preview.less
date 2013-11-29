@@ -1,0 +1,215 @@
+.view-toolbar {
+
+}
+.view-controls {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline-block;
+    }
+    .view-control {
+        height: 3.72em;
+        width: 6em;
+        padding: 0.4em 1.5em;
+        position: relative;
+        background: none;
+        border: none;
+        text-align: center;
+        color: #fefdfd;
+        .border-radius(none);
+        .transition(background 0.5s ease-in-out);
+        &:active,
+        &.selected {
+            background: #343434;            }
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    .iphone-item,
+    .tablet-item,
+    .auto-item {
+        .text {
+            .visuallyhidden;
+        }
+    }
+    .iphone-item {
+        @media only screen and (max-width: 32.4285em) {
+            display: none;
+        }
+    }
+    .tablet-item {
+        @media only screen and (max-width: 55.7142em) {
+            display: none;
+        }
+    }
+    .desktop-item {
+        @media only screen and (max-width: 71.4285em) {
+            display: none;
+        }
+    }
+    .auto-item {
+        @media only screen and (max-width: 32.4285em) {
+            display: none;
+        }
+    }
+    .device-icon {
+        font-size: 0.0535em;
+        .transition(all 0.5s ease);
+        .screen {
+            background: #2b2b2b;
+        }
+    }
+    .device-icon-iphone {
+        display: inline-block;
+        width: 52px;
+        height: 33px;
+        background-image: url('images/mobile.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        &.rotate {
+            .transform(rotate(90deg));
+            .transform(rotate3d(0,0,1,90deg));
+        }
+    }
+    .device-icon-tablet {
+        display: inline-block;
+        width: 52px;
+        height: 33px;
+        background-image: url('images/tablet.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        &.rotate {
+            .transform(rotate(90deg));
+            .transform(rotate3d(0,0,1,90deg));
+        }
+    }
+    .device-icon-auto {
+        display: inline-block;
+        width: 52px;
+        height: 33px;
+        background-image: url('images/desktop.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .view-control-desktop:after {
+    }
+}
+
+.preview-selector-form {
+    display: inline-block;
+}
+
+.preview-container {
+    position: relative;
+    margin: 4em auto 0;
+    overflow: hidden;
+    .transition(all 0.5s ease);
+    .screen-border {
+        .transition(~"width, height, 0.5s ease");
+    }
+    &::before,
+    &::after {
+        .transition(all 0.5s ease);
+    }
+    &.iphone {
+        .device-iphone;
+        display: block;
+        .transform-origin(290px 290px);
+        .site-preview {
+            iframe {
+                width: inherit;
+                height: inherit;
+            }
+        }
+    }
+    &.tablet {
+        .device-tablet;
+        display: block;
+        .transform-origin(565px 565px);
+        .site-preview {
+            iframe {
+                width: inherit;
+                height: inherit;
+            }
+        }
+    }
+    &.auto {
+        height: 40.5714em;
+        @media only screen and (min-height: 46.25em) {
+            height: 70vh;
+        }
+        @media only screen and (min-height: 58.75em) {
+            height: 75vh;
+        }
+        @media only screen and (min-height: 66.875em) {
+            height: 80vh;
+        }
+        border: #b5b5b5 solid 0.0714em;
+        border-radius: 0.4285em;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#e9e9e9), to(#000));
+        background-image: -webkit-linear-gradient(top, #e9e9e9, #000);
+        background-image: -moz-linear-gradient(top, #e9e9e9, #000);
+        background-image: -o-linear-gradient(top, #e9e9e9, #000);
+        background-image: -ms-linear-gradient(top, #e9e9e9, #000);
+        background-image: linear-gradient(top, #e9e9e9, #000);
+        padding-top: 2.8571em;
+        width: 90%;
+        max-width: 95em;
+        .transition(none);
+        &:before {
+            content: "";
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODMiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiPjx0aXRsZT5TbGljZSAxPC90aXRsZT48ZyBza2V0Y2g6dHlwZT0iTVNMYXllckdyb3VwIiBmaWxsPSIjQkVCRUJFIj48ZWxsaXBzZSBpZD0iT3ZhbC01NSIgc2tldGNoOnR5cGU9Ik1TU2hhcGVHcm91cCIgY3g9IjkuNDE0IiBjeT0iOS41MjgiIHJ4PSI5LjQxNCIgcnk9IjkuNTI4Ii8+PGVsbGlwc2UgaWQ9Ik92YWwtNTUiIHNrZXRjaDp0eXBlPSJNU1NoYXBlR3JvdXAiIGN4PSI0MS40MjIiIGN5PSI5LjUyOCIgcng9IjkuNDE0IiByeT0iOS41MjgiLz48ZWxsaXBzZSBza2V0Y2g6dHlwZT0iTVNTaGFwZUdyb3VwIiBjeD0iNzMuNDMiIGN5PSI5LjUyOCIgcng9IjkuNDE0IiByeT0iOS41MjgiLz48L2c+PC9zdmc+') no-repeat center center;
+            display: block;
+            position: absolute;
+            top: 0.5em;
+            left: 0.5em;
+            width: 5em;
+            height: 2em;
+            background-size: 4em;
+        }
+        .screen-border {
+            border: #e5e5e5 solid;
+            border-width: 1px 0 0 0;
+            position: absolute;
+            top: 2.8571em;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            .transition(none);
+        }
+        .site-preview {
+            width: 100%;
+            height: 100%;
+            .transition(none);
+        }
+    }
+    &.no-transition {
+        .transition(none);
+        &::before,
+        &::after,
+        .screen-border,
+        .site-preview {
+            .transition(none);
+        }
+    }
+}
+.site-preview {
+    display: block;
+    -webkit-overflow-scrolling: touch;
+    .transition(~"width, height, 0.5s ease 0.5s");
+    iframe {
+        border: none;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+.no-delay .site-preview {
+    .transition(~"width, height, 0.5s ease");
+}
+.mobile-webkit .site-preview {
+    overflow: auto;
+}
+
