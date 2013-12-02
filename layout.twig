@@ -40,6 +40,68 @@
 
 	{% include basekit.bodyScript %}
 
+	<!-- Validator --> 
+	<script src="{{asset('js/validator/jquery.validator.js')}}"></script>
+	<script type="text/javascript">
+			$('#partner-signup').validate({
+				rules: {
+				    name: {
+				      	required: true,
+				      	rangelength: [1, 100]
+				    },
+				    telephone: {
+				      	required: true,
+				      	rangelength: [8, 100]
+				    },
+				    email: {
+				      	required: true,
+						email: true
+
+				    },
+				    password: {
+				      	required: true,
+				      	rangelength: [6, 100]
+				    },
+				    companyName: {
+				      	required: false,
+				      	maxlength: 100
+				    },
+				    website: {
+				      	required: false,
+				      	maxlength: 256
+				    }
+				},
+				messages: {
+					name: {
+						required: "Please enter your full name",
+						minlength: "Your full name must consist of at least 1 character",
+						maxlength: "Your full name must be less than 100 characters"
+					},
+					telephone: {
+						required: "Please enter your telephone number",
+						minlength: "Your telephone must consist of at least 8 characters",
+						maxlength: "Your telephone must be less than 100 characters"
+					},
+					email: {
+						required: "Please enter a valid email address",
+						minlength: "Your email must consist of at least 5 characters",
+						maxlength: "Your full name must be less than 100 characters"
+					},
+					password: {
+						required: "Please provide a password",
+						minlength: "Your password must be at least 5 characters long",
+						maxlength: "Your password must be less than 100 characters"
+					},
+					companyName: {
+						maxlength: "Your company name must be less than 100 characters"
+					},
+					website: {
+						maxlength: "Your website address must be less than 256 characters"
+					}
+				}
+			});
+	</script>
+
 	<!-- ROUNDABOUT !-->
 	<script type="text/javascript" src="templates/basekit-com-site/js/roundabout/jquery.roundabout.js"></script>
 	<script type="text/javascript">
@@ -59,6 +121,5 @@
 			window.unoSlider = $('#sliderId').unoSlider();
 		});
 	</script>
-
 </body>
 </html>
