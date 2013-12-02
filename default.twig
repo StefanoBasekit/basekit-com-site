@@ -77,7 +77,7 @@
                                 <fieldset>
                                     {{widget('content', 'partnersignupfieldset1content1', {"content":'<p><b>Enter your <span class="orange">contact details</span> below.</b></p>'})|raw}}
                                     <label>{{widget('content', 'partnersignupfieldset1content2', {"content":'<h4 class="h4dark">FULL NAME</h4>'})|raw}}</label>
-                                    <input name="fullname" id="fullname" type="text" placeholder="Enter your full name...">
+                                    <input name="name" id="name" type="text" placeholder="Enter your full name...">
                                     <label>{{widget('content', 'partnersignupfieldset1content3', {"content":'<h4 class="h4dark">TELEPHONE</h4>'})|raw}}</label>
                                     <input name="telephone" id="telephone" type="text" placeholder="Enter your telephone number...">
                                 </fieldset>
@@ -90,9 +90,9 @@
                                 <!-- EMAIL - PASSWORD !-->
                                 <fieldset>
                                     <label>{{widget('content', 'partnersignupfieldset3content1', {"content":'<h4 class="h4dark">EMAIL ADDRESS</h4>'})|raw}}</label>
-                                    <input id="partneraccount_email" type="text" placeholder="Enter your email address..." class="email-address">
+                                    <input id="email" name="email" type="text" placeholder="Enter your email address..." class="email-address">
                                     <label>{{widget('content', 'partnersignupfieldset3content2', {"content":'<h4 class="h4dark">PASSWORD</h4>'})|raw}}</label>
-                                    <input id="partneraccount_password" type="password" placeholder="Enter a password..." class="password">
+                                    <input id="password" name="password" type="password" placeholder="Enter a password..." class="password">
                                 </fieldset>
                             </div>
                         </div>
@@ -103,7 +103,7 @@
                                 <fieldset>
                                     <div class="column span-two">
                                         <label>{{widget('content', 'partnersignupfieldset3content2', {"content":'<h4 class="h4dark">COMPANY NAME</h4>'})|raw}}</label>
-                                        <input name="name" id="name" type="text" placeholder="Enter your company name...">
+                                        <input name="companyName" id="companyName" type="text" placeholder="Enter your company name...">
                                     </div>
                                     <div class="column span-two">
                                         <label>{{widget('content', 'partnersignupfieldset3content3', {"content":'<h4 class="h4dark">WEBSITE</h4>'})|raw}}</label>
@@ -126,14 +126,11 @@
                                             <option value="1m">1M+</option>
                                         </select>
                                     </div>
-                                    <!-- <input name="noofusers" id="noofusers" type="text" placeholder="Number of published user sites..."> -->
                                 </fieldset>
                             </div>
                             <div class="column span-two">
                                 <fieldset>
                                     <label>{{widget('content', 'partnersignupfieldset5content1', {"content":'<h4 class="h4dark">LANGUAGE</h4>'})|raw}}</label>
-                                    <!-- <input name="language" id="language" type="text" placeholder="Enter your users primary language..."> -->
-
                                     <div class="select-style">
                                         <select>
                                             <option value="en">English</option>
@@ -141,7 +138,6 @@
                                             <option value="pt_br">Portuguese</option>
                                         </select>
                                     </div>
-
                                 </fieldset>
                                 <button id="submit" type="submit" class="button stan-btn green">SUBMIT</button>
                             </div>
