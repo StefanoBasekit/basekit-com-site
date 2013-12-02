@@ -13,9 +13,10 @@
             <div class="column span-80">
                 <nav class="nav-desktop clearfix">
                     <ul>
+                        <li><a href="/">Home</a></li>
                         <li><a href="/partners">Partners</a></li>
-                        <li><a href="/tour">Tour</a></li>
-                        <li><a href="/about">About</a></li>
+                        <!-- <li><a href="/tour">Tour</a></li> -->
+                        <!-- <li><a href="/about">About</a></li> -->
                         <li>
                             <a href="#" class="fade-out">Community</a>
                             <div class="arrow_box"><h4 class="h4white">Coming Soon</h4></div>
@@ -358,7 +359,7 @@
         </div>
         <div class="footer2 clearfix">
             <div class="left">
-                {{widget('content', 'footer2content1', {"content":'<p>Copyright &copy; BaseKit Platform 2013. All Rights Reserved.</p>'})|raw}}
+                <p>Copyright &copy; BaseKit Platform {{ "now"|date("Y") }}. All Rights Reserved.</p>
             </div>
             <div class="right">
                 {{widget('content', 'footer2content2', {"content":'<p>VAT Registration Number 339 0727 47 | Company Number 06669087</p>'})|raw}}

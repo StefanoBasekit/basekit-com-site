@@ -98,6 +98,7 @@ section.signup-form {
 	}
 
 	.form-container {
+		position: relative;
 		background-color: @color-swatch1;
 		margin: 1.2em 0 0;
 		-webkit-border-top-left-radius: 7px;
@@ -149,6 +150,38 @@ section.signup-form {
 				}
 			}
 
+			.select-style {
+			    border: 1px solid #e6e6e6;
+			    width: 90%;
+				.rounded-corners;
+			    overflow: hidden;
+			    background: @lightGrey image('/images/select-arrow.png') no-repeat 94% 50%;
+
+			    &:hover {
+			    	border: 1px solid @color-swatch3;
+					-webkit-transition: all .2s ease-in-out;
+					transition: all .2s ease-in-out;
+					background: @color-swatch1 image('/images/select-arrow-hov.png') no-repeat 94% 50%;
+			    }
+
+			    select {
+			    	width: 90%;
+			    	height: 50px;
+			    	text-indent: 12px;
+				    border: none;
+				    box-shadow: none;
+				    background: transparent;
+				    background-image: none;
+				    -webkit-appearance: none;
+				    .p-font;
+				    cursor: pointer;
+
+				    &:focus {
+					    outline: none;
+					}
+				}
+			}
+
 			.userbase-fields,
 			.company-website {
 				margin: 3em 0 0;
@@ -162,6 +195,8 @@ section.signup-form {
 
 		/* RIGHT CONTENT */
 		.right-content {
+			position: absolute;
+			.box-sizing;
 			background-color: @lightGrey;
 			padding: 40px 30px;
 			height: 100%;

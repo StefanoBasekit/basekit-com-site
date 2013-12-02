@@ -13,9 +13,10 @@
             <div class="column span-80">
                 <nav class="nav-desktop clearfix">
                     <ul>
+                        <li><a href="/">Home</a></li>
                         <li><a href="/partners">Partners</a></li>
-                        <li><a href="/tour">Tour</a></li>
-                        <li><a href="/about">About</a></li>
+                        <!-- <li><a href="/tour">Tour</a></li> -->
+                        <!-- <li><a href="/about">About</a></li> -->
                         <li>
                             <a href="#" class="fade-out">Community</a>
                             <div class="arrow_box"><h4 class="h4white">Coming Soon</h4></div>
@@ -116,14 +117,31 @@
                         <div class="res-col columns span-50-50">
                             <div class="column span-two">
                                 <fieldset>
-                                    <label>{{widget('content', 'partnersignupfieldset4content2', {"content":'<h4 class="h4dark">NUMBER OF PUBLISHED SITES</h4>'})|raw}}</label>
-                                    <input name="noofusers" id="noofusers" type="text" placeholder="Number of published user sites...">
+                                    <label>{{widget('content', 'partnersignupfieldset4content2', {"content":'<h4 class="h4dark">NUMBER OF USERS</h4>'})|raw}}</label>
+                                    <div class="select-style">
+                                        <select>
+                                            <option value="1+">&#60; 10k</option>
+                                            <option value="10k+">10k - 100k</option>
+                                            <option value="100k+">100k - 1M</option>
+                                            <option value="1m">1M+</option>
+                                        </select>
+                                    </div>
+                                    <!-- <input name="noofusers" id="noofusers" type="text" placeholder="Number of published user sites..."> -->
                                 </fieldset>
                             </div>
                             <div class="column span-two">
                                 <fieldset>
-                                    <label>{{widget('content', 'partnersignupfieldset5content1', {"content":'<h4 class="h4dark">PRIMARY LANGUAGE</h4>'})|raw}}</label>
-                                    <input name="language" id="language" type="text" placeholder="Enter your users primary language...">
+                                    <label>{{widget('content', 'partnersignupfieldset5content1', {"content":'<h4 class="h4dark">LANGUAGE</h4>'})|raw}}</label>
+                                    <!-- <input name="language" id="language" type="text" placeholder="Enter your users primary language..."> -->
+
+                                    <div class="select-style">
+                                        <select>
+                                            <option value="en">English</option>
+                                            <option value="es">Spanish</option>
+                                            <option value="pt_br">Portuguese</option>
+                                        </select>
+                                    </div>
+
                                 </fieldset>
                                 <button id="submit" type="submit" class="button stan-btn green">SUBMIT</button>
                             </div>
@@ -145,8 +163,6 @@
 <a id="why-basekit"></a>
 <section class="why-basekit">
     <div class="wrapper">
-        <div class="formaddon-container clearfix">
-        </div>
         {{widget('content', 'whybasekit-title', {"content":'<h3>Why Partner with BaseKit?</h3>'})|raw}}
         <!-- INFO BLOCKS !-->
         <div class="info-blocks">
@@ -291,8 +307,6 @@
                    
                 </li>
             </ul>
-    
-
 
     </div>
 </section>
