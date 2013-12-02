@@ -11,6 +11,7 @@
 section.partners-subnav {
 	background-color: @color-swatch7;
 	padding: 0;
+	z-index: 9999;
 
 	h2 {
 		line-height: 110px;
@@ -71,6 +72,12 @@ section.partners-subnav {
 	}
 }
 
+.scroller_anchor{
+	height: 0px; 
+	margin: 0; 
+	padding: 0;
+}
+
 
 /* ===============================
    SIGNUP FORM
@@ -118,6 +125,17 @@ section.signup-form {
 				display: block;
 				width: 90%;
 				margin: 1.7em 0 0.6em;
+
+				&.error {
+					background-color: #FFEFEF;
+					padding: 2px 5px;
+					width: 84%;
+					.border-radius(3px);
+					.p-font;
+					font-size: 11px;
+					color: #E77272;
+					margin: 10px 0 0;
+				}
 			}
 
 			fieldset {

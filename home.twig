@@ -188,24 +188,8 @@
 
         <!-- SLIDESHOW !-->
         <div class="slideshow-frame">
-
-            <!-- <div id="sliderId">
-                <div class="unoSliderNav"></div>
-                <ul>
-                    <li class="current">
-                        <img src="{{asset('/js/slider/slides/surfandlove-slide.jpg')}}">
-                    </li>
-                    <li>
-                        <img src="{{asset('/js/slider/slides/surfandlove-slide.jpg')}}">
-                    </li>
-                    <li>
-                        <img src="{{asset('/js/slider/slides/surfandlove-slide.jpg')}}">
-                    </li>
-                </ul>
-            </div> -->
-
-            <div class="browser-controls"></div>
-            {{widget('responsiveslideshow', 'thisunqiuewidgetname', {'duration':'3', 'transSpeed': '1000', 'transType': 'fade', 'showButtons': true, 'showBullets': false, 'allowPause': false, 'allowLoop': false, 'images':[{'url':asset('/images/surfandlove-slide.jpg')}]})|raw}}
+            <div class="browser-controls"><span></span><span></span><span></span></div>
+            {{widget('responsiveslideshow', 'responsiveslideshow', {'duration':'5', 'transSpeed': '1000', 'transType': 'fade', 'showButtons': true, 'showBullets': false, 'allowPause': false, 'allowLoop': false, 'images':[{'url':asset('/images/surfandlove-slide.jpg')},{'url':asset('/images/georgia-slide.jpg')},{'url':asset('/images/smartinc-slide.jpg')}]})|raw}}
         </div>
 
     </div>
