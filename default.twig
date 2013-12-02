@@ -13,9 +13,9 @@
             <div class="column span-80">
                 <nav class="nav-desktop clearfix">
                     <ul>
-                        <li><a href="#">Partners</a></li>
-                        <li><a href="#">Tour</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="/partners">Partners</a></li>
+                        <li><a href="/tour">Tour</a></li>
+                        <li><a href="/about">About</a></li>
                         <li>
                             <a href="#" class="fade-out">Community</a>
                             <div class="arrow_box"><h4 class="h4white">Coming Soon</h4></div>
@@ -29,6 +29,7 @@
 </header>
 
 <!-- SUB NAV BAR !-->
+<a id="/#partner-signup"></a>
 <section class="partners-subnav">
     <div class="wrapper">
         <div class="res-col columns span-20-80">
@@ -37,10 +38,10 @@
             </div>
             <div class="column span-80">
                 <ul class="clearfix">
-                    <li class="selected">{{widget('content', 'partners-subnavcontent1', {"content":'<h5><a href="/#why"><i class="fa fa-keyboard-o"></i>Partner Signup</a></h5>'})|raw}}</li>
-                    <li>{{widget('content', 'partners-subnavcontent2', {"content":'<h5><a href="#"><i class="fa fa-question"></i>Why BaseKit</a></h5>'})|raw}}</li>
-                    <li>{{widget('content', 'partners-subnavcontent3', {"content":'<h5><a href="#"><i class="fa fa-power-off"></i>Get Started</a></h5>'})|raw}}</li>
-                    <li>{{widget('content', 'partners-subnavcontent4', {"content":'<h5><a href="#"><i class="fa fa-comments-o"></i>Testimonials</a></h5>'})|raw}}</li>
+                    <li class="selected">{{widget('content', 'partners-subnavcontent1', {"content":'<h5><a href="/#partner-signup"><i class="fa fa-keyboard-o"></i>Partner Signup</a></h5>'})|raw}}</li>
+                    <li>{{widget('content', 'partners-subnavcontent2', {"content":'<h5><a href="/#why-basekit"><i class="fa fa-question"></i>Why BaseKit</a></h5>'})|raw}}</li>
+                    <li>{{widget('content', 'partners-subnavcontent3', {"content":'<h5><a href="/#get-started"><i class="fa fa-power-off"></i>Get Started</a></h5>'})|raw}}</li>
+                    <li>{{widget('content', 'partners-subnavcontent4', {"content":'<h5><a href="/#testimonials"><i class="fa fa-comments-o"></i>Testimonials</a></h5>'})|raw}}</li>
             </div>
         </div>
     </div>
@@ -141,7 +142,7 @@
 </section>
 
 <!-- WHY BASEKIT !-->
-<a id="why"></a>
+<a id="why-basekit"></a>
 <section class="why-basekit">
     <div class="wrapper">
         <div class="formaddon-container clearfix">
@@ -187,6 +188,7 @@
 </section>
 
 <!-- BECOME A PARTNER !-->
+<a id="get-started"></a>
 <section class="become-partner LightGrey">
     <div class="wrapper">
         {{widget('content', 'becomepartnertitle', {"content":'<h2 class="h2-36pad">How to get started as a BaseKit Partner</h2><h5>As soon you complete the <a href="#">partner registration</a> form, you can make BaseKit available to your customers<br> without the need for complex technical or contractual setups.</h5>'})|raw}}
@@ -246,6 +248,7 @@
 </section>
 
 <!-- DEVICE SWITCHER !-->
+<a id="customer"></a>
 <section class="device-switcher">
     <div class="wrapper">
         {{widget('content', 'deviceswitchertitle', {"content":'<h2 class="hwhite" style="text-align: center">Every customer gets a beautiful, responsive site.</h2>'})|raw}}
@@ -266,6 +269,7 @@
 </section>
 
 <!-- TESTIMONIALS !-->
+<a id="testimonials"></a>
 <section class="testimonials">
     <div class="wrapper">
         {{widget('content', 'testimonialstitle', {"content":'<h2 class="h2-20pad" style="text-align: center">Customer Testimonials</h2><h5 style="text-align: center">Proud to partner with these and many other leading hosting companies.</h5>'})|raw}}
