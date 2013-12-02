@@ -351,6 +351,12 @@ section.template-previewer {
 					border-right: 1px solid #5d5d5d;
 					&:hover {
 						cursor: pointer;
+						background: #343434;
+						-webkit-transition: background 0.5s ease-in-out;
+						-moz-transition: background 0.5s ease-in-out;
+						-o-transition: background 0.5s ease-in-out;
+						transition: background 0.5s ease-in-out;
+
 					}
 					&:first-child {
 						border-left: 1px solid #5d5d5d;
@@ -419,7 +425,7 @@ section.template-slideshow {
 
 	.slideshow-frame {
 		margin: 6em 0 0;
-		background-color: #e2e2e2;
+		/*background-color: #e2e2e2;*/
 		-webkit-border-top-left-radius: 7px;
 		-webkit-border-top-right-radius: 7px;
 		-moz-border-radius-topleft: 7px;
@@ -574,6 +580,11 @@ footer {
 					margin-left: 8px;
 				}
 			}
+		}
+
+		&.half {
+			width: 50%;
+			float: left;
 		}
 	}
 

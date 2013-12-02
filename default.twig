@@ -37,7 +37,7 @@
             </div>
             <div class="column span-80">
                 <ul class="clearfix">
-                    <li class="selected">{{widget('content', 'partners-subnavcontent1', {"content":'<h5><a href="#"><i class="fa fa-keyboard-o"></i>Partner Signup</a></h5>'})|raw}}</li>
+                    <li class="selected">{{widget('content', 'partners-subnavcontent1', {"content":'<h5><a href="/#why"><i class="fa fa-keyboard-o"></i>Partner Signup</a></h5>'})|raw}}</li>
                     <li>{{widget('content', 'partners-subnavcontent2', {"content":'<h5><a href="#"><i class="fa fa-question"></i>Why BaseKit</a></h5>'})|raw}}</li>
                     <li>{{widget('content', 'partners-subnavcontent3', {"content":'<h5><a href="#"><i class="fa fa-power-off"></i>Get Started</a></h5>'})|raw}}</li>
                     <li>{{widget('content', 'partners-subnavcontent4', {"content":'<h5><a href="#"><i class="fa fa-comments-o"></i>Testimonials</a></h5>'})|raw}}</li>
@@ -83,21 +83,21 @@
                             <div class="column span-two">
                                 <!-- COMPANY - WEBSITE !-->
                                 <fieldset>
-                                    {{widget('content', 'partnersignupfieldset12ontent1', {"content":'<p><b>Enter your <span class="orange">company information</span> below.</b></p>'})|raw}}
+                                    {{widget('content', 'partnersignupfieldset12ontent1', {"content":'<p><b>Enter your <span class="orange">account information</span> below.</b></p>'})|raw}}
                                 </fieldset>
                                 <!-- EMAIL - PASSWORD !-->
                                 <fieldset>
                                     <label>{{widget('content', 'partnersignupfieldset3content1', {"content":'<h4 class="h4dark">EMAIL ADDRESS</h4>'})|raw}}</label>
                                     <input id="partneraccount_email" type="text" placeholder="Enter your email address..." class="email-address">
                                     <label>{{widget('content', 'partnersignupfieldset3content2', {"content":'<h4 class="h4dark">PASSWORD</h4>'})|raw}}</label>
-                                    <input id="partneraccount_password" type="password" placeholder="Create a password..." class="password">
+                                    <input id="partneraccount_password" type="password" placeholder="Enter a password..." class="password">
                                 </fieldset>
                             </div>
                         </div>
                         <!-- COMPANY - WEBSITE !-->
                         <div class="company-website">
                             <div class="res-col columns span-50-50">
-                                {{widget('content', 'partnersignupfieldset3ontent1', {"content":'<p><b>Enter additonal information about your company below.</b></p>'})|raw}}
+                                {{widget('content', 'partnersignupfieldset3ontent1', {"content":'<p><b>Enter additonal information about your company.</b></p>'})|raw}}
                                 <fieldset>
                                     <div class="column span-two">
                                         <label>{{widget('content', 'partnersignupfieldset3content2', {"content":'<h4 class="h4dark">COMPANY NAME</h4>'})|raw}}</label>
@@ -141,6 +141,7 @@
 </section>
 
 <!-- WHY BASEKIT !-->
+<a id="why"></a>
 <section class="why-basekit">
     <div class="wrapper">
         <div class="formaddon-container clearfix">
@@ -166,7 +167,7 @@
             <div class="res-col columns span-30-31-30">
                 <div class="column span-three-left">
                     <div class="conversion-left">
-                        {{widget('content', 'bkconversion-3block1', {"content":'<h4>Great Conversion Rates</h4><p>Our partners get conversion rates of 10% <br>- 30% or more depending on customer demographics. Lorem ipsum dolor sit am consectetur adipisicing elit, sed do eius.</p>'})|raw}}
+                        {{widget('content', 'bkconversion-3block1', {"content":'<h4>Great Conversion Rates</h4><p>Our partners get conversion rates of 10% <br>- 30% or more depending on customer demographics.</p>'})|raw}}
                     </div>
                 </div>
                 <div class="column span-three-middle">
@@ -345,7 +346,15 @@
                 </ul>
             </div>
             <div class="column span-four">
-                {{widget('content', 'footercolumn3content1', {"content":'<h4 class="h4white upsize">Newsletter</h3>'})|raw}}
+                {{widget('content', 'footercolumn4content1', {"content":'<h4 class="h4white upsize">Social</h3>'})|raw}}
+                <ul class="footer-menu half">
+                    <li>{{widget('content', 'footercolumn4content2', {"content":'<p><a href="#">Facebook</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn4content3', {"content":'<p><a href="#">Twitter</a></p>'})|raw}}</li>
+                </ul>
+                <ul class="footer-menu half">
+                    <li>{{widget('content', 'footercolumn4content4', {"content":'<p><a href="#">YouTube</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn4content5', {"content":'<p><a href="#">Google+</a></p>'})|raw}}</li>
+                </ul>
             </div>
         </div>
         <div class="footer2 clearfix">

@@ -142,12 +142,12 @@
                                 </li>
                                 <li>
                                     <label for="option2"><h4 class="h4circle blue">ES</h4></label>
-                                    <input name="site-url" type="radio" id="option2" value="http://imgur.com/a/ERwuS" class="preview-input">
+                                    <input name="site-url" type="radio" id="option2" value="http://001.basekit.com" class="preview-input">
                                     <span class="preview-option"></span>
                                 </li>
                                 <li>
                                     <label for="option3"><h4 class="h4circle green">FR</h4></label>
-                                    <input name="site-url" type="radio" id="option3" value="http://news.layervault.com" class="preview-input">
+                                    <input name="site-url" type="radio" id="option3" value="http://002.basekit.com" class="preview-input">
                                     <span class="preview-option"></span>
                                 </li>
                             </ul>
@@ -184,11 +184,29 @@
                 {{widget('content', 'template-slideshow3blockscontent3', {"content":'<h4>Change at Any Time</h4><p>Give your site a complete a new look by swapping templates at any time. New templates are added every two weeks. </p>'})|raw}}
             </div>
         </div>
+
         <!-- SLIDESHOW !-->
         <div class="slideshow-frame">
+
+            <!-- <div id="sliderId">
+                <div class="unoSliderNav"></div>
+                <ul>
+                    <li class="current">
+                        <img src="{{asset('/js/slider/slides/surfandlove-slide.jpg')}}">
+                    </li>
+                    <li>
+                        <img src="{{asset('/js/slider/slides/surfandlove-slide.jpg')}}">
+                    </li>
+                    <li>
+                        <img src="{{asset('/js/slider/slides/surfandlove-slide.jpg')}}">
+                    </li>
+                </ul>
+            </div> -->
+
             <div class="browser-controls"></div>
             {{widget('responsiveslideshow', 'thisunqiuewidgetname', {'duration':'3', 'transSpeed': '1000', 'transType': 'fade', 'showButtons': true, 'showBullets': false, 'allowPause': false, 'allowLoop': false, 'images':[{'url':asset('/images/surfandlove-slide.jpg')}]})|raw}}
         </div>
+
     </div>
 </section>
 
@@ -327,7 +345,15 @@
                 </ul>
             </div>
             <div class="column span-four">
-                {{widget('content', 'footercolumn3content1', {"content":'<h4 class="h4white upsize">Newsletter</h3>'})|raw}}
+                {{widget('content', 'footercolumn4content1', {"content":'<h4 class="h4white upsize">Social</h3>'})|raw}}
+                <ul class="footer-menu half">
+                    <li>{{widget('content', 'footercolumn4content2', {"content":'<p><a href="#">Facebook</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn4content3', {"content":'<p><a href="#">Twitter</a></p>'})|raw}}</li>
+                </ul>
+                <ul class="footer-menu half">
+                    <li>{{widget('content', 'footercolumn4content4', {"content":'<p><a href="#">YouTube</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn4content5', {"content":'<p><a href="#">Google+</a></p>'})|raw}}</li>
+                </ul>
             </div>
         </div>
         <div class="footer2 clearfix">

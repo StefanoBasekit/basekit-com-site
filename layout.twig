@@ -28,6 +28,7 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('/css/rescols.css')}}" />
 	<link rel="stylesheet" type="text/css" href="{{asset('/fonts/font-awesome/css/font-awesome.min.css')}}" />
 	<link rel="stylesheet" type="text/css" href="{{asset('/js/previewer/stylesheet.css')}}" />
+	<link rel="stylesheet" type="text/css" href="{{asset('/js/slider/css/unoSlider.min.css')}}" />
 
 
 	{% include basekit.headScript %}
@@ -39,6 +40,7 @@
 
 	{% include basekit.bodyScript %}
 
+	<!-- ROUNDABOUT !-->
 	<script type="text/javascript" src="templates/basekit-com-site/js/roundabout/jquery.roundabout.js"></script>
 	<script type="text/javascript">
 	   $(document).ready(function() {
@@ -46,7 +48,17 @@
 	   });
 	</script>
 
+	<!-- TEMPLATE PREVIEWER !-->
 	<script src="{{asset('js/previewer/preview.js')}}"></script>
+
+	<!-- SLIDER !-->
+	<script src="{{asset('js/slider/js/unoSlider.js')}}"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+			// My Uno Slider
+			window.unoSlider = $('#sliderId').unoSlider();
+		});
+	</script>
 
 </body>
 </html>
