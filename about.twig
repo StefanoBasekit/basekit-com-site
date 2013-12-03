@@ -7,7 +7,7 @@
         <div class="res-col columns span-20-80">
             <div class="column span-20">
                 <div class="logo">
-                    <a href="#"><img src="{{asset('/images/logo.png')}}" class="bk-logo"></a>
+                    <a href="/"><img src="{{asset('/images/logo.png')}}" class="bk-logo"></a>
                 </div>
             </div>
             <div class="column span-80">
@@ -18,8 +18,7 @@
                         <!-- <li><a href="/tour">Tour</a></li> -->
                         <!-- <li><a href="/about">About</a></li> -->
                         <li>
-                            <a href="#" class="fade-out">Community</a>
-                            <div class="arrow_box"><h4 class="h4white">Coming Soon</h4></div>
+                            <a class="fade-out">Community<div class="arrow_box"><h4 class="h4white">Coming Soon</h4></div></a>
                         </li>
                         <!-- <li><a href="#" class="button small-btn orange">Login</a></li> -->
                     </ul>
@@ -257,7 +256,7 @@
                     {{widget('content', 'subsignupcontent1', {"content":'<h2 class="nopad">Become a BaseKit Partner</h2><h5>Signup to access our partner portal and get a <a href="#">free trial</a> site.</h5>'})|raw}}
                 </div>
                 <div class="column span-30">
-                    <a href="#" class="button main-btn green">Signup Today</a>
+                    <a href="/#partner-signup" class="button main-btn green">Signup Today</a>
                 </div>
             </div>
         </div>  
@@ -326,10 +325,10 @@
                 <img src="{{asset('/images/partner-logos/123-reg.png')}}" class="reg-logo">
             </div>
             <div class="column span-five">
-                <img src="{{asset('/images/partner-logos/enom.png')}}" class="enom-logo">
+                <img src="{{asset('/images/partner-logos/fasthosts.png')}}" class="enom-logo">
             </div>
             <div class="column span-five-last">
-                <a href="#" class="button main-btn green">Become a Partner</a>
+                <a href="/#partner-signup" class="button main-btn green">Become a Partner</a>
             </div>
         </div>
     </div>
@@ -342,46 +341,49 @@
             <div class="column span-four">
                 {{widget('content', 'footercolumn1content1', {"content":'<h4 class="h4white upsize">BaseKit Platform</h3>'})|raw}}
                 <ul class="footer-menu">
-                    <li>{{widget('content', 'footercolumn1content2', {"content":'<p><a href="#">Partners</a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn1content3', {"content":'<p><a href="#">Tour</a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn1content4', {"content":'<p><a href="#">About</a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn1content5', {"content":'<p><a href="#">Community</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn1content2', {"content":'<p><a href="/">Home</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn1content3', {"content":'<p><a href="/partners">Partners</a></p>'})|raw}}</li>
+                    <!-- <li>{{widget('content', 'footercolumn1content3', {"content":'<p><a href="#">Tour</a></p>'})|raw}}</li> -->
+                    <!-- <li>{{widget('content', 'footercolumn1content4', {"content":'<p><a href="#">About</a></p>'})|raw}}</li> -->
+                    <li>
+                        <a class="fade-out">Community<div class="arrow_box"><h4 class="h4white">Coming Soon</h4></div></a>
+                    </li>
                 </ul>
             </div>
             <div class="column span-four">
                 {{widget('content', 'footercolumn2content1', {"content":'<h4 class="h4white upsize">Company</h3>'})|raw}}
                 <ul class="footer-menu">
-                    <li>{{widget('content', 'footercolumn2content2', {"content":'<p><a href="#">Terms &amp; Conditions</a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn2content3', {"content":'<p><a href="#">Jobs</a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn2content4', {"content":'<p><a href="#">Contact</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn2content2', {"content":'<p><a href="http://www.basekit.com/terms-and-conditions">Terms &amp; Conditions</a></p>'})|raw}}</li>
+                    <!-- <li>{{widget('content', 'footercolumn2content3', {"content":'<p><a href="#">Jobs</a></p>'})|raw}}</li> -->
+                    <li>{{widget('content', 'footercolumn2content4', {"content":'<p><a href="/partners">Contact</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn2content5', {"content":'<p><a href="https://basekit.zendesk.com">Support</a></p>'})|raw}}</li>
                 </ul>
             </div>
             <div class="column span-four">
                 {{widget('content', 'footercolumn3content1', {"content":'<h4 class="h4white upsize">Developers</h3>'})|raw}}
                 <ul class="footer-menu">
-                    <li>{{widget('content', 'footercolumn3content2', {"content":'<p><a href="#">Documentation<i class="fa fa-external-link"></i></a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn3content3', {"content":'<p><a href="#">Join the Community</a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn3content4', {"content":'<p><a href="#">Support</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn3content2', {"content":'<p><a href="http://develop.basekit.com">Documentation<i class="fa fa-external-link"></i></a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn3content3', {"content":'<p><a href="http://develop.basekit.com">Join the Community</a></p>'})|raw}}</li>
                 </ul>
             </div>
             <div class="column span-four">
                 {{widget('content', 'footercolumn4content1', {"content":'<h4 class="h4white upsize">Social</h3>'})|raw}}
                 <ul class="footer-menu half">
-                    <li>{{widget('content', 'footercolumn4content2', {"content":'<p><a href="#">Facebook</a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn4content3', {"content":'<p><a href="#">Twitter</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn4content2', {"content":'<p><a href="https://www.facebook.com/TeamBaseKit">Facebook</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn4content3', {"content":'<p><a href="https://twitter.com/basekit">Twitter</a></p>'})|raw}}</li>
                 </ul>
                 <ul class="footer-menu half">
-                    <li>{{widget('content', 'footercolumn4content4', {"content":'<p><a href="#">YouTube</a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn4content5', {"content":'<p><a href="#">Google+</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn4content4', {"content":'<p><a href="http://www.youtube.com/user/TeamBaseKit">YouTube</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn4content5', {"content":'<p><a href="https://plus.google.com/108742094467162026595/posts">Google+</a></p>'})|raw}}</li>
                 </ul>
             </div>
         </div>
         <div class="footer2 clearfix">
             <div class="left">
-                {{widget('content', 'footer2content1', {"content":'<p>Copyright &copy; BaseKit Platform 2013. All Rights Reserved.</p>'})|raw}}
+                <p>Copyright &copy; BaseKit Platform {{ "now"|date("Y") }}. All Rights Reserved.</p>
             </div>
             <div class="right">
-                {{widget('content', 'footer2content2', {"content":'<p>VAT Registration Number 339 0727 47 | Company Number 06669087</p>'})|raw}}
+                <p>VAT Registration Number 339 0727 47 | Company Number 06669087</p>
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@
         <div class="res-col columns span-20-80">
             <div class="column span-20">
                 <div class="logo">
-                    <a href="#"><img src="{{asset('/images/logo.png')}}" class="bk-logo"></a>
+                    <a href="/"><img src="{{asset('/images/logo.png')}}" class="bk-logo"></a>
                 </div>
             </div>
             <div class="column span-80">
@@ -18,8 +18,7 @@
                         <!-- <li><a href="/tour">Tour</a></li> -->
                         <!-- <li><a href="/about">About</a></li> -->
                         <li>
-                            <a href="#" class="fade-out">Community</a>
-                            <div class="arrow_box"><h4 class="h4white">Coming Soon</h4></div>
+                            <a class="fade-out">Community<div class="arrow_box"><h4 class="h4white">Coming Soon</h4></div></a>
                         </li>
                         <!-- <li><a href="#" class="button small-btn orange">Login</a></li> -->
                     </ul>
@@ -43,7 +42,7 @@
                 </div>
                 <div class="main-cta">
                     <!-- <a href="#" class="button trans-btn trans-grey">Build a Website</a> -->
-                    <a href="#" class="button trans-btn trans-green">Become a Partner</a>
+                    <a href="/partners" class="button trans-btn trans-green">Become a Partner</a>
                 </div>
             </div>
         </div>
@@ -64,7 +63,7 @@
                 <img src="{{asset('/images/partner-logos/123-reg.png')}}" class="reg-logo">
             </div>
             <div class="column span-five">
-                <img src="{{asset('/images/partner-logos/enom.png')}}" class="enom-logo">
+                <img src="{{asset('/images/partner-logos/fasthosts.png')}}" class="enom-logo">
             </div>
             <div class="column span-five">
                 <img src="{{asset('/images/partner-logos/papaki.png')}}" class="papaki-logo">
@@ -96,7 +95,7 @@
             </div>
             <div class="column span-two">
                 <div class="language-info">
-                    {{widget('content', 'introsubcontent2', {"content":'<h3>Available in 8 languages</h3><p>Editor 7 is available in English (British), Spanish, Polish, German, French, Italian, Dutch, Brazilian Portuguese, Swedish. Russian and Greek will be available soon.</p>'})|raw}}
+                    {{widget('content', 'introsubcontent2', {"content":'<h3>Available in 15 languages</h3><p>Editor 7 is available in English (British), English (US), Polish, Serbian, German, Spanish, French, Italian, Dutch, Turkish, Portugese (Brazilian), Swedish, Portuguese (Portugal), Russian and Greek.</p>'})|raw}}
                 </div>
             </div>
         </div>
@@ -104,6 +103,7 @@
 </section>
 
 <!-- TEMPLATE PREVIEWER !-->
+<a id="template-preview"></a>
 <section class="template-previewer">
     
     <!-- PREVIEW WINDOW !--> 
@@ -147,7 +147,7 @@
                                     <span class="preview-option"></span>
                                 </li>
                                 <li>
-                                    <label for="option3"><h4 class="h4circle green">FR</h4></label>
+                                    <label for="option3"><h4 class="h4circle green">DE</h4></label>
                                     <input name="site-url" type="radio" id="option3" value="http://002.basekit.com" class="preview-input">
                                     <span class="preview-option"></span>
                                 </li>
@@ -204,19 +204,19 @@
             <div class="res-col columns span-50-25-25">
                 <div class="column span-three-left">
                     <ul class="signup-steps">
-                        <li class="step signup">{{widget('content', 'developercomminitystepscontent1', {"content":'<h4 class="h4dark">1. Signup</h4><p class="psub">Create a <a href="#">business account</a> with BaseKit<br> - free trial available on request.</p>'})|raw}}</li>
-                        <li class="step setup">{{widget('content', 'developercomminitystepscontent2', {"content":'<h4 class="h4dark">2. Setup</h4><p class="psub">Read the <a href="#">online documentation</a><br> and start building your own template.</p>'})|raw}}</li>
+                        <li class="step signup">{{widget('content', 'developercomminitystepscontent1', {"content":'<h4 class="h4dark">1. Signup</h4><p class="psub">Create a business account with BaseKit<br> - free trial available on request.</p>'})|raw}}</li>
+                        <li class="step setup">{{widget('content', 'developercomminitystepscontent2', {"content":'<h4 class="h4dark">2. Setup</h4><p class="psub">Read the <a href="http://developer.basekit.com">online documentation</a><br> and start building your own template.</p>'})|raw}}</li>
                         <li class="step spread">{{widget('content', 'developercomminitystepscontent3', {"content":'<h4 class="h4dark">3. Spread the Word</h4><p class="psub">Get discounts and upgrades when you<br> refer other developers.</p>'})|raw}}</li>
                 </div>
                 <div class="circle-graphics">
                     <div class="column span-three-middle">
                         <img src="{{asset('/images/code-graphic.png')}}">
-                        <a href="#" class="button stan-btn green">Join the Community</a>
-                        {{widget('content', 'developercommunitycodecontent1', {"content":'<p class="psub">See <a href="#">customer templates</a></p>'})|raw}}
+                        <a href="http://develop.basekit.com" class="button stan-btn green">Join the Community</a>
+                        {{widget('content', 'developercommunitycodecontent1', {"content":'<p class="psub">See <a href="/#template-preview">customer templates</a></p>'})|raw}}
                     </div>
                     <div class="column span-three-right">
                         <img src="{{asset('/images/docs-graphic.png')}}">
-                        <a href="#" class="button stan-btn orange">Online Documenation</a>
+                        <a href="http://develop.basekit.com" class="button stan-btn orange">Online Documenation</a>
                         {{widget('content', 'developercommunitydocscontent1', {"content":'<p class="psub">Template creation tips</p>'})|raw}}
                     </div>
                 </div>
@@ -236,7 +236,7 @@
 <!-- EDITOR FEATURES !-->
 <section class="editor-features">
     <div class="wrapper">
-        {{widget('content', 'websiteeditorcontent1', {"content":'<h3 class="h3upsize">Site editor features</h3>'})|raw}}
+        {{widget('content', 'websiteeditorcontent1', {"content":'<h3 class="h3upsize" style="text-align: center">Site editor features</h3>'})|raw}}
         <!-- FEATURE LIST !-->
         <div class="feature-list">
             <div class="res-col columns span-30-31-30">
@@ -291,10 +291,10 @@
                 <img src="{{asset('/images/partner-logos/123-reg.png')}}" class="reg-logo">
             </div>
             <div class="column span-five">
-                <img src="{{asset('/images/partner-logos/enom.png')}}" class="enom-logo">
+                <img src="{{asset('/images/partner-logos/fasthosts.png')}}" class="enom-logo">
             </div>
             <div class="column span-five-last">
-                <a href="#" class="button main-btn green">Become a Partner</a>
+                <a href="/partners" class="button main-btn green">Become a Partner</a>
             </div>
         </div>
     </div>
@@ -307,37 +307,40 @@
             <div class="column span-four">
                 {{widget('content', 'footercolumn1content1', {"content":'<h4 class="h4white upsize">BaseKit Platform</h3>'})|raw}}
                 <ul class="footer-menu">
-                    <li>{{widget('content', 'footercolumn1content2', {"content":'<p><a href="#">Partners</a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn1content3', {"content":'<p><a href="#">Tour</a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn1content4', {"content":'<p><a href="#">About</a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn1content5', {"content":'<p><a href="#">Community</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn1content2', {"content":'<p><a href="/">Home</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn1content3', {"content":'<p><a href="/partners">Partners</a></p>'})|raw}}</li>
+                    <!-- <li>{{widget('content', 'footercolumn1content3', {"content":'<p><a href="#">Tour</a></p>'})|raw}}</li> -->
+                    <!-- <li>{{widget('content', 'footercolumn1content4', {"content":'<p><a href="#">About</a></p>'})|raw}}</li> -->
+                    <li>
+                        <a class="fade-out">Community<div class="arrow_box"><h4 class="h4white">Coming Soon</h4></div></a>
+                    </li>
                 </ul>
             </div>
             <div class="column span-four">
                 {{widget('content', 'footercolumn2content1', {"content":'<h4 class="h4white upsize">Company</h3>'})|raw}}
                 <ul class="footer-menu">
-                    <li>{{widget('content', 'footercolumn2content2', {"content":'<p><a href="#">Terms &amp; Conditions</a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn2content3', {"content":'<p><a href="#">Jobs</a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn2content4', {"content":'<p><a href="#">Contact</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn2content2', {"content":'<p><a href="http://www.basekit.com/terms-and-conditions">Terms &amp; Conditions</a></p>'})|raw}}</li>
+                    <!-- <li>{{widget('content', 'footercolumn2content3', {"content":'<p><a href="#">Jobs</a></p>'})|raw}}</li> -->
+                    <li>{{widget('content', 'footercolumn2content4', {"content":'<p><a href="/partners">Contact</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn2content5', {"content":'<p><a href="https://basekit.zendesk.com">Support</a></p>'})|raw}}</li>
                 </ul>
             </div>
             <div class="column span-four">
                 {{widget('content', 'footercolumn3content1', {"content":'<h4 class="h4white upsize">Developers</h3>'})|raw}}
                 <ul class="footer-menu">
-                    <li>{{widget('content', 'footercolumn3content2', {"content":'<p><a href="#">Documentation<i class="fa fa-external-link"></i></a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn3content3', {"content":'<p><a href="#">Join the Community</a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn3content4', {"content":'<p><a href="#">Support</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn3content2', {"content":'<p><a href="http://develop.basekit.com">Documentation<i class="fa fa-external-link"></i></a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn3content3', {"content":'<p><a href="http://develop.basekit.com">Join the Community</a></p>'})|raw}}</li>
                 </ul>
             </div>
             <div class="column span-four">
                 {{widget('content', 'footercolumn4content1', {"content":'<h4 class="h4white upsize">Social</h3>'})|raw}}
                 <ul class="footer-menu half">
-                    <li>{{widget('content', 'footercolumn4content2', {"content":'<p><a href="#">Facebook</a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn4content3', {"content":'<p><a href="#">Twitter</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn4content2', {"content":'<p><a href="https://www.facebook.com/TeamBaseKit">Facebook</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn4content3', {"content":'<p><a href="https://twitter.com/basekit">Twitter</a></p>'})|raw}}</li>
                 </ul>
                 <ul class="footer-menu half">
-                    <li>{{widget('content', 'footercolumn4content4', {"content":'<p><a href="#">YouTube</a></p>'})|raw}}</li>
-                    <li>{{widget('content', 'footercolumn4content5', {"content":'<p><a href="#">Google+</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn4content4', {"content":'<p><a href="http://www.youtube.com/user/TeamBaseKit">YouTube</a></p>'})|raw}}</li>
+                    <li>{{widget('content', 'footercolumn4content5', {"content":'<p><a href="https://plus.google.com/108742094467162026595/posts">Google+</a></p>'})|raw}}</li>
                 </ul>
             </div>
         </div>
@@ -346,7 +349,7 @@
                 <p>Copyright &copy; BaseKit Platform {{ "now"|date("Y") }}. All Rights Reserved.</p>
             </div>
             <div class="right">
-                {{widget('content', 'footer2content2', {"content":'<p>VAT Registration Number 339 0727 47 | Company Number 06669087</p>'})|raw}}
+                <p>VAT Registration Number 339 0727 47 | Company Number 06669087</p>
             </div>
         </div>
     </div>
