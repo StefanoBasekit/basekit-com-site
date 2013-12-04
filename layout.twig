@@ -43,6 +43,10 @@
 	<!-- Validator --> 
 	<script src="{{asset('js/validator/jquery.validator.js')}}"></script>
 	<script type="text/javascript">
+			$('#submit').click(function(){
+				$('.overlay').show();
+			})
+
 			$('#partner-signup').validate({
 				rules: {
 				    name: {
@@ -99,14 +103,13 @@
 						maxlength: "Your website address must be less than 256 characters"
 					}
 				},
-				submitHandler: function(form) {
-					$('.overlay').show();
-					$(form).submit();
-				},
 				invalidHandler: function(event, validator) {
 					$('.overlay').hide();
 				}
 			});
+
+
+
 	</script>
 
 	<!-- ROUNDABOUT !-->
