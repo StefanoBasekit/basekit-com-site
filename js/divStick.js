@@ -1,7 +1,15 @@
 // This function will be executed when the user scrolls the page.
 $(window).scroll(function(e) {
+
+    var el = $(".scroller_anchor");
+
+    // SB: Bomb out if we don't have the scroller_anchor element on this page
+    if (!el.length) {
+        return;
+    }
+
     // Get the position of the location where the scroller starts.
-    var scroller_anchor = $(".scroller_anchor").offset().top;
+    var scroller_anchor = el.offset().top;
     
     // Check if the user has scrolled and the current position is after the scroller's start location and if its not already fixed at the top 
     if ($(this).scrollTop() >= scroller_anchor && $('.partners-subnav').css('position') != 'fixed') 
