@@ -417,28 +417,37 @@ section.device-switcher {
 
 section.tesimonials {
 
-	ul.carousel {
+	
+}
 
-		.roundabout-holder {
-			list-style: none;
-			padding: 6em 0;
-			margin: 0;
-			height: 5em;
-			width: 5em;
+.quotes {
+	margin: 5em 0 0;
 
-			.roundabout-moveable-item {
-				background-color: @lightGrey;
-				height: 4em;
-				width: 4em;
-				cursor: pointer;
-				background-color: #ccc;
-				border: 1px solid #999;
-			}
-			.roundabout-in-focus {
-				cursor: auto;
-			}
+	h3 {
+		font-size: 18px;
+		text-align: center;
+		span {
+			font-family: 'proxima-nova'!important;
+			font-size: 14px;
+			margin-left: 4px;
+			letter-spacing: 0;
 		}
 	}
+
+	img {
+		display: block;
+		margin: 0 auto 1.5em;
+	}
+}
+
+.quote {
+	text-align: center;
+	background-color: @lightGrey;
+	border: 1px solid darken(@lightGrey,10%);
+	padding: 30px;
+	margin-bottom: 1em;
+	.rounded-corners;
+	box-shadow: 0 0 10px rgba(150,150,150,0.1);
 }
 
 
