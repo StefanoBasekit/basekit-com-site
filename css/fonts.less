@@ -28,7 +28,8 @@
 
 
 /* @import must be at top of file, otherwise CSS will not work */
-@import image('//hello.myfonts.net/count/293530');
+/* SB: This won't work as image expects a relative path. The URL gives an empty response so this shouldn't be required */
+/* @import image('//hello.myfonts.net/count/293530'); */
 
 
 @font-face {
@@ -56,9 +57,9 @@
 @font-face {
     font-family: 'din';
     src: image('din/dinWeb.eot');
-    src: image('/fonts/din/dinWeb.eot?#iefix') format('embedded-opentype'),
-         image('/fonts/din/dinWeb.woff') format('woff'),
-         image('/fonts/din/dinComp.ttf') format('truetype');
+    src: image('/fonts/din/DINWeb.eot?#iefix') format('embedded-opentype'),
+         image('/fonts/din/DINWeb.woff') format('woff'),
+         image('/fonts/din/DinComp.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
