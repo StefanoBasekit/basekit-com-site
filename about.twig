@@ -29,7 +29,7 @@
 </header>
 
 <!-- SUB NAV BAR !-->
-<a id="/#partner-signup"></a>
+<a id="#partner-signup"></a>
  <!-- This div is used to indicate the original position of the scrollable fixed div. -->
 <div class="scroller_anchor"></div>
 
@@ -76,7 +76,7 @@
                     <!-- FORM !-->
                     <form id="partner-signup" method="post" action="http://partners.basekit.com/sign-up">
                         <div class="res-col columns span-50-50">
-                            <div class="column span-two">
+                            <div class="column span-two-left">
                                 <!-- NAME - TELEPHONE !-->
                                 <fieldset>
                                     {{widget('content', 'partnersignupfieldset1content1', {"content":'<p><b>Enter your <span class="orange">contact details</span> below.</b></p>'})|raw}}
@@ -86,7 +86,7 @@
                                     <input name="telephone" id="telephone" type="text" placeholder="Enter your telephone number...">
                                 </fieldset>
                             </div>
-                            <div class="column span-two">
+                            <div class="column span-two-right">
                                 <!-- COMPANY - WEBSITE !-->
                                 <fieldset>
                                     {{widget('content', 'partnersignupfieldset12ontent1', {"content":'<p><b>Enter your <span class="orange">account information</span> below.</b></p>'})|raw}}
@@ -105,11 +105,11 @@
                             <div class="res-col columns span-50-50">
                                 {{widget('content', 'partnersignupfieldset3ontent1', {"content":'<p><b>Enter additonal information about your company.</b></p>'})|raw}}
                                 <fieldset>
-                                    <div class="column span-two">
+                                    <div class="column span-two-left">
                                         <label>{{widget('content', 'partnersignupfieldset3content2', {"content":'<h4 class="h4dark">COMPANY NAME</h4>'})|raw}}</label>
                                         <input name="companyName" id="companyName" type="text" placeholder="Enter your company name...">
                                     </div>
-                                    <div class="column span-two">
+                                    <div class="column span-two-right">
                                         <label>{{widget('content', 'partnersignupfieldset3content3', {"content":'<h4 class="h4dark">WEBSITE</h4>'})|raw}}</label>
                                         <input name="website" id="website" type="text" placeholder="Enter your company website...">
                                     </div>
@@ -119,7 +119,7 @@
 
                         <!-- USER BASE FIELDS !-->
                         <div class="res-col columns span-50-50">
-                            <div class="column span-two">
+                            <div class="column span-two-left">
                                 <fieldset>
                                     <label>{{widget('content', 'partnersignupfieldset4content2', {"content":'<h4 class="h4dark">NUMBER OF USERS</h4>'})|raw}}</label>
                                     <div class="select-style">
@@ -132,7 +132,7 @@
                                     </div>
                                 </fieldset>
                             </div>
-                            <div class="column span-two">
+                            <div class="column span-two-right">
                                 <fieldset>
                                     <label>{{widget('content', 'partnersignupfieldset5content1', {"content":'<h4 class="h4dark">LANGUAGE</h4>'})|raw}}</label>
                                     <div class="select-style">
@@ -256,7 +256,7 @@
                     {{widget('content', 'subsignupcontent1', {"content":'<h2 class="nopad">Become a BaseKit Partner</h2><h5>Signup to access our partner portal and get a <a href="#">free trial</a> site.</h5>'})|raw}}
                 </div>
                 <div class="column span-30">
-                    <a href="/#partner-signup" class="button main-btn green">Signup Today</a>
+                    <a href="#partner-signup" class="button main-btn green">Signup Today</a>
                 </div>
             </div>
         </div>  
@@ -271,10 +271,10 @@
         <!-- DEVICE CONTENT !-->
         <div class="device-content">
             <div class="res-col columns span-50-50">
-                <div class="column span-two">
+                <div class="column span-two-left">
                     <img src="{{asset('/images/device-liftmodule.png')}}" class="tablet">
                 </div>
-                <div class="column span-two">
+                <div class="column span-two-right">
                     <div class="right-text">
                         {{widget('content', 'deviceswitchercontent1', {"content":'<h4 class="upsize3"><span class="orange">Websites for All Devices</span></h4><p class="hwhite" style="margin-bottom: 1em">Our responsive sites are designed from the ground up to look<br> great on any device. See how your site looks at any point without<br> having wait for conversions or use a secondary application.</p><p class="hwhite">Don&#39;t settle for a website builder that adds a clumsy &#39;mobile con-<br>version&#39; process at the end of the site publishing workflow. Only a<br> fully responsive site can provide a simple, consistant way for your<br> customers to make websites that work everywhere.</p>'})|raw}}
                     </div>

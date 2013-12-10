@@ -936,14 +936,14 @@
 .preview-container.tablet .screen {
   display: block;
 }
-.preview-container.tablet:before {
+/*.preview-container.tablet:before {
   width: 1.0714em;
   height: 1.0714em;
   border-radius: 7.1428em;
   background: #232525;
   top: 4.1428em;
   left: 34.5em;
-}
+}*/
 .preview-container.tablet:after {
   width: 5.1428em;
   height: 5.1428em;
@@ -1006,31 +1006,34 @@
   transition: none;
 }
 @media only screen and (min-height: 46.25em) {
-  .preview-container.auto {
-    height: 70vh;
+  .preview-container.auto .screen-border {
+    top: 2em!important;
+  }
+  .preview-container.auto:before {
+    background-size: 2.6em;
+    top: .8em;
   }
 }
-@media only screen and (min-height: 58.75em) {
+@media only screen and (max-width: 479px) {
+  .preview-container {
+    margin: 4em auto 0;
+  }
   .preview-container.auto {
-    height: 75vh;
+    height: 29em;
   }
 }
-@media only screen and (min-height: 66.875em) {
-  .preview-container.auto {
-    height: 80vh;
-  }
-}
+
 .preview-container.auto:before {
   content: "";
   background-image: url('images/controls.png');
   background-repeat: no-repeat;
   display: block;
   position: absolute;
-  top: 1.05em;
+  top: .7em;
   left: 1em;
   width: 5em;
   height: 2em;
-  background-size: 3em;
+  background-size: 2.6em;
 }
 .preview-container.auto .screen-border {
   position: absolute;

@@ -69,7 +69,7 @@
             "font-family": "din",
             "font-size": "36px",
             "font-weight": "inherit",
-            "line-height": "32px",
+            "line-height": "36px",
             "color": "@color-swatch4",
             "letter-spacing": "-2px"
         },

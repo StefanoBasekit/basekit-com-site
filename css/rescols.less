@@ -45,12 +45,12 @@
 		width: 80%;
 	}
 
-	@media only screen and (max-width: 479px) {
+	/*@media only screen and (max-width: 479px) {
 		.columns.span-20-80 .column.span-20,
 		.columns.span-20-80 .column.span-80 {
 			width: 100%;
 		}
-	}
+	}*/
 
 	/* === 30 x 70 === */
 
@@ -74,8 +74,25 @@
 
 	/* === 50 x 50 === */
 
-	.columns.span-50-50 .column.span-two {
-		width: 50%;
+	.columns {
+		.column {
+			&.span-two-left {
+				width: 47.5%;
+				margin-right: 2.5%;
+				@media @mobile {
+					width: 100%;
+					margin: 0;
+				}
+			}
+			&.span-two-right {
+				width: 47.5%;
+				margin-left: 2.5%;
+				@media @mobile {
+					width: 100%;
+					margin: 0;
+				}
+			}
+		}
 	}
 
 	/* === 55 x 45 === */
@@ -97,31 +114,38 @@
 
 	/* === 30 x 31 x 30 === */
 
-	.columns.span-30-31-30 .column.span-three-left,
-	.columns.span-30-31-30 .column.span-three-right {
-		width: 29%;
-	}
+	.columns {
 
-	.columns.span-30-31-30 .column.span-three-middle {
-		width: 30%;
-		margin-left: 5.5%;
-		margin-right: 5.5%;
-	}
+		&.span-30-31-30 {
 
-	@media only screen and (max-width: 768px) {
+			.column {
 
-		.columns.span-30-31-30 .column.span-three-left,
-		.columns.span-30-31-30 .column.span-three-middle,
-		.columns.span-30-31-30 .column.span-three-right {
-			width: 100%;
-			margin: 0 0 10%;
+				&.span-three-left,
+				&.span-three-right {
+					width: 29%;
+					@media @mobile {
+						width: 100%;
+						margin: 0 0 10%;
+					}
+				}
+				&.span-three-middle {
+					width: 30%;
+					margin-left: 5.5%;
+					margin-right: 5.5%;
+					@media @mobile {
+						width: 100%;
+						margin: 0 0 10%;
+					}
+				}
+				&.span-three-right {
+					margin: 0;
+				}
+
+			}
 		}
 
-		.columns.span-30-31-30 .column.span-three-right {
-			margin: 0;
-		}
-
 	}
+
 
 	/* === 40 x 30 x 30 === */
 
@@ -157,16 +181,35 @@
 
 	/* === 20 x 5 === */
 
-	.columns.span-20x5 .column.span-five-first {
-		width: 15%;
-	}
+	.columns {
 
-	.columns.span-20x5 .column.span-five {
-		width: 21.2%;
-	}
+		&.span-20x5 {
+			
+			.column {
 
-	.columns.span-20x5 .column.span-last {
-		width: 25%;
+				&.span-five-first {
+					width: 15%;
+
+					@media @tablet {
+						display: none;
+					}
+
+				}
+
+				&.span-five {
+					width: 21.2%;
+
+					@media @tablet {
+						width: 25%;
+					}
+					@media @mobile {
+						width: 50%;
+					}
+
+				}
+			}
+		}
+
 	}
 
 	/* === 13 x 20x3 x 27 === */
