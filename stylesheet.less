@@ -701,6 +701,13 @@ section.template-slideshow {
 				-webkit-border-radius: 50%;
 				-moz-border-radius: 50%;
 				border-radius: 50%;
+				@media @mobileSml {
+					display: none;
+				}
+			}
+			@media @mobileSml {
+				height: 10px;
+				padding: 0 8px 0;
 			}
 		}
 	}
@@ -719,6 +726,9 @@ section.template-slideshow {
 			}
 			@media @mobile {
 				height: 230px;
+			}
+			@media @mobileSml {
+				height: 158px;
 			}
 		}	
 
@@ -815,7 +825,7 @@ section.developer-community {
 			}
 
 			li {
-				padding: 0 0 2em 4em;
+				padding: 0 0 2em 5.5em;
 				.box-sizing;
 
 				@media @tablet {
