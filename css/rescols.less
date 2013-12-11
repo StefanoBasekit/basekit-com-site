@@ -54,42 +54,91 @@
 
 	/* === 30 x 70 === */
 
-	.columns.span-30-70 .column.span-30 {
-		width: 30%;
-	}
-
-	.columns.span-30-70 .column.span-70 {
-		width: 70%;
+	.columns {
+		&.span-30-70 {
+			.column {
+				&.span-30 {
+					width: 30%;
+					@media @mobile {
+						width: 100%;
+					}
+				}
+				&.span-70 {
+					width: 70%;
+					@media @mobile {
+						width: 100%;
+					}
+				}
+			}
+		}
 	}
 
 	/* === 70 x 30 === */
 
-	.columns.span-70-30 .column.span-70 {
-		width: 70%;
-	}
-
-	.columns.span-70-30 .column.span-30 {
-		width: 30%;
+	.columns {
+		&.span-70-30 {
+			.column {
+				&.span-70 {
+					width: 70%;
+					@media @mobile {
+						width: 100%;
+					}
+				}
+				&.span-30 {
+					width: 30%;
+					@media @mobile {
+						width: 100%;
+					}
+				}
+			}
+		}
 	}
 
 	/* === 50 x 50 === */
 
 	.columns {
-		.column {
-			&.span-two-left {
-				width: 47.5%;
-				margin-right: 2.5%;
-				@media @mobile {
-					width: 100%;
-					margin: 0;
+		&.span-50-50 {
+			.column {
+				&.span-two-left {
+					width: 47.5%;
+					margin-right: 2.5%;
+					@media @mobile {
+						width: 100%;
+						margin: 0 0 3em;
+					}
+				}
+				&.span-two-right {
+					width: 47.5%;
+					margin-left: 2.5%;
+					@media @mobile {
+						width: 100%;
+						margin: 0;
+					}
 				}
 			}
-			&.span-two-right {
-				width: 47.5%;
-				margin-left: 2.5%;
-				@media @mobile {
-					width: 100%;
-					margin: 0;
+		}
+	}
+
+	/* === 54 x 46 === */
+
+	.columns {
+		&.span-54-46 {
+			.column {
+				&.span-two-left {
+					width: 51%;
+					margin-right: 3%;
+					@media @mobile {
+						width: 100%;
+						margin: 0 0 3em;
+					}
+				}
+				&.span-two-right {
+					width: 43%;
+					margin-left: 3%;
+					@media @mobile {
+						width: 100%;
+						margin: 0;
+					}
 				}
 			}
 		}
@@ -170,8 +219,18 @@
 
 	/* === 25 x 4 === */
 
-	.columns.span-25x4 .column.span-four {
-		width: 25%;
+	.columns {
+		&.span-25x4 {
+			.column {
+				&.span-four {
+					width: 25%;
+					@media @mobile {
+						width: 50%;
+						margin: 0 0 10%;
+					}
+				}
+			}
+		}
 	}
 
 

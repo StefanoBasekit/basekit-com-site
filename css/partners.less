@@ -15,12 +15,15 @@ section.partners-subnav {
 
 	h2 {
 		line-height: 110px;
+		@media @tablet {
+			line-height: 100px;
+		}
 	}
 
 	ul {
-		height: 110px;
-		width: 92%;
+		width: 100%;
 		float: right;
+		margin-right: -5%;
 
 		li {
 			float: left;
@@ -51,6 +54,10 @@ section.partners-subnav {
 					i {
 						color: @color-swatch3;
 					}
+				}
+
+				@media @tablet {
+					margin: 1.2em 0 0;
 				}
 
 				i {
@@ -86,9 +93,33 @@ section.partners-subnav {
 section.signup-form {
 	background-color: @color-swatch3;
 	padding: 6em 0 0;
+	@media @tablet {
+		padding: 4em 0 0;
+
+		.columns {
+			&.span-70-30 {
+				.column {
+					&.span-70 {
+						width: 100%;
+					}
+					&.span-30 {
+						display: none;
+					}
+				}
+			}
+		}
+
+		h3 {
+			white-space: nowrap;
+		}
+
+	}
 
 	ul.points {
 		float: right;
+		@media @tablet {
+			display: none;
+		}
 
 		li {
 			display: inline-block;
@@ -120,6 +151,9 @@ section.signup-form {
 		form {
 			padding: 40px 30px 0;
 			border-right: 1px solid #d7d7d7;
+			@media @tablet {
+				border-right: 0;
+			}
 
 			label {
 				display: block;
@@ -153,6 +187,7 @@ section.signup-form {
 				border: 1px solid #e6e6e6;
 				text-indent: 12px;
 				.p-font;
+				font-size: 14px;
 
 				&:focus {
 					outline: none;
@@ -190,6 +225,7 @@ section.signup-form {
 				    background-image: none;
 				    -webkit-appearance: none;
 				    .p-font;
+				    font-size: 14px;
 				    cursor: pointer;
 				    padding: 13px 0;
 
@@ -259,14 +295,16 @@ section.signup-form {
    =============================== */
 
 section.why-basekit {
-	display: table;
 
-	.formaddon-container {
-
+	@media @tablet {
+		padding: 5em 0 0;
 	}
 
 	.info-blocks {
 		margin: 5.5em 0 0;
+		@media @tablet {
+			padding: 0;
+		}
 	}
 
 	i {
@@ -274,22 +312,63 @@ section.why-basekit {
 		margin: 9px 20px 0 0;
 		color: @color-swatch3;
 		vertical-align: middle;
+		@media @tablet {
+			display: none;
+		}
 	}
 
 	.bkcoversion {
-		display: table-row;
-	}
 
-	.conversion-left {
-		margin: 3em 0 0;
-	}
+		.conversion-left {
+			margin: 1.7em 0 0;
+		}
 
-	.conversion-right {
-		margin: .3em 0 0;
+		.conversion-right {
+			margin: .3em 0 0;
+		}
+
+
+		&.columns {
+
+			&.span-30-31-30 {
+
+				.column {
+
+					&.span-three-left,
+					&.span-three-right {
+						width: 100%!important;
+						@media @mobile {
+							width: 100%;
+							margin: 0 0 10%;
+						}
+					}
+					&.span-three-middle {
+						width: 30%;
+						margin-left: 5.5%;
+						margin-right: 5.5%;
+						@media @mobile {
+							width: 100%;
+							margin: 0 0 10%;
+						}
+					}
+					&.span-three-right {
+						margin: 0;
+					}
+
+				}
+			}
+
+		}
+
 	}
 
 	.conversion-circle {
-		display: table-cell;
+
+		img {
+			max-width: 101%;
+		}
+
+		/*display: table-cell;
 		vertical-align: middle;
 		background-color: @color-swatch2;
 		height: 285px;
@@ -311,8 +390,9 @@ section.why-basekit {
 			color: @color-swatch1;
 			line-height: 22px;
 			letter-spacing: -1px;
-		}
+		}*/
 	}
+
 }
 
 
@@ -324,14 +404,28 @@ section.become-partner {
 	text-align: center;
 	padding: 6em 0 0;
 
+	h5 {
+		max-width: 70%;
+		margin: 0 auto;
+		@media @tablet {
+			max-width: 100%;
+		}
+	}
+
 	.partner-steps {
 		margin: 2em 0 0;
 		position: relative;
 		bottom: -70px;
+		@media @tablet {
+			margin: 0;
+		}
 
 		.step {
 			position: relative;
 			padding: 2.4em 0;
+			@media @tablet {
+				padding: 2em 0;
+			}
 			background-color: @color-swatch3;
 			.rounded-corners;
 			box-shadow: 0 3px 0px darken(@color-swatch3,10%);
@@ -350,14 +444,27 @@ section.become-partner {
 				-webkit-border-radius: 50%;
 				-moz-border-radius: 50%;
 				border-radius: 50%;
+				@media @tablet {
+					line-height: 38px;
+					font-size: 19px;
+					height: 35px;
+					width: 35px;
+					top: -18px;
+				}
 			}
 
 			h3 {
 				font-size: 28px;
+				@media @tablet {
+					font-size: 21px;
+				}
 			}
 
 			img {
 				padding: 2.4em 0 0;
+				@media @tablet {
+					max-width: 80%;
+				}
 			}
 		}
 	}
@@ -367,6 +474,9 @@ section.become-partner {
 
 section.become-partner-sub {
 	padding: 7em 0 6em;
+	@media @tablet {
+		padding: 10em 0 6em;
+	}
 }
 
 .subsignup {
@@ -381,6 +491,22 @@ section.become-partner-sub {
 		float: right;
 		position: relative;
 		top: -1px;
+		@media @tablet {
+			top: -3px;
+		}
+	}
+
+	h2 {
+		&.nopad {
+			padding: 0;
+			line-height: 44px;
+		}
+	}
+
+	h5 {
+		@media @tablet {
+			display: none;
+		}
 	}
 }
 
@@ -393,18 +519,51 @@ section.device-switcher {
 	padding: 6em 0 0;
 	background-color: @color-swatch7;
 
+	@media @tablet {
+		text-align: center;
+
+		.columns {
+			&.span-50-50 {
+				.column {
+					&.span-two-left {
+						width: 100%;
+						margin: 0 0 10%;
+					}
+					&.span-two-right {
+						width: 100%;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
 	.device-content {
 		margin: 6em 0 0;
+		@media @tablet {
+			margin: 3em 0 0;
+		}
 
-		img.tablet {
+		img.tablet-wht {
 			position: relative;
 			left: -368px;
 			bottom: -4px;
 			max-width: inherit;
+			@media @tablet {
+				max-width: 80%;
+				display: block;
+				margin: 0 auto;
+				left: 0;
+				bottom: 0;
+			}
 		}
 
 		.right-text {
 			margin: 3em 0 0;
+			@media @tablet {
+				max-width: 64%;
+				margin: 3em auto 0;
+			}
 		}
 	}
 
@@ -415,40 +574,68 @@ section.device-switcher {
    TESTIMONIALS
    =========================== */
 
-section.tesimonials {
+section.testimonials {
 
-	
-}
-
-.quotes {
-	margin: 5em 0 0;
-
-	h3 {
-		font-size: 18px;
-		text-align: center;
-		span {
-			font-family: 'proxima-nova'!important;
-			font-size: 14px;
-			margin-left: 4px;
-			letter-spacing: 0;
+	@media @tablet {
+		.columns {
+			&.span-30-31-30 {
+				.column {
+					&.span-three-left {
+						width: 47.5%!important;
+						margin-right: 2.5%!important;
+					}
+					&.span-three-middle {
+						width: 47.5%!important;
+						margin-left: 2.5%!important;
+						margin-right: 0%!important;
+					}
+					&.span-three-right {
+						display: none;
+					}
+				}
+			}
 		}
 	}
 
-	img {
-		display: block;
-		margin: 0 auto 1.5em;
+	.quotes {
+		margin: 5em 0 0;
+
+		h3 {
+			font-size: 18px;
+			text-align: center;
+			span {
+				font-family: 'proxima-nova'!important;
+				font-size: 14px;
+				margin-left: 4px;
+				letter-spacing: 0;
+			}
+		}
+
+		img {
+			display: block;
+			margin: 0 auto 1.5em;
+			&.hg-logo {
+				margin-top: -10px; 
+				margin-bottom: 13px;
+				@media @tablet {
+					margin-top: -16px;
+				}
+			}
+		}
+
+		.quote {
+			text-align: center;
+			background-color: @lightGrey;
+			border: 1px solid darken(@lightGrey,10%);
+			padding: 30px;
+			margin-bottom: 1em;
+			.rounded-corners;
+			box-shadow: 0 0 10px rgba(150,150,150,0.1);
+		}
 	}
+	
 }
 
-.quote {
-	text-align: center;
-	background-color: @lightGrey;
-	border: 1px solid darken(@lightGrey,10%);
-	padding: 30px;
-	margin-bottom: 1em;
-	.rounded-corners;
-	box-shadow: 0 0 10px rgba(150,150,150,0.1);
-}
 
 
 

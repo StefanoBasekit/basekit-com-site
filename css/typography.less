@@ -21,6 +21,13 @@ h1 {
 	line-height:@font-swatch1-line-height;
 	letter-spacing: @font-swatch1-letter-spacing;
 	font-size: @font-swatch1-font-size;
+	@media @tablet { 
+		font-size: bkscale(@font-swatch1-font-size,0.75);
+		line-height: bkscale(@font-swatch1-line-height,0.75);
+	}
+	@media @mobileSml { 
+		font-size: bkscale(@font-swatch1-font-size,0.68);
+	}
 }
 
 h2
@@ -46,6 +53,19 @@ h2
 	}
 	&.h2-20pad {
 		padding-bottom: 20px;
+	}
+
+	@media @tablet { 
+		font-size: bkscale(@font-swatch2-font-size,0.85);
+
+		&.h2sub {
+			font-size: 17px;
+			line-height: 26px;
+		}
+	}
+	@media @mobile { 
+		font-size: bkscale(@font-swatch2-font-size,0.8);
+		padding-bottom: 50px;
 	}
 }
 
@@ -79,6 +99,10 @@ h3
 		@media @tablet {
 			margin-bottom: 60px;
 		}
+	}
+
+	@media @tablet { 
+		font-size: bkscale(@font-swatch3-font-size,0.95);
 	}
 }
 
@@ -146,6 +170,14 @@ h5 {
 		color: @color-swatch4;
 		line-height: 24px;
 	}
+
+	@media @tablet { 
+		font-size: 17px;
+	}
+	@media @mobile { 
+		font-size: 16px;
+	}
+
 }
 
 p {

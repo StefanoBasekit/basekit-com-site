@@ -1016,10 +1016,20 @@
 }
 @media only screen and (max-width: 479px) {
   .preview-container {
-    margin: 4em auto 0;
+    margin: 0;
+  }
+  .preview-container.auto .screen-border {
+    top: 0!important;
   }
   .preview-container.auto {
+    width: 100%;
     height: 29em;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+  }
+  .preview-container.auto:before {
+    display: none;
   }
 }
 

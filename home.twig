@@ -93,6 +93,16 @@
                 </div>
             </div>
         </div>
+        <div class="mobile">
+            <div class="res-col columns span-50-50">
+                <div class="column span-two-left">
+                    <img src="{{asset('/images/partner-logos/host-europe.png')}}" class="he-logo">
+                </div>
+                <div class="column span-two-right">
+                    <img src="{{asset('/images/partner-logos/123-reg.png')}}" class="reg-logo">
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -103,25 +113,25 @@
         <!-- INTRO - 3 BLOCKS !-->
         <div class="res-col columns span-30-31-30">
             <div class="column span-three-left">
-                {{widget('content', 'intro3blockscontent1', {"content":'<h4>Responsive Site</h4><p>Every site adapts to the device it is used on so your site will always look great on any size of screen.</p>'})|raw}}
+                {{widget('content', 'intro3blockscontent1', {"content":'<h4>Responsive Site</h4><p> The layout of your website adapts to the screen it is viewed on, so your visitors will always see a site that looks just right.</p>'})|raw}}
             </div>
             <div class="column span-three-middle">
-                {{widget('content', 'intro3blockscontent2', {"content":'<h4>Every Device</h4><p>Responsive CSS3/HTML5 ends the need for clumsy &#39;mobile conversion&#39; tools. Create a site once and it works everywhere.</p>'})|raw}}
+                {{widget('content', 'intro3blockscontent2', {"content":'<h4>Every Device</h4><p>Responsive CSS3/HTML5 ends the need for clumsy &#39;mobile conversion&#39; tools. One site works everywhere.</p>'})|raw}}
             </div>
             <div class="column span-three-right">
-                {{widget('content', 'intro3blockscontent3', {"content":'<h4>Web traffic</h4><p>Over 50% of new web traffic is coming from mobile devices so every website should be designed with mobile in mind.</p>'})|raw}}
+                {{widget('content', 'intro3blockscontent3', {"content":'<h4>Web traffic</h4><p>Over 50% of new web traffic now comes from mobile devices so every website should be designed with mobile in mind.</p>'})|raw}}
             </div>
         </div>
         <div class="divider"></div>
-        <div class="res-col columns span-50-50">
+        <div class="res-col columns span-54-46">
             <div class="desk-tab-mob">
                 <div class="column span-two-left">
-                    {{widget('content', 'introsubcontent1', {"content":'<h3>Desktop. Tablet. Mobile. <span class="preview-sub">Preview on all devices.</span></h3><p>Use our instant preview mode to view and edit your website on desktop, tablet and mobile screen widths. Easily change and edit the appearance of your site by changing colours, fonts and layouts.</p>'})|raw}}
+                    {{widget('content', 'introsubcontent1', {"content":'<h3>Computer. Tablet. Mobile. <span class="preview-sub">Preview on all devices.</span></h3><p>Switch between Computer, Tablet and Mobile preview at any time to see instantly how your site looks on each kind of device. Publish your site at any time with out any extra steps to make a mobile version. No other site editor makes building a Responsive site so simple.</p>'})|raw}}
                 </div>
             </div>
             <div class="column span-two-right">
                 <div class="language-info">
-                    {{widget('content', 'introsubcontent2', {"content":'<h3>Available in 15 languages</h3><p>Editor 7 is available in English (British), English (US), Polish, Serbian, German, Spanish, French, Italian, Dutch, Turkish, Portugese (Brazilian), Swedish, Portuguese (Portugal), Russian and Greek.</p>'})|raw}}
+                    {{widget('content', 'introsubcontent2', {"content":'<h3>Available in 11 languages</h3><p>Editor 7 is available in English (British), English (US), Polish, German, Spanish, French, Italian, Dutch, Turkish and Portuguese (Brazilian), Russian, Serbian. Greek and Portuguese (European) are coming soon.</p>'})|raw}}
                 </div>
             </div>
         </div>
@@ -139,7 +149,8 @@
             <div class="view-toolbar clearfix" role="menu">
                 <div class="wrapper">
                     <div class="device-left clearfix">
-                        <h4 class="h4white">Select a Device</h4>
+                        <h4 class="h4white mobHide">Select a Device</h4>
+                        <h4 class="h4white mobShow">Preview Site</h4>
                         <ul class="js-view-controls view-controls">
                             <li class="auto-item">
                                 <button class="js-device-switch js-auto view-control view-control-auto selected">
@@ -208,7 +219,7 @@
                 {{widget('content', 'template-slideshow3blockscontent2', {"content":'<h4>Fully Customisable</h4><p>Every template design can be easily customised by changing colours, fonts, backgrounds  and images.</p>'})|raw}}
             </div>
             <div class="column span-three-right">
-                {{widget('content', 'template-slideshow3blockscontent3', {"content":'<h4>Change at Any Time</h4><p>Give your site a complete a new look by swapping templates at any time. New templates are added every two weeks. </p>'})|raw}}
+                {{widget('content', 'template-slideshow3blockscontent3', {"content":'<h4>Change at Any Time</h4><p>Give your site a complete a new look by swapping templates at any time. New templates are added every few weeks. </p>'})|raw}}
             </div>
         </div>
 
@@ -387,7 +398,7 @@
         </div>
         <!-- BAR - TABLET !-->
         <div class="tablet">
-            {{widget('content', 'partnerbar1content1', {"content":'<h3><span>Start your free,</span> no-risk, <span>14 day trial!</span><a href="/partners" class="button main-btn green">Become a Partner</a></h3>'})|raw}}
+            {{widget('content', 'partnerbar2content1', {"content":'<h3><span class="mobHide">Start your free, <span class="darkspan">no-risk</span>, BaseKit trial!</span><a href="/partners" class="button main-btn green">Become a Partner</a></h3>'})|raw}}
         </div>
     </div>
 </section>
@@ -438,11 +449,11 @@
         </div>
         <div class="footer2 clearfix">
             <div class="left">
-                <p>Copyright &copy; BaseKit Platform {{ "now"|date("Y") }}. All Rights Reserved.</p>
+                <p><span class="mobHide">Copyright</span>&copy; BaseKit Platform {{ "now"|date("Y") }}. All Rights Reserved.</p>
             </div>
             <div class="right">
                 <p class="desktop">VAT Registration Number 339 0727 47 | Company Number 06669087</p>
-                <p class="tablet">VAT No. 339 0727 47&nbsp;|&nbsp;Company No. 06669087</p>
+                <p class="tablet mobHide">VAT No. 339 0727 47&nbsp;|&nbsp;Company No. 06669087</p>
             </div>
         </div>
     </div>
