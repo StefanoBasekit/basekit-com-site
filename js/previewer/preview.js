@@ -44,7 +44,6 @@ var SitePreview = (function () {
     }
 
     function revealPreview () {
-        el.find('.js-site-preview').append('<iframe class="js-preview-site" src="' + getURL() + '"></iframe>');
         el.find('.js-preview-overlay').remove();
     }
 
@@ -73,6 +72,10 @@ var SitePreview = (function () {
         setActiveDevice(newDevice);
     }
 
+    function loadIframe () {
+        el.find('.js-site-preview').append('<iframe class="js-preview-site" src="' + getURL() + '"></iframe>');
+    }
+
     function attachEvents () {
         el.find('.js-view-controls').on('click', '.js-device-switch', handleDeviceSwitch);
         el.find('.js-preview-selector').on('change', handleURLSwitch);
@@ -81,6 +84,7 @@ var SitePreview = (function () {
 
     return {
         init: function () {
+            loadIframe();
             attachEvents();
             handleMobileWebKit();
         }
@@ -88,5 +92,7 @@ var SitePreview = (function () {
 
 }());
 
-SitePreview.init();
+$(function () {
+    SitePreview.init();
+});
 
