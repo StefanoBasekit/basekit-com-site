@@ -61,18 +61,20 @@
 <!-- SIGNUP FORM !-->
 <section class="signup-form">
     <div class="wrapper">
-        <div class="res-col columns span-30-70">
-            <div class="column span-30">
-                {{widget('content', 'signupform-title', {"content":'<h3 class="hwhite upsize">Partner Signup Form</h3>'})|raw}}
-            </div>
-            <div class="column span-70">
-                <ul class="points">
-                    <li>{{widget('content', 'signupform-point1', {"content":'<h4 class="h4white upsize2">EASY TO DEPLOY</h4>'})|raw}}</li>
-                    <li><i class="fa fa-circle"></i></li>
-                    <li>{{widget('content', 'signupform-point2', {"content":'<h4 class="h4white upsize2">NO UP-FRONT COST</h4>'})|raw}}</li>
-                    <li><i class="fa fa-circle"></i></li>
-                    <li>{{widget('content', 'signupform-point3', {"content":'<h4 class="h4white upsize2">HIGH ARPU</h4>'})|raw}}</li>
-                </ul>
+        <div class="partner-title">
+            <div class="res-col columns span-30-70">
+                <div class="column span-30">
+                    {{widget('content', 'signupform-title', {"content":'<h3 class="hwhite upsize">Partner Signup Form</h3>'})|raw}}
+                </div>
+                <div class="column span-70">
+                    <ul class="points">
+                        <li>{{widget('content', 'signupform-point1', {"content":'<h4 class="h4white upsize2">EASY TO DEPLOY</h4>'})|raw}}</li>
+                        <li><i class="fa fa-circle"></i></li>
+                        <li>{{widget('content', 'signupform-point2', {"content":'<h4 class="h4white upsize2">NO UP-FRONT COST</h4>'})|raw}}</li>
+                        <li><i class="fa fa-circle"></i></li>
+                        <li>{{widget('content', 'signupform-point3', {"content":'<h4 class="h4white upsize2">HIGH ARPU</h4>'})|raw}}</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <!-- FORM CONTAINER !-->
@@ -89,7 +91,7 @@
                                     <label>{{widget('content', 'partnersignupfieldset1content2', {"content":'<h4 class="h4dark">FULL NAME</h4>'})|raw}}</label>
                                     <input name="name" id="name" type="text" placeholder="Enter your full name...">
                                     <label>{{widget('content', 'partnersignupfieldset1content3', {"content":'<h4 class="h4dark">TELEPHONE</h4>'})|raw}}</label>
-                                    <input name="telephone" id="telephone" type="text" placeholder="Enter your telephone number...">
+                                    <input name="telephone" id="telephone" type="text" placeholder="Enter your telephone number..." class="telephone">
                                 </fieldset>
                             </div>
                             <div class="column span-two-right">
@@ -177,7 +179,7 @@
                     {{widget('content', 'whybasekit-3block1', {"content":'<i class="fa fa-bullseye"></i><h4>Low Churn, High Value</h4><p>Your customer&#39;s sites can grow at any time so they won&#39;t cancel when they need more features.</p>'})|raw}}
                 </div>
                 <div class="column span-three-middle">
-                    {{widget('content', 'whybasekit-3block2', {"content":'<i class="fa fa-signal"></i><h4>Increased Revenue</h4><p>Build sustainable revenue by offering your customers free access to a website builder<br> that has everything they need.</p>'})|raw}}
+                    {{widget('content', 'whybasekit-3block2', {"content":'<i class="fa fa-signal"></i><h4>Increased Revenue</h4><p>Build sustainable revenue by offering your customers free access to a website builder that has everything they need.</p>'})|raw}}
                 </div>
                 <div class="column span-three-right">
                     {{widget('content', 'whybasekit-3block3', {"content":'<i class="fa fa-magic"></i><h4>Easy, Fast Deployment</h4><p>Within an hour you could have Basekit integrated putting you ahead of your competitors.</p>'})|raw}}
@@ -250,7 +252,7 @@
                 {{widget('content', 'becomepartnersubstep1', {"content":'<h4>Simple Signup <span class="tabHide">Process</span></h4><p>Use our simple <a href="#">partner signup form</a> to become a partner in just a few minutes.</p>'})|raw}}
             </div>
             <div class="column span-three-middle">
-                {{widget('content', 'becomepartnersubstep2', {"content":'<h4>Easy Integration</h4><p>Download our <b class="underline">plugin</b> from partner central to get started - or use our <b class="underline">embed code</b>.</p>'})|raw}}
+                {{widget('content', 'becomepartnersubstep2', {"content":'<h4>Easy Integration</h4><p>Download our <b>plugin</b> from partner central to get started - or use our <b>embed code</b>.</p>'})|raw}}
             </div>
             <div class="column span-three-right">
                 {{widget('content', 'becomepartnersubstep3', {"content":'<h4><span class="tabHide">Receive</span> Monthly Revenue</h4><p>Receive attractive revenue-shares on all upgrades and app sales.</p>'})|raw}}
@@ -260,7 +262,7 @@
         <div class="subsignup">
             <div class="res-col columns span-70-30">
                 <div class="column span-70">
-                    {{widget('content', 'subsignupcontent1', {"content":'<h2 class="nopad">Become a BaseKit Partner</h2><h5>Signup to access our partner portal and get a <a href="#">free trial</a> site.</h5>'})|raw}}
+                    {{widget('content', 'subsignupcontent1', {"content":'<h2 class="nopad">Become a BaseKit Partner</h2><h5>Signup to access our partner portal and get a free trial site.</h5>'})|raw}}
                 </div>
                 <div class="column span-30">
                     <a href="#partner-signup" class="button main-btn green">Signup Today</a>
@@ -284,7 +286,7 @@
                     </div>
                     <div class="column span-two-right">
                         <div class="right-text">
-                            {{widget('content', 'deviceswitchercontent1', {"content":'<h4 class="upsize3"><span class="orange">Websites for All Devices</span></h4><p class="hwhite" style="margin-bottom: 1em">Our responsive sites are designed from the ground up to look great on any device. See how your site looks at any point without having to wait for conversions or use a secondary application.</p><p class="hwhite">Don&#39;t settle for a website builder that adds a clumsy &#39;mobile conversion&#39; process at the end of the site publishing workflow. Only a fully responsive site can provide a simple, consistent way for your customers to make websites that work everywhere.</p>'})|raw}}
+                            {{widget('content', 'deviceswitchercontent1', {"content":'<h4 class="upsize3"><span class="orange">Websites for All Devices</span></h4><p class="hwhite first">Our responsive sites are designed from the ground up to look great on any device. See how your site looks at any point without having to wait for conversions or use a secondary application.</p><p class="hwhite">Don&#39;t settle for a website builder that adds a clumsy &#39;mobile conversion&#39; process at the end of the site publishing workflow. Only a fully responsive site can provide a simple, consistent way for your customers to make websites that work everywhere.</p>'})|raw}}
                         </div>
                     </div>
                 </div>
@@ -295,7 +297,7 @@
                 <div class="res-col columns span-50-50">
                     <div class="column span-two-left">
                         <div class="right-text">
-                            {{widget('content', 'deviceswitchercontent1', {"content":'<h4 class="upsize3"><span class="orange">Websites for All Devices</span></h4><p class="hwhite" style="margin-bottom: 1em">Our responsive sites are designed from the ground up to look great on any device. See how your site looks at any point without having to wait for conversions or use a secondary application.</p><p class="hwhite">Don&#39;t settle for a website builder that adds a clumsy &#39;mobile conversion&#39; process at the end of the site publishing workflow. Only a fully responsive site can provide a simple, consistent way for your customers to make websites that work everywhere.</p>'})|raw}}
+                            {{widget('content', 'deviceswitchercontent1', {"content":'<h4 class="upsize3"><span class="orange">Websites for All Devices</span></h4><p class="hwhite first" style="margin-bottom: 1em">Our responsive sites are designed from the ground up to look great on any device. See how your site looks at any point without having to wait for conversions or use a secondary application.</p><p class="hwhite">Don&#39;t settle for a website builder that adds a clumsy &#39;mobile conversion&#39; process at the end of the site publishing workflow. Only a fully responsive site can provide a simple, consistent way for your customers to make websites that work everywhere.</p>'})|raw}}
                         </div>
                     </div>
                     <div class="column span-two-right">
@@ -314,7 +316,7 @@
         {{widget('content', 'testimonialstitle', {"content":'<h2 class="h2-20pad" style="text-align: center">Customer Testimonials</h2><h5 style="text-align: center">Proud to partner with these and many other leading hosting companies.</h5>'})|raw}}
 
         <!-- QUOTES !-->
-        <div class="quotes">
+        <!-- <div class="quotes">
             <div class="res-col columns span-30-31-30">
                 <div class="column span-three-left">
                     <img src="{{asset('/images/partner-logos/123-reg.png')}}">
@@ -331,6 +333,24 @@
                     <h3>HostGator <span>- Brent Oxley, President</span></h3>
                 </div>
                 <div class="column span-three-right">
+                    <img src="{{asset('/images/partner-logos/uk2group.png')}}" style="margin: 12px auto 2em">
+                    <div class="quote">
+                        {{widget('content', 'testimonialquote3', {"content":'<p>"BaseKit were the only team that we felt we could work with, as they shared our vision for enabling users to quickly create fantastic looking websites."</p>'})|raw}}
+                    </div>
+                    <h3>UK2 Group <span>- Andy Manning, Director</span></h3>
+                </div>
+            </div>
+        </div> -->
+        <div class="quotes">
+            <div class="res-col columns span-50-50">
+                <div class="column span-two-left">
+                    <img src="{{asset('/images/partner-logos/123-reg.png')}}">
+                    <div class="quote">
+                        {{widget('content', 'testimonialquote1', {"content":'<p>"We are very happy with our partnership with Basekit, whose website builder product enables our customers to easily create great looking websites for their business."</p>'})|raw}}
+                    </div>
+                    <h3>123Reg <span>- James McLean, CoFounder</span></h3>
+                </div>
+                <div class="column span-two-right">
                     <img src="{{asset('/images/partner-logos/uk2group.png')}}" style="margin: 12px auto 2em">
                     <div class="quote">
                         {{widget('content', 'testimonialquote3', {"content":'<p>"BaseKit were the only team that we felt we could work with, as they shared our vision for enabling users to quickly create fantastic looking websites."</p>'})|raw}}
@@ -367,7 +387,7 @@
             </div>
         </div>
         <!-- BAR - TABLET !-->
-        <div class="tablet">
+        <div class="partner-res">
             {{widget('content', 'partnerbar2content1', {"content":'<h3><span class="mobHide">Start your free, <span class="darkspan">no-risk</span>, BaseKit trial!</span><a href="/partners" class="button main-btn green">Become a Partner</a></h3>'})|raw}}
         </div>
     </div>

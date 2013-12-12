@@ -18,12 +18,18 @@ section.partners-subnav {
 		@media @tablet {
 			line-height: 100px;
 		}
+		@media @mobile {
+			line-height: 80px;
+		}
 	}
 
 	ul {
 		width: 100%;
 		float: right;
 		margin-right: -5%;
+		@media @mobile {
+			display: none;
+		}
 
 		li {
 			float: left;
@@ -115,24 +121,35 @@ section.signup-form {
 
 	}
 
-	ul.points {
-		float: right;
-		@media @tablet {
-			display: none;
-		}
+	@media @mobile {
+		padding: 3em 0 0;
+	}
 
-		li {
-			display: inline-block;
-			float: left;
+	.partner-title {
 
-			i {
-				font-size: 6px;
-				color: darken(@color-swatch3,12%);
-				margin: 0 20px;
-				vertical-align: middle;
-				line-height: 30px;
+		ul.points {
+			float: right;
+
+			li {
+				display: inline-block;
+				float: left;
+
+				i {
+					font-size: 6px;
+					color: darken(@color-swatch3,12%);
+					margin: 0 20px;
+					vertical-align: middle;
+					line-height: 30px;
+				}
 			}
 		}
+
+		.span-70 {
+			@media @tablet {
+				display: none;
+			}
+		}
+
 	}
 
 	.form-container {
@@ -172,6 +189,12 @@ section.signup-form {
 				}
 			}
 
+			.span-two-left {
+				@media @mobile {
+					margin: 0!important;
+				}
+			}
+
 			fieldset {
 				border: 0;
 				padding: 0;
@@ -184,10 +207,15 @@ section.signup-form {
 				margin: 0;
 				background-color: @lightGrey;
 				.rounded-corners;
+				.box-sizing;
 				border: 1px solid #e6e6e6;
 				text-indent: 12px;
 				.p-font;
 				font-size: 14px;
+
+				@media @mobile {
+					width: 100%;
+				}
 
 				&:focus {
 					outline: none;
@@ -199,12 +227,24 @@ section.signup-form {
 
 				&.email-address {
 					width: 95%;
+					@media @mobile {
+						width: 100%;
+					}
+				}
+
+				&.telephone {
+					@media @mobile {
+						margin-bottom: 3em;
+					}
 				}
 			}
 
 			.select-style {
 			    border: 1px solid #e6e6e6;
 			    width: 90%;
+			    @media @mobile {
+					width: 100%;
+				}
 				.rounded-corners;
 			    overflow: hidden;
 			    background: @lightGrey image('/images/select-arrow.png') no-repeat 94% 50%;
@@ -228,6 +268,9 @@ section.signup-form {
 				    font-size: 14px;
 				    cursor: pointer;
 				    padding: 13px 0;
+				    @media @mobile {
+				    	padding: 9px 0;
+					}
 
 				    &:focus {
 					    outline: none;
@@ -297,11 +340,11 @@ section.signup-form {
 section.why-basekit {
 
 	@media @tablet {
-		padding: 5em 0 0;
+		padding: 4em 0;
 	}
 
 	.info-blocks {
-		margin: 5.5em 0 0;
+		margin: 5em 0 0;
 		@media @tablet {
 			padding: 0;
 		}
@@ -366,6 +409,9 @@ section.why-basekit {
 
 		img {
 			max-width: 101%;
+			@media @mobile {
+				max-width: 70%;
+			}
 		}
 
 		/*display: table-cell;
@@ -403,6 +449,9 @@ section.why-basekit {
 section.become-partner {
 	text-align: center;
 	padding: 6em 0 0;
+	@media @tablet {
+		padding: 4em 0 0;
+	}
 
 	h5 {
 		max-width: 70%;
@@ -419,16 +468,26 @@ section.become-partner {
 		@media @tablet {
 			margin: 0;
 		}
+		@media @mobile {
+			top: 80px;
+			margin-top: -30px;
+		}
 
 		.step {
 			position: relative;
 			padding: 2.4em 0;
-			@media @tablet {
-				padding: 2em 0;
-			}
 			background-color: @color-swatch3;
 			.rounded-corners;
 			box-shadow: 0 3px 0px darken(@color-swatch3,10%);
+
+			@media @tablet {
+				padding: 2em 0;
+			}
+			@media @mobile {
+				max-width: 75%;
+				margin: 0 auto 2em;
+				display: block;
+			}
 
 			.number {
 				position: absolute;
@@ -458,6 +517,9 @@ section.become-partner {
 				@media @tablet {
 					font-size: 21px;
 				}
+				@media @mobile {
+					font-size: 28px;
+				}
 			}
 
 			img {
@@ -477,6 +539,9 @@ section.become-partner-sub {
 	@media @tablet {
 		padding: 10em 0 6em;
 	}
+	@media @mobile {
+		padding: 7em 0 5em;
+	}
 }
 
 .subsignup {
@@ -486,6 +551,11 @@ section.become-partner-sub {
 	padding: 3em 3em 2.5em;
 	.rounded-corners;
 	box-shadow: 0 0 10px rgba(150,150,150,0.1);
+	@media @mobile {
+		margin: 4em 0 0;
+		padding: 1.5em;
+		text-align: center;
+	}
 
 	a.button {
 		float: right;
@@ -494,12 +564,18 @@ section.become-partner-sub {
 		@media @tablet {
 			top: -3px;
 		}
+		@media @mobile {
+			width: 100%;
+			.box-sizing;
+			margin: 0.5em 0 0;
+		}
 	}
 
 	h2 {
 		&.nopad {
 			padding: 0;
 			line-height: 44px;
+			font-size: 26px;
 		}
 	}
 
@@ -567,6 +643,15 @@ section.device-switcher {
 		}
 	}
 
+	p {
+		font-size: 18px;
+		max-width: 90%;
+		&.first {
+			max-width: 80%;
+			margin: 0 0 1.8em;
+		}
+	}
+
 }
 
 
@@ -624,7 +709,6 @@ section.testimonials {
 		}
 
 		.quote {
-			text-align: center;
 			background-color: @lightGrey;
 			border: 1px solid darken(@lightGrey,10%);
 			padding: 30px;

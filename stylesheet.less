@@ -39,6 +39,34 @@ section {
 	}
 }
 
+i {
+	&.ic {
+		float: left;
+		display: inline-block;
+		height: 34px;
+		width: 53px;
+		margin-right: 20px;
+		margin-top: -2px;
+		background-repeat: no-repeat;
+		@media @mobile {
+			display: none;
+		}
+
+		&.responsive {
+			background-image: image('/images/ic-responsive.png');
+			margin-right: 10px;
+		}
+		&.devices {
+			background-image: image('/images/ic-devices.png');
+		}
+		&.traffic {
+			background-image: image('/images/ic-graph.png');
+			margin-right: 16px;
+		}
+	}
+	
+}
+
 /* ===============================
    RESPONSIVE QUERIES
    =============================== */
@@ -104,7 +132,6 @@ header {
 	nav {		
 		width: 100%;
 		position: relative;
-		margin: 0.3em 0 0;
 
 		&.nav-desktop {
 			display: block;
@@ -329,6 +356,13 @@ section {
 			}
 		}
 
+		.partner-res {
+			display: none;
+			@media @tablet {
+				display: block;
+			}
+		}
+
 		h3 {
 			margin: 0;
 		}
@@ -434,6 +468,16 @@ section.intro {
 		}
 
 	}
+
+	/*i {
+		font-size: 2em;
+		margin: 9px 20px 0 0;
+		color: @color-swatch3;
+		vertical-align: middle;
+		@media @tablet {
+			display: none;
+		}
+	}*/
 
 	@media @mobile {
 		padding: 4em 0 0;
@@ -672,6 +716,26 @@ section.template-slideshow {
 		}
 	}
 
+	.browser-img {
+		position: relative;
+		margin: 6em 0 -5px;
+		@media @tablet {
+			margin-top: 4em;
+		}
+
+		img {
+			&.surf-mob {
+				position: absolute;
+				bottom: 0;
+				right: -32px;
+				@media @tablet {
+					display: none;
+				}
+			}
+		}
+
+	}
+
 	.slideshow-frame {
 		margin: 6em 0 0;
 
@@ -825,7 +889,7 @@ section.developer-community {
 			}
 
 			li {
-				padding: 0 0 2em 5.5em;
+				padding: 0 0 2em 4.5em;
 				.box-sizing;
 
 				@media @tablet {
@@ -923,6 +987,10 @@ section.website-editor {
 
 section.editor-features {
 
+	@media @mobile {
+		padding: 4em 0 1em;
+	}
+
 	.feature-list {
 
 		&.desktop {
@@ -939,6 +1007,12 @@ section.editor-features {
 			}
 		}
 
+		.span-two-left {
+			@media @mobile {
+				margin: 0!important;
+			}
+		}
+
 		article {
 			.rounded-corners;
 			padding: 2em;
@@ -948,6 +1022,18 @@ section.editor-features {
 
 			h4 {
 				border-color: darken(@lightGrey,9%);
+			}
+		}
+
+		i {
+			float: left;
+			font-size: 1.3em;
+			margin-right: 16px;
+			color: #C4C4C4;
+			&.fa-facebook {
+				position: relative;
+				left: -2px;
+				top: 2px;
 			}
 		}
 	}
