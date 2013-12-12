@@ -164,7 +164,7 @@
                             </li>
                             <li class="iphone-item">
                                 <button class="js-device-switch js-iphone view-control view-control-iphone">
-                                    <span class="device-icon-iphone">
+                                    <span class="device-icon device-icon-iphone">
                                 </button>
                             </li>
                         </ul>
@@ -175,7 +175,7 @@
                             <ul>
                                 <li>
                                     <label for="option1"><h4 class="h4circle yellow">EN</h4></label>
-                                    <input name="site-url" type="radio" id="option1" value="http://003.basekit.com" class="preview-input">
+                                    <input name="site-url" type="radio" id="option1" value="http://003.basekit.com" class="preview-input" checked>
                                     <span class="preview-option"></span>
                                 </li>
                                 <li>
@@ -195,8 +195,10 @@
             </div>
             <div class="js-preview-container preview-container no-transition auto">
                 <div class="screen-border">
-                    <div class="site-preview screen">
-                        <iframe src="http://003.basekit.com" class="js-preview-site"></iframe>
+                    <div class="js-site-preview site-preview screen">
+                        <div class="js-preview-overlay site-preview-overlay">
+                            <button class="js-reveal-preview site-preview-activate-button button trans-btn trans-green" type="button">Preview</button>
+                        </div>
                     </div>
                 </div>
             </div>

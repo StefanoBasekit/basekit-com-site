@@ -20,6 +20,10 @@ var SitePreview = (function () {
         el.find('.js-device-switch .device-icon').toggleClass('rotate'); 
     }
 
+    function getURL () {
+        return el.find('[name="site-url"]:checked').val();
+    }
+
     function setURL (URL) {
         previewEl.find('.js-preview-site').attr('src', URL);
     }
@@ -37,6 +41,11 @@ var SitePreview = (function () {
 
         el.find('.js-device-switch').removeClass('selected');
         el.find('.js-' + device).addClass('selected');
+    }
+
+    function revealPreview () {
+        el.find('.js-site-preview').append('<iframe class="js-preview-site" src="' + getURL() + '"></iframe>');
+        el.find('.js-preview-overlay').remove();
     }
 
     function handleURLSwitch (evt) {
@@ -67,6 +76,7 @@ var SitePreview = (function () {
     function attachEvents () {
         el.find('.js-view-controls').on('click', '.js-device-switch', handleDeviceSwitch);
         el.find('.js-preview-selector').on('change', handleURLSwitch);
+        el.find('.js-reveal-preview').on('click', revealPreview);
     }
 
     return {
