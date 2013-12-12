@@ -160,6 +160,7 @@
                     <div class="right-content">
                         {{widget('content', 'partnersignuprightcontent1', {"content":'<h5 class="h5dark">You&#39;re in good company</h5><p class="psub14">More than 900 companies in over 20 countries already rely on BaseKit:</p>'})|raw}}
                         <img src="{{asset('/images/partner-logos/logos4-sml.png')}}">
+                        <a href="#testimonials">See our testimonials</a>
                     </div>
                 </div>
             </div>
@@ -203,8 +204,12 @@
                 </div>
                 <div class="column span-three-right">
                     <div class="conversion-right">
-                        {{widget('content', 'bkconversion-3block3content1', {"content":'<h4>Expert Assistance Included</h4><p>Our dedicated team is here to provide valuable advice on how to commercialise the product and increase your conversion rates.</p>'})|raw}}
-                        {{widget('content', 'bkconversion-3block3content2', {"content":'<h4 style="margin-top: 2.5em">Customer Support</h4><p>We provide support documentation and front-line issue resolution at no extra charge</p>'})|raw}}
+                        <div class="left">
+                            {{widget('content', 'bkconversion-3block3content1', {"content":'<h4>Expert Assistance Included</h4><p>Our dedicated team is here to provide valuable advice on how to commercialise the product and increase your conversion rates.</p>'})|raw}}
+                        </div>
+                        <div class="right">
+                            {{widget('content', 'bkconversion-3block3content2', {"content":'<h4>Customer Support</h4><p>We provide support documentation and front-line issue resolution at no extra charge</p>'})|raw}}
+                        </div>
                     </div>
                 </div>
             </div>

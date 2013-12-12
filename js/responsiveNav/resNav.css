@@ -43,9 +43,17 @@
 	width: 60%;
 	height: 4px;
 	background: #747474;
-	top: 6px;
+	top: 9px;
 	left: 0;
 	box-shadow: 0 9px 0 #747474, 0 18px 0 #747474;
+}
+
+.dl-menuwrapper button:hover:after {
+	background: #B8B8B8;
+	box-shadow: 0 9px 0 #B8B8B8, 0 18px 0 #B8B8B8;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 .dl-menuwrapper .dl-menu {

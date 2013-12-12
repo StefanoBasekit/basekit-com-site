@@ -260,17 +260,16 @@ section.signup-form {
 			    	width: 101%;
 			    	text-indent: 12px;
 				    border: none;
+				    .box-sizing;
 				    box-shadow: none;
 				    background: transparent;
 				    background-image: none;
 				    -webkit-appearance: none;
 				    .p-font;
+				    color: #929292;
 				    font-size: 14px;
 				    cursor: pointer;
-				    padding: 13px 0;
-				    @media @mobile {
-				    	padding: 9px 0;
-					}
+				    padding: 10px 0;
 
 				    &:focus {
 					    outline: none;
@@ -286,6 +285,9 @@ section.signup-form {
 			.button {
 				float: right;
 				margin: 8.5%;
+				@media @mobile {
+					margin-right: 0;
+				}
 			}
 		}
 
@@ -309,6 +311,12 @@ section.signup-form {
 
 			img {
 				margin: 2.4em 0 0;
+			}
+
+			a {
+				float: left;
+				font-size: 14px;
+				margin: 2.7em 0 0;
 			}
 		}
 	}
@@ -346,7 +354,7 @@ section.why-basekit {
 	.info-blocks {
 		margin: 5em 0 0;
 		@media @tablet {
-			padding: 0;
+			margin: 4em 0 0;
 		}
 	}
 
@@ -360,7 +368,35 @@ section.why-basekit {
 		}
 	}
 
-	.bkcoversion {
+	.bkconversion {
+
+		.span-three-left {
+			@media @tablet {
+				width: 45%!important;
+				margin-right: 5%!important;
+				margin-bottom: 10%;
+			}
+			@media @mobile {
+				width: 100%!important;
+			}
+		}
+
+		.span-three-middle {
+			@media @tablet {
+				width: 50%!important;
+				margin: 0%!important;
+			}
+			@media @mobile {
+				width: 100%!important;
+			}
+		}
+
+		.span-three-right {
+			@media @tablet {
+				width: 100%!important;
+				margin: 0%!important;
+			}
+		}
 
 		.conversion-left {
 			margin: 1.7em 0 0;
@@ -368,36 +404,28 @@ section.why-basekit {
 
 		.conversion-right {
 			margin: .3em 0 0;
-		}
-
-
-		.columns {
-
-			&.span-30-31-30 {
-
-				.column {
-
-					&.span-three-left,
-					&.span-three-right {
-						width: 100%!important;
-						@media @mobile {
-							width: 100%;
-							margin: 0 0 10%;
-						}
-					}
-					&.span-three-middle {
-						width: 30%;
-						margin-left: 5.5%;
-						margin-right: 5.5%;
-						@media @mobile {
-							width: 100%;
-							margin: 0 0 10%;
-						}
-					}
-					&.span-three-right {
-						margin: 0;
-					}
-
+			.left {
+				@media @tablet {
+					float: left;
+					width: 45%;
+					margin-right: 5%;
+				}
+				@media @mobile {
+					width: 100%!important;
+					margin: 10% 0;
+				}
+			}
+			.right {
+				margin-top: 2.5em;
+				@media @tablet {
+					float: left;
+					width: 45%;
+					margin-left: 5%;
+					margin-top: 0;
+				}
+				@media @mobile {
+					width: 100%!important;
+					margin: 0;
 				}
 			}
 
@@ -409,8 +437,16 @@ section.why-basekit {
 
 		img {
 			max-width: 101%;
+			@media @tablet {
+				max-width: 75%;
+				.margin-center;
+				margin-top: 0.5em;
+				position: relative;
+				right: -14px;
+			}
 			@media @mobile {
 				max-width: 70%;
+				display: initial;
 			}
 		}
 
@@ -452,6 +488,9 @@ section.become-partner {
 	@media @tablet {
 		padding: 4em 0 0;
 	}
+	@media @mobileSml {
+		padding: 3em 0 0;
+	}
 
 	h5 {
 		max-width: 70%;
@@ -488,6 +527,9 @@ section.become-partner {
 				margin: 0 auto 2em;
 				display: block;
 			}
+			@media @mobile {
+				max-width: 85%;
+			}
 
 			.number {
 				position: absolute;
@@ -519,6 +561,9 @@ section.become-partner {
 				}
 				@media @mobile {
 					font-size: 28px;
+				}
+				@media @mobileSml {
+					font-size: 26px;
 				}
 			}
 
@@ -557,6 +602,16 @@ section.become-partner-sub {
 		text-align: center;
 	}
 
+	
+	.column {
+		&.span-70 {
+			@media @mobileSml {
+				display: none;
+			}
+		}
+	}
+
+
 	a.button {
 		float: right;
 		position: relative;
@@ -569,12 +624,17 @@ section.become-partner-sub {
 			.box-sizing;
 			margin: 0.5em 0 0;
 		}
+		@media @mobileSml {
+			margin: 0;
+		}
 	}
 
 	h2 {
 		&.nopad {
 			padding: 0;
 			line-height: 44px;
+		}
+		@media @mobile {
 			font-size: 26px;
 		}
 	}
@@ -614,6 +674,10 @@ section.device-switcher {
 		}
 	}
 
+	@media @mobile {
+		padding: 4em 0 0;
+	}
+
 	.device-content {
 		margin: 6em 0 0;
 		@media @tablet {
@@ -640,15 +704,31 @@ section.device-switcher {
 				max-width: 64%;
 				margin: 3em auto 0;
 			}
+			@media @mobile {
+				margin: 0;
+				max-width: 100%;
+			}
 		}
 	}
 
 	p {
 		font-size: 18px;
 		max-width: 90%;
+		@media @tablet {
+			max-width: 100%;
+		}
+		@media @mobile {
+			font-size: 16px;
+		}
 		&.first {
 			max-width: 80%;
 			margin: 0 0 1.8em;
+			@media @tablet {
+				max-width: 100%;
+			}
+			@media @mobile {
+				max-width: 100%;
+			}
 		}
 	}
 
@@ -684,6 +764,9 @@ section.testimonials {
 
 	.quotes {
 		margin: 5em 0 0;
+		@media @mobile {
+			margin: 4em 0 0;
+		}
 
 		h3 {
 			font-size: 18px;
@@ -693,6 +776,9 @@ section.testimonials {
 				font-size: 14px;
 				margin-left: 4px;
 				letter-spacing: 0;
+			}
+			@media @mobile {
+				margin: 0;
 			}
 		}
 

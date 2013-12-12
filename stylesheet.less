@@ -32,10 +32,10 @@ section {
 	background-color: #f2f2f2;
 
 	@media @tablet { 
-		margin: 5em 0;
+		margin: 4em 0;
 	}
 	@media @mobile { 
-		margin: 3em 0;
+		margin: 2.7em 0;
 	}
 }
 
@@ -414,14 +414,20 @@ section {
 	}
 
 	&.bottom {
-		padding: 3em 0;
+		padding: 3em 0 2em;
+		@media @tablet {
+			padding: 3em 0;
+		}
 
 		h3 {
 			position: relative;
 			top: 4px;
 		}
 		a.button { 
-			top: -13px;
+			top: -7px;
+			@media @tablet {
+				top: -12px;
+			}
 			@media @mobile {
 				top: -30px;
 				.box-sizing;
@@ -744,6 +750,9 @@ section.template-slideshow {
 		@media @tablet {
 			margin-top: 4em;
 		}
+		@media @mobile {
+			margin-top: 3em;
+		}
 
 		img {
 			&.surf-mob {
@@ -983,6 +992,9 @@ section.website-editor {
 	@media @tablet {
 		padding: 5em 0 0;
 	}
+	@media @mobile {
+		padding: 4em 0 0;
+	}
 
 	.mac-ui {
 		display: block;
@@ -993,6 +1005,7 @@ section.website-editor {
 		@media @tablet {	
 			width: 90%;
 			bottom: -11px;
+			margin-top: 3em;
 		}
 		@media @mobile {	
 			margin: 60px auto 0;
@@ -1041,6 +1054,9 @@ section.editor-features {
 			margin: 0 0 3em;
 			background-color: darken(@lightGrey,3%);
 			box-shadow: 0 3px 0 darken(@lightGrey,6%);
+			@media @mobile {
+				margin: 0 0 2em;
+			}
 
 			h4 {
 				border-color: darken(@lightGrey,9%);
@@ -1123,6 +1139,9 @@ footer {
 		&.half {
 			width: 50%;
 			float: left;
+			@media @mobile {
+				width: 100%;
+			}
 		}
 	}
 
