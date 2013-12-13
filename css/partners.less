@@ -187,6 +187,12 @@ section.signup-form {
 					color: #E77272;
 					margin: 10px 0 0;
 				}
+
+				&.mobHide {
+					@media @mobile {
+						display: none;
+					}
+				}
 			}
 
 			.span-two-left {
@@ -283,10 +289,10 @@ section.signup-form {
 			}
 
 			.button {
-				float: right;
-				margin: 8.5%;
+				margin: 2px 0 26%;
+				padding: 15px 20px 13px;
 				@media @mobile {
-					margin-right: 0;
+					margin: 7% 0 20%;
 				}
 			}
 		}
@@ -582,7 +588,7 @@ section.become-partner {
 section.become-partner-sub {
 	padding: 7em 0 6em;
 	@media @tablet {
-		padding: 10em 0 6em;
+		padding: 8em 0 4em;
 	}
 	@media @mobile {
 		padding: 7em 0 5em;
@@ -596,10 +602,13 @@ section.become-partner-sub {
 	padding: 3em 3em 2.5em;
 	.rounded-corners;
 	box-shadow: 0 0 10px rgba(150,150,150,0.1);
-	@media @mobile {
+	@media @tablet {
 		margin: 4em 0 0;
-		padding: 1.5em;
+		padding: 2em;
+	}
+	@media @mobile {
 		text-align: center;
+		padding: 1.5em;
 	}
 
 	

@@ -125,33 +125,25 @@
                             </div>
                         </div>
 
-                        <!-- USER BASE FIELDS !-->
-                        <div class="res-col columns span-50-50">
-                            <div class="column span-two-left">
-                                <fieldset>
-                                    <label>{{widget('content', 'partnersignupfieldset4content2', {"content":'<h4 class="h4dark">NUMBER OF USERS</h4>'})|raw}}</label>
-                                    <div class="select-style">
-                                        <select id="users" name="users">
-                                            <option value="1+">&#60; 10k</option>
-                                            <option value="10k+">10k - 100k</option>
-                                            <option value="100k+">100k - 1M</option>
-                                            <option value="1m">1M+</option>
-                                        </select>
-                                    </div>
-                                </fieldset>
-                            </div>
-                            <div class="column span-two-right">
-                                <fieldset>
-                                    <label>{{widget('content', 'partnersignupfieldset5content1', {"content":'<h4 class="h4dark">LANGUAGE</h4>'})|raw}}</label>
-                                    <div class="select-style">
-                                        <select id="language" name="language">
-                                            <option value="en">English</option>
-                                            <option value="es">Spanish</option>
-                                            <option value="pt_br">Portuguese</option>
-                                        </select>
-                                    </div>
-                                </fieldset>
-                                <button id="submit" type="submit" class="button stan-btn green">SUBMIT</button>
+                        <!-- LANGUAGE - SUBMIT !-->
+                        <div class="language-submit">
+                            <div class="res-col columns span-50-50">
+                                <div class="column span-two-left">
+                                    <fieldset>
+                                        <label>{{widget('content', 'partnersignupfieldset5content1', {"content":'<h4 class="h4dark">LANGUAGE</h4>'})|raw}}</label>
+                                        <div class="select-style">
+                                            <select id="language" name="language">
+                                                <option value="en">English</option>
+                                                <option value="es">Spanish</option>
+                                                <option value="pt_br">Portuguese</option>
+                                            </select>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="column span-two-right">
+                                    <label class="mobHide">&nbsp;</label>
+                                    <button id="submit" type="submit" class="button stan-btn green">SUBMIT</button>
+                                </div>
                             </div>
                         </div>
                     </form>
