@@ -87,21 +87,53 @@
                         </div>
 
                         <!-- PARTNER TABLE !-->
-                        <div class="partner-table">
+                        <div class="partner-table clearfix">
                             <div class="col1">
                                 <div class="thead">
                                     <h4 class="h4dark">BaseKit Partner</h4>
                                 </div>
+                                <!-- SITEJAM !-->
                                 <div class="trow">
-                                    <img src="{{asset('/images/partner-logos/partnerlist/sitejam-logo.png')}}">
+                                    <div class="tinner">
+                                        <div class="tinner1">
+                                            <img src="{{asset('/images/partner-logos/partnerlist/sitejam-logo.png')}}">
+                                            <div class="mobShow">
+                                                <a href="http://www.sitejam.com" class="color sj">http://www.sitejam.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 123 REG !-->
+                                <div class="trow">
+                                    <div class="tinner">
+                                        <div class="tinner1">
+                                            <img src="{{asset('/images/partner-logos/partnerlist/123-reg.png')}}">
+                                            <div class="mobShow">
+                                                <a href="http://www.sitejam.com" class="color 123reg">http://www.123-reg.co.uk</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col2">
                                 <div class="thead">
                                     <h4 class="h4dark">Partner Website</h4>
                                 </div>
+                                <!-- SITEJAM !-->
                                 <div class="trow">
-                                    <a href="http://www.sitejam.com" class="color sj">http://www.sitejam.com</a>
+                                    <div class="tinner">
+                                        <div class="tinner1">
+                                            <a href="http://www.sitejam.com" class="color sj">http://www.sitejam.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- 123 REG !-->
+                                <div class="trow">
+                                    <div class="tinner">
+                                        <div class="tinner1">
+                                            <a href="http://www.sitejam.com" class="color 123reg">http://www.123-reg.co.uk</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -113,6 +145,25 @@
                         <img src="{{asset('/images/partner-logos/logos4-sml.png')}}">
                         <a href="#testimonials">See our testimonials</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="under-blocks">
+    <div class="wrapper">
+        <!-- INFO BLOCKS !-->
+        <div class="info-blocks">
+            <div class="res-col columns span-30-31-30">
+                <div class="column span-three-left">
+                    {{widget('content', 'whybasekit-3block1', {"content":'<i class="fa fa-bullseye"></i><h4>Low Churn, High Value</h4><p>Your customer&#39;s sites can grow at any time so they won&#39;t cancel when they need more features.</p>'})|raw}}
+                </div>
+                <div class="column span-three-middle">
+                    {{widget('content', 'whybasekit-3block2', {"content":'<i class="fa fa-signal"></i><h4>Increased Revenue</h4><p>Build sustainable revenue by offering your customers free access to a website builder that has everything they need.</p>'})|raw}}
+                </div>
+                <div class="column span-three-right">
+                    {{widget('content', 'whybasekit-3block3', {"content":'<i class="fa fa-magic"></i><h4>Easy, Fast Deployment</h4><p>Within an hour you could have Basekit integrated putting you ahead of your competitors.</p>'})|raw}}
                 </div>
             </div>
         </div>

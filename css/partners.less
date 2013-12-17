@@ -98,9 +98,9 @@ section.partners-subnav {
 
 section.signup-form {
 	background-color: @color-swatch3;
-	padding: 6em 0 0;
+	padding: 1em 0 0;
 	@media @tablet {
-		padding: 4em 0 0;
+		padding: 0;
 
 		.columns {
 			&.span-70-30 {
@@ -121,12 +121,9 @@ section.signup-form {
 
 	}
 
-	@media @mobile {
-		padding: 3em 0 0;
-	}
-
 	.partner-title {
-
+		position: relative;
+		bottom: -60px;
 		ul.points {
 			float: right;
 
@@ -143,64 +140,20 @@ section.signup-form {
 				}
 			}
 		}
-
 		.span-70 {
 			@media @tablet {
 				display: none;
-			}
-		}
-
-	}
-
-	.left-content {
-		padding: 40px 30px 0;
-		border-right: 1px solid #d7d7d7;
-		&.partnerlist {
-			padding: 0;
-		}
-
-		.partnerlist-intro {
-			width: 100%;
-			padding: 40px 30px 20px;
-			.box-sizing;
-			P {
-				margin: 1.8em 0;
-			}
-		}
-
-		.partner-table {
-			.col1 {
-				width: 40%;
-				float: left;
-				border-right: 1px solid #eaeaea;
-			}
-			.col2 {
-				width: 60%;
-				float: left;
-			}
-			.thead {
-				background-color: #fbfbfb;
-				padding: 16px 30px; 
-				border-top: 1px solid #eaeaea;
-			}
-			.trow {
-				padding: 32px 30px;
-				border-bottom: 1px solid #eaeaea;
-				border-top: 1px solid #eaeaea;
 			}
 		}
 	}
 
 	.standout-container {
 		position: relative;
+		bottom: -60px;
 		background-color: @color-swatch1;
 		margin: 1.2em 0 0;
-		-webkit-border-top-left-radius: 7px;
-		-webkit-border-top-right-radius: 7px;
-		-moz-border-radius-topleft: 7px;
-		-moz-border-radius-topright: 7px;
-		border-top-left-radius: 7px;
-		border-top-right-radius: 7px;
+		.rounded-corners;
+		border: 1px solid #eaeaea;
 		box-shadow: 0 0 24px rgba(110,110,110,0.1);
 
 		/* FORM */
@@ -335,6 +288,101 @@ section.signup-form {
 			}
 		}
 
+		.left-content {
+			padding: 40px 30px 0;
+			border-right: 1px solid #d7d7d7;
+			&.partnerlist {
+				padding: 0;
+			}
+			@media @tablet {
+				border-right: 0;
+			}
+
+			.partnerlist-intro {
+				width: 100%;
+				padding: 40px 30px 20px;
+				.box-sizing;
+				P {
+					margin: 1.8em 0;
+				}
+			}
+
+			.partner-table {
+				display: table;
+				width: 100%;
+
+				.col1 {
+					width: 40%;
+					float: left;
+					box-shadow: inset -1px 0px 0 #eaeaea;
+					.thead {
+						border-right: 1px solid #eaeaea;
+					}
+					@media @mobile {
+						width: 100%;
+					}
+				}
+				.col2 {
+					width: 60%;
+					float: left;
+					@media @mobile {
+						display: none;
+					}
+				}
+				.thead {
+					background-color: #fbfbfb;
+					padding: 16px 30px; 
+					border-top: 1px solid #eaeaea;
+					border-bottom: 1px solid #eaeaea;
+				}
+				.trow {
+					display: table;
+					.box-sizing;
+					padding: 0 30px;
+					height: 135px;
+					border-bottom: 1px solid #eaeaea;
+					width: 100%;
+					&:last-child {
+						border-bottom: 0;
+					}
+					@media @tablet {
+						height: 100px;
+					}
+					@media @tablet {
+						height: 130px;
+					}
+
+					.sj {
+						color: #00ccd2;
+					}
+					.123reg {
+						color: #34a5d9;
+					}
+
+					.tinner {
+						display: table-row;
+						.tinner1 {
+							display: table-cell;
+							vertical-align: middle;
+						}
+					}
+				}
+				h4 {
+					white-space: nowrap;
+				}
+				img {
+					max-width: 80%;
+					@media @tablet {
+						max-width: 65%;
+					}
+					@media @mobile {
+						max-width: 50%;
+						margin: 0 0 10px;
+					}
+				}
+			}
+		}
+
 		/* RIGHT CONTENT */
 		.right-content {
 			position: absolute;
@@ -390,27 +438,7 @@ section.signup-form {
    =============================== */
 
 section.why-basekit {
-
-	@media @tablet {
-		padding: 4em 0;
-	}
-
-	.info-blocks {
-		margin: 5em 0 0;
-		@media @tablet {
-			margin: 4em 0 0;
-		}
-	}
-
-	i {
-		font-size: 2em;
-		margin: 9px 20px 0 0;
-		color: @color-swatch3;
-		vertical-align: middle;
-		@media @tablet {
-			display: none;
-		}
-	}
+	padding: 9em 0 6em;
 
 	.bkconversion {
 
@@ -519,6 +547,38 @@ section.why-basekit {
 		}*/
 	}
 
+	.info-blocks {
+		margin: 5em 0 0;
+	}
+
+}
+
+.info-blocks {
+	margin: 3em 0 0;
+	@media @tablet {
+		margin: 2.5em 0 0;
+	}
+	i {
+		font-size: 2em;
+		margin: 9px 20px 0 0;
+		color: @color-swatch3;
+		vertical-align: middle;
+		@media @tablet {
+			display: none;
+		}
+	}
+}
+
+/* ===============================
+   UNDER BLOCKS
+   =============================== */
+
+section {
+	&.under-blocks {
+		@media @tablet {
+			padding: 6em 0 5em;
+		}
+	}
 }
 
 
