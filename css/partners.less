@@ -152,7 +152,46 @@ section.signup-form {
 
 	}
 
-	.form-container {
+	.left-content {
+		padding: 40px 30px 0;
+		border-right: 1px solid #d7d7d7;
+		&.partnerlist {
+			padding: 0;
+		}
+
+		.partnerlist-intro {
+			width: 100%;
+			padding: 40px 30px 20px;
+			.box-sizing;
+			P {
+				margin: 1.8em 0;
+			}
+		}
+
+		.partner-table {
+			.col1 {
+				width: 40%;
+				float: left;
+				border-right: 1px solid #eaeaea;
+			}
+			.col2 {
+				width: 60%;
+				float: left;
+			}
+			.thead {
+				background-color: #fbfbfb;
+				padding: 16px 30px; 
+				border-top: 1px solid #eaeaea;
+			}
+			.trow {
+				padding: 32px 30px;
+				border-bottom: 1px solid #eaeaea;
+				border-top: 1px solid #eaeaea;
+			}
+		}
+	}
+
+	.standout-container {
 		position: relative;
 		background-color: @color-swatch1;
 		margin: 1.2em 0 0;
@@ -166,8 +205,7 @@ section.signup-form {
 
 		/* FORM */
 		form {
-			padding: 40px 30px 0;
-			border-right: 1px solid #d7d7d7;
+			padding: 0;
 			@media @tablet {
 				border-right: 0;
 			}

@@ -78,75 +78,77 @@
             </div>
         </div>
         <!-- FORM CONTAINER !-->
-        <div class="form-container">
+        <div class="standout-container">
             <div class="res-col columns span-70-30">
                 <div class="column span-70">
                     <!-- FORM !-->
-                    <form id="partner-signup" method="post" action="http://partners.basekit.com/sign-up">
-                        <div class="res-col columns span-50-50">
-                            <div class="column span-two-left">
-                                <!-- NAME - TELEPHONE !-->
-                                <fieldset>
-                                    {{widget('content', 'partnersignupfieldset1content1', {"content":'<p><b>Enter your <span class="orange">contact details</span> below.</b></p>'})|raw}}
-                                    <label>{{widget('content', 'partnersignupfieldset1content2', {"content":'<h4 class="h4dark">FULL NAME</h4>'})|raw}}</label>
-                                    <input name="name" id="name" type="text" placeholder="Enter your full name...">
-                                    <label>{{widget('content', 'partnersignupfieldset1content3', {"content":'<h4 class="h4dark">TELEPHONE</h4>'})|raw}}</label>
-                                    <input name="telephone" id="telephone" type="text" placeholder="Enter your telephone number..." class="telephone">
-                                </fieldset>
-                            </div>
-                            <div class="column span-two-right">
-                                <!-- COMPANY - WEBSITE !-->
-                                <fieldset>
-                                    {{widget('content', 'partnersignupfieldset12ontent1', {"content":'<p><b>Enter your <span class="orange">account information</span> below.</b></p>'})|raw}}
-                                </fieldset>
-                                <!-- EMAIL - PASSWORD !-->
-                                <fieldset>
-                                    <label>{{widget('content', 'partnersignupfieldset3content1', {"content":'<h4 class="h4dark">EMAIL ADDRESS</h4>'})|raw}}</label>
-                                    <input id="email" name="email" type="text" placeholder="Enter your email address..." class="email-address">
-                                    <label>{{widget('content', 'partnersignupfieldset3content2', {"content":'<h4 class="h4dark">PASSWORD</h4>'})|raw}}</label>
-                                    <input id="password" name="password" type="password" placeholder="Enter a password..." class="password">
-                                </fieldset>
-                            </div>
-                        </div>
-                        <!-- COMPANY - WEBSITE !-->
-                        <div class="company-website">
-                            <div class="res-col columns span-50-50">
-                                {{widget('content', 'partnersignupfieldset3ontent1', {"content":'<p><b>Enter additonal information about your company.</b></p>'})|raw}}
-                                <fieldset>
-                                    <div class="column span-two-left">
-                                        <label>{{widget('content', 'partnersignupfieldset3content2', {"content":'<h4 class="h4dark">COMPANY NAME</h4>'})|raw}}</label>
-                                        <input name="companyName" id="companyName" type="text" placeholder="Enter your company name...">
-                                    </div>
-                                    <div class="column span-two-right">
-                                        <label>{{widget('content', 'partnersignupfieldset3content3', {"content":'<h4 class="h4dark">WEBSITE</h4>'})|raw}}</label>
-                                        <input name="website" id="website" type="text" placeholder="Enter your company website...">
-                                    </div>
-                                </fieldset>
-                            </div>
-                        </div>
-
-                        <!-- LANGUAGE - SUBMIT !-->
-                        <div class="language-submit">
+                    <div class="left-content">
+                        <form id="partner-signup" method="post" action="http://partners.basekit.com/sign-up">
                             <div class="res-col columns span-50-50">
                                 <div class="column span-two-left">
+                                    <!-- NAME - TELEPHONE !-->
                                     <fieldset>
-                                        <label>{{widget('content', 'partnersignupfieldset5content1', {"content":'<h4 class="h4dark">LANGUAGE</h4>'})|raw}}</label>
-                                        <div class="select-style">
-                                            <select id="language" name="language">
-                                                <option value="en">English</option>
-                                                <option value="es">Spanish</option>
-                                                <option value="pt_br">Portuguese</option>
-                                            </select>
-                                        </div>
+                                        {{widget('content', 'partnersignupfieldset1content1', {"content":'<p><b>Enter your <span class="orange">contact details</span> below.</b></p>'})|raw}}
+                                        <label>{{widget('content', 'partnersignupfieldset1content2', {"content":'<h4 class="h4dark">FULL NAME</h4>'})|raw}}</label>
+                                        <input name="name" id="name" type="text" placeholder="Enter your full name...">
+                                        <label>{{widget('content', 'partnersignupfieldset1content3', {"content":'<h4 class="h4dark">TELEPHONE</h4>'})|raw}}</label>
+                                        <input name="telephone" id="telephone" type="text" placeholder="Enter your telephone number..." class="telephone">
                                     </fieldset>
                                 </div>
                                 <div class="column span-two-right">
-                                    <label class="mobHide">&nbsp;</label>
-                                    <button id="submit" type="submit" class="button stan-btn green">SUBMIT</button>
+                                    <!-- COMPANY - WEBSITE !-->
+                                    <fieldset>
+                                        {{widget('content', 'partnersignupfieldset12ontent1', {"content":'<p><b>Enter your <span class="orange">account information</span> below.</b></p>'})|raw}}
+                                    </fieldset>
+                                    <!-- EMAIL - PASSWORD !-->
+                                    <fieldset>
+                                        <label>{{widget('content', 'partnersignupfieldset3content1', {"content":'<h4 class="h4dark">EMAIL ADDRESS</h4>'})|raw}}</label>
+                                        <input id="email" name="email" type="text" placeholder="Enter your email address..." class="email-address">
+                                        <label>{{widget('content', 'partnersignupfieldset3content2', {"content":'<h4 class="h4dark">PASSWORD</h4>'})|raw}}</label>
+                                        <input id="password" name="password" type="password" placeholder="Enter a password..." class="password">
+                                    </fieldset>
                                 </div>
                             </div>
-                        </div>
-                    </form>
+                            <!-- COMPANY - WEBSITE !-->
+                            <div class="company-website">
+                                <div class="res-col columns span-50-50">
+                                    {{widget('content', 'partnersignupfieldset3ontent1', {"content":'<p><b>Enter additonal information about your company.</b></p>'})|raw}}
+                                    <fieldset>
+                                        <div class="column span-two-left">
+                                            <label>{{widget('content', 'partnersignupfieldset3content2', {"content":'<h4 class="h4dark">COMPANY NAME</h4>'})|raw}}</label>
+                                            <input name="companyName" id="companyName" type="text" placeholder="Enter your company name...">
+                                        </div>
+                                        <div class="column span-two-right">
+                                            <label>{{widget('content', 'partnersignupfieldset3content3', {"content":'<h4 class="h4dark">WEBSITE</h4>'})|raw}}</label>
+                                            <input name="website" id="website" type="text" placeholder="Enter your company website...">
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                            <!-- LANGUAGE - SUBMIT !-->
+                            <div class="language-submit">
+                                <div class="res-col columns span-50-50">
+                                    <div class="column span-two-left">
+                                        <fieldset>
+                                            <label>{{widget('content', 'partnersignupfieldset5content1', {"content":'<h4 class="h4dark">LANGUAGE</h4>'})|raw}}</label>
+                                            <div class="select-style">
+                                                <select id="language" name="language">
+                                                    <option value="en">English</option>
+                                                    <option value="es">Spanish</option>
+                                                    <option value="pt_br">Portuguese</option>
+                                                </select>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="column span-two-right">
+                                        <label class="mobHide">&nbsp;</label>
+                                        <button id="submit" type="submit" class="button stan-btn green">SUBMIT</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <div class="column span-30">
                     <div class="right-content">
