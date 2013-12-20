@@ -41,9 +41,23 @@
 
 	{% include basekit.bodyScript %}
 
-	<!-- Validator --> 
+	<!-- Scripts for the Partner's Page Validator --> 
 	<script src="{{asset('js/validator/jquery.validator.js')}}"></script>
 	<script type="text/javascript">
+			var bkerror = "";
+			function getParameterByName(name) {
+			    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+			    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+			        results = regex.exec(location.search);
+			    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+			}
+
+			bkerror = getParameterByName('error');
+			if(bkerror !== "") {
+				$('#sign-up-form-error p').text(bkerror);
+				$('#sign-up-form-error').show();
+			}
+
 			$('#submit').click(function(){
 				$('.overlay').show();
 			})
@@ -108,9 +122,6 @@
 					$('.overlay').hide();
 				}
 			});
-
-
-
 	</script>
 
 	<!-- ROUNDABOUT !-->
