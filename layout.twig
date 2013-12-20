@@ -44,7 +44,10 @@
 	<!-- Scripts for the Partner's Page Validator --> 
 	<script src="{{asset('js/validator/jquery.validator.js')}}"></script>
 	<script type="text/javascript">
-			var bkerror = "";
+			var bkerror = "",
+				error = null,
+				p = null;
+				
 			function nl2br (str) {
     			var breakTag = '<br />';
     			return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
@@ -59,7 +62,13 @@
 
 			bkerror = getParameterByName('error');
 			if(bkerror !== "") {
-				$('#sign-up-form-error p').text(bkerror);
+				errors = bkerror.split('<br />');
+				$.each(errors, function (i, item) {
+				    p = $("p");
+				    p.text(item);
+				    $('#sign-up-form-error span').html(p);
+				});
+				p = null;
 				$('#sign-up-form-error').show();
 			}
 
