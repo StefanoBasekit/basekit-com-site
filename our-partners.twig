@@ -1,0 +1,404 @@
+{% block templatehead %}
+<link href='//api.tiles.mapbox.com/mapbox.js/v1.6.0/mapbox.css' rel='stylesheet' />
+<script src='//api.tiles.mapbox.com/mapbox.js/v1.6.0/mapbox.js'></script>
+{% endblock %}
+
+{% block content %}
+
+<!-- HEADER !-->
+{% include '/includes/header.twig' %}
+
+<!-- SUB NAV BAR !-->
+<a id="#partner-signup"></a>
+
+<section class="partners-subnav">
+    <div class="wrapper">
+        {{widget('content', 'partners-subnavcontent1', {"content":'<h2 class="hwhite">Our Partners</h2>'})|raw}}
+    </div>
+</section>
+
+<!-- PARTNER LIST !-->
+<section class="signup-form">
+    <div class="wrapper">
+        <div class="partner-title">
+            {{widget('content', 'partnerlist-title', {"content":'<h3 class="hwhite upsize">Over 100 partners have already chosen BaseKit</h3>'})|raw}}
+        </div>
+        <!-- PARTNER LIST CONTAINER !-->
+        <div class="standout-container">
+            <div class="res-col columns span-70-30">
+                <div class="column span-70">
+                    <div class="left-content partnerlist">
+                        <div class="partnerlist-intro">
+                            {{widget('content', 'partnerlistcontent1', {"content":'<h5 class="h5dark">Discover the benefits of partnership</h5><p>When you offer your customers the best websites and the best website editor you will quickly see benefits including reduced churn, higher satisfaction ratings and improved revenue.</p>'})|raw}}
+                        </div>
+                    </div>
+                </div>
+                <div class="column span-30">
+                    <div class="right-content">
+                        {{widget('content', 'partnerlistcontent1', {"content":'<h5 class="h5dark">Looking for a website?</h5><p class="psub14">Try the latest version of BaseKit with any of the partners listed below. </p>'})|raw}}
+                    </div>
+                </div>
+            </div>
+            <!-- PARTNER TABLE !-->
+            <div class="partner-table">
+                <table class="desktop">
+                    <tr>
+                        <th style="padding: 0">Recent Partners</th>
+                        <th>Website</th>
+                        <th>Try It Now</th>
+                    </tr>
+                    <tr>
+                        <td><img src="{{asset('/images/partner-logos/partnerlist/sitejam-logo.png')}}"></td>
+                        <td><a href="http://www.sitejam.com">http://www.sitejam.com</a></td>
+                        <td><a href="http://www.sitejam.com" class="button stan-btn sj">Get Started</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="{{asset('/images/partner-logos/partnerlist/namesco.png')}}"></td>
+                        <td><a href="http://www.sitejam.com">http://www.names.co.uk</a></td>
+                        <td><a href="http://www.sitejam.com" class="button stan-btn names">Get Started</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="{{asset('/images/partner-logos/partnerlist/hostamania.png')}}"></td>
+                        <td><a href="http://www.sitejam.com">http://www.hostmania.com</a></td>
+                        <td><a href="http://www.sitejam.com" class="button stan-btn hosta">Get Started</a></td>
+                    </tr>
+                </table>
+                <table class="mobile">
+                    <tr>
+                        <th>Website</th>
+                    </tr>
+                    <tr>
+                        <td><img src="{{asset('/images/partner-logos/partnerlist/sitejam-logo.png')}}">
+                            <a href="http://www.sitejam.com">http://www.sitejam.com</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="{{asset('/images/partner-logos/partnerlist/namesco.png')}}">
+                            <a href="http://www.sitejam.com">http://www.names.co.uk</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="{{asset('/images/partner-logos/partnerlist/hostamania.png')}}">
+                            <a href="http://www.sitejam.com">http://www.hostmania.com</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PARTNER LIST CONTAINER !-->
+<section class="partner-list">
+    <div class="wrapper">
+        <h3>Partner List <span>Click on a location to see a partner list</span></h3>
+        <div class="standout-container">
+            <div id='map'></div>
+            <div class="res-col columns span-70-30">
+                <div class="column span-70">
+                    <div class="left-content partnerlist">
+                        <div class="partnerlist-intro">
+                            {{widget('content', 'partnerlistcontent1', {"content":'<h5 class="h5dark">Available in 15 languages</h5><p>Our products are built to support multiple languages and easy localisation. As soon as your installation is complete you can use your brand configuration panel to set defaults for maps, feeds and social media to match your local preferences.</p>'})|raw}}
+                        </div>
+                    </div>
+                </div>
+                <div class="column span-30">
+                    <div class="right-content">
+                        {{widget('content', 'partnerlistcontent1', {"content":'<h5 class="h5dark">Responsive sites for all</h5><p class="psub14">Give every one of your customers a free responsive website they can publish immediately.</p>'})|raw}}
+                        <a href="/partners" class="button small-btn green">Become a Partner</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+var map = L.mapbox.map('map', 'richardhealy.h145di6d');
+
+var geoJson = [
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [-0.1198244, 51.5112139]},
+    "properties": {
+        "partners": "123-Reg, AON Website, Creative Web, Domain Monster, Heart Internet, HostDime,  Kulao, Netcetera, Pickaweb, UK2 Group, WebHosting.co.uk, Central Nic, Fast Hosts, Paragon Internet, Enix, Names.co.uk, SiteJam",
+        "region": "United Kingdom" 
+    }
+}, 
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [-95.7128910, 37.0902400]},
+    "properties": {
+        "partners": "Hostgator, Dana Web Pro, Dutco Internet, Emerge Media, FastWebHost, iAdvantage, V-Media, WebMonster, Verio, ENOM, Hostek, Business Buddy Inc, Hostamania",
+        "region": "United States" 
+    }
+},  
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [-3.7492200, 40.4636670]},
+    "properties": {
+        "partners": "Acens, Doominos, Nominalia",
+        "region": "Spain" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [10.4515260, 51.1656910]},
+    "properties": {
+        "partners": "HostEurope, Novatrend",
+        "region": "Germany" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [12.5673800, 41.8719400]},
+    "properties": {
+        "partners": "Aruba, Register IT",
+        "region": "Italy" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [35.2433220, 38.9637450]},
+    "properties": {
+        "partners": "Cabuk Internet, Enerjik Bilisim, Intrapar, SBM Internet Yazlim, Site Canavari, Sadece",
+        "region": "Turkey" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [8.4689460, 60.4720240]},
+    "properties": {
+        "partners": "Cloud Names",
+        "region": "Norway" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [19.1451360, 51.9194380]},
+    "properties": {
+        "partners": "Dediserv, Red Sky, Home.pl",
+        "region": "Poland" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [22.9375060, -30.5594820]},
+    "properties": {
+        "partners": "South Africa, All41Web",
+        "region": "South Africa" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [2.2137490, 46.2276380]},
+    "properties": {
+        "partners": "Gandi, OVH",
+        "region": "France" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [-7.0926200, 31.7917020]},
+    "properties": {
+        "partners": "Genious Communications, Proweb Media",
+        "region": "Morocco" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [78.9628800, 20.5936840]},
+    "properties": {
+        "partners": "Google India, Tridev Media",
+        "region": "India" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [8.2275120, 46.8181880]},
+    "properties": {
+        "partners": "HostEurope Swiss, Host Star",
+        "region": "Switzerland" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [-106.3467710, 56.1303660]},
+    "properties": {
+        "partners": "HostPapa, Register.Ca",
+        "region": "Canada" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [5.2912660, 52.1326330]},
+    "properties": {
+        "partners": "KPN Netherlands",
+        "region": "Netherlands" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [-8.2438900, 53.4129100]},
+    "properties": {
+        "partners": "Lets Host",
+        "region": "Ireland" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [18.6435010, 60.1281610]},
+    "properties": {
+        "partners": "Loopia",
+        "region": "Sweden" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [-51.9252800, -14.2350040]},
+    "properties": {
+        "partners": "MS&M Enterprise",
+        "region": "Brazil" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [1.6596260, 28.0338860]},
+    "properties": {
+        "partners": "Numedia Webs",
+        "region": "Algeria" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [24.9667600, 45.9431610]},
+    "properties": {
+        "partners": "Oxygen",
+        "region": "Romania" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [21.8243120, 39.0742080]},
+    "properties": {
+        "partners": "Papaki",
+        "region": "Greece" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [105.3187560, 61.5240100]},
+    "properties": {
+        "partners": "RU Center Signed",
+        "region": "Russia" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [25.4858300, 42.7338830]},
+    "properties": {
+        "partners": "SiteGround",
+        "region": "Bulgaria" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [14.5500720, 47.5162310]},
+    "properties": {
+        "partners": "Emerion",
+        "region": "Austria" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [55.3074850, 25.2711390]},
+    "properties": {
+        "partners": "ROI",
+        "region": "Dubai" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [-77.3962800, 25.0342800]},
+    "properties": {
+        "partners": "Bahama Hosting",
+        "region": "Bahamas" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [103.8198360, 1.3520830]},
+    "properties": {
+        "partners": "ReadySpace, StarHub",
+        "region": "Singapore" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [-102.5527840, 23.6345010]},
+    "properties": {
+        "partners": "WebHosting Mexico",
+        "region": "Mexico" 
+    }
+},
+{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [25.7481510, 61.9241100]},
+    "properties": {
+        "partners": "Nebula",
+        "region": "Finland" 
+    }
+}
+
+];
+
+// Add custom popups to each using our custom feature properties
+map.markerLayer.on('layeradd', function(e) {
+    var marker = e.layer,
+        feature = marker.feature;
+
+    // Create custom popup content
+    // ...if link, add to pop
+    var popupContent =  '';
+    
+    popupContent +=          '<h4>' + feature.properties.region + '</h4>';
+    popupContent +=          '<p>' + feature.properties.partners + '</p>';
+    
+    // http://leafletjs.com/reference.html#popup
+    marker.bindPopup(popupContent,{
+        closeButton: false,
+        minWidth: 320
+    });
+});
+
+// Add features to the map
+map.markerLayer.setGeoJSON(geoJson);
+map.setView([40.97, -36.56], 3);
+</script>
+
+<section class="under-blocks">
+    <div class="wrapper">
+        <!-- INFO BLOCKS !-->
+        <div class="info-blocks">
+            <div class="res-col columns span-30-31-30">
+                <div class="column span-three-left">
+                    {{widget('content', 'whybasekit-3block1', {"content":'<h4>Reduced Churn</h4><p>Our attractive websites and easy-to-use site editor help keep customers far longer than other, older products.</p>'})|raw}}
+                </div>
+                <div class="column span-three-middle">
+                    {{widget('content', 'whybasekit-3block2', {"content":'<h4>Increased Revenue</h4><p>We provide free marketing and packaging advice to help you achieve the best conversion rates in the business.</p>'})|raw}}
+                </div>
+                <div class="column span-three-right">
+                    {{widget('content', 'whybasekit-3block2', {"content":'<h4>Rapid Deployment</h4><p>A BaseKit integration can take less than an hour to set up and you can go live immediately</p>'})|raw}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PARTNER BAR !-->
+{% include '/includes/partner-bar.twig' %}
+
+<!-- FOOTER !-->
+{% include '/includes/footer.twig' %}
+
+{% endblock %}

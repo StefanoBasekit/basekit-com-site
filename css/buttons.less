@@ -57,8 +57,8 @@
 	/* SMALL BUTTON */
 	&.small-btn {
 		padding: 8px 10px 7px;
-		text-transform: uppercase;
-		text-shadow: 0 1px 3px darken(@color-swatch2,15%);
+		.border-radius(4px);
+		box-shadow: 0 2px 0 darken(@color-swatch3,10%);
 	}
 
 	/* TRANSPARENT BUTTON */
@@ -67,13 +67,13 @@
 		background-color: transparent;
 		text-transform: uppercase;
 		&.trans-grey {
-			margin-right: 16px;
 			border: 2px solid hsla(hue(@lightGrey), saturation(@lightGrey), lightness(@lightGrey), 0.4); 
 			&:hover {
 				border-color: @color-swatch1;
 			}
 		}
 		&.trans-green {
+			margin-left: 16px;
 			border: 2px solid hsla(hue(@color-swatch3), saturation(@color-swatch3), lightness(@color-swatch3), 0.7); 
 			&:hover {
 				border: 2px solid @color-swatch3;

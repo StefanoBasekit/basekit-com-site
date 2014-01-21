@@ -1,0 +1,29 @@
+<!-- PARTNER BAR !-->
+<section class="partner-bar bottom LightGrey">
+    <div class="wrapper">
+        <!-- BAR - DESKTOP !-->
+        <div class="desktop">
+            <div class="res-col columns span-12-21x3-27">
+                <div class="column span-five-first">
+                    {{widget('content', 'partnerbar1content1', {"content":'<h4 class="h4light">Proud to<br> Partner With</h4>'})|raw}}
+                </div>
+                <div class="column span-five">
+                    <img src="{{asset('/images/partner-logos/host-europe.png')}}">
+                </div>
+                <div class="column span-five">
+                    <img src="{{asset('/images/partner-logos/123-reg.png')}}" class="reg-logo">
+                </div>
+                <div class="column span-five">
+                    <img src="{{asset('/images/partner-logos/fasthosts.png')}}" class="enom-logo">
+                </div>
+                <div class="column span-five-last">
+                    <a href="/partners" class="button main-btn green">Become a Partner</a>
+                </div>
+            </div>
+        </div>
+        <!-- BAR - TABLET !-->
+        <div class="partner-res">
+            {{widget('content', 'partnerbar2content1', {"content":'<h3><span class="mobHide">Start your free, <span class="darkspan">no-risk</span>, BaseKit trial!</span><a href="/partners" class="button main-btn green">Become a Partner</a></h3>'})|raw}}
+        </div>
+    </div>
+</section>

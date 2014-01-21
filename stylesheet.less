@@ -75,21 +75,21 @@ i {
 @mobile: ~"only screen and (max-width: 479px)";
 @mobileSml: ~"only screen and (max-width: 349px)";
 
-&.desktop {
+.desktop {
 	display: block;
 	@media @tablet {
 		display: none;
 	}
 }
 
-&.tablet {
+.tablet {
 	display: none;
 	@media @tablet {
 		display: block;
 	}
 }
 
-&.mobile {
+.mobile {
 	display: none;
 	@media @mobile {
 		display: block;
@@ -728,8 +728,8 @@ section.template-previewer {
         	}
         }
         button {
-        	.margin-center;
-        	margin-top: 3em;
+        	margin: 3em auto 0!important;
+        	display: block;
         	font-size: 15px;
         	@media @tablet {
         		font-size: 13px;
@@ -1194,22 +1194,5 @@ footer {
 			text-align: right;
 		}
 	}
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

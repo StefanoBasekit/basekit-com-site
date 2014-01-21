@@ -17,6 +17,7 @@
 	<meta name="keywords" content="{{ page.keywords }}" />
 	<meta name="description" content="{{ page.description }}" />
 	<meta http-equiv="content-language" content="{{ page.seoLang }}" />
+	<meta property="og:image" content="{{asset('/images/facebook-og-preview.jpg')}}">
 
 	{% if site.favicon %}
 		<link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
@@ -38,39 +39,13 @@
 	<link rel="stylesheet" href="//{{env.assetDomain}}/templates/common/responsive-columns.css" />
 	{% endif %}
 
+	{% block templatehead %}
+	{% endblock %}
+
 	{% include basekit.headScript %}
 
-	{% if page.templateType == "default" %}
-	<!-- Default only CSS - have to put this here due to no default page class -->
-	<style>
-	ul {
-	   padding:0 0 0 40px;
-	}
-
-	li {
-	   list-style-type:disc;
-	   font-family: proxima-nova;
-	   font-size: 15px;
-	   font-weight: inherit;
-	   line-height: 26px;
-	   color: #929292;
-	   letter-spacing: inherit;
-	}
-
-	.wrapper h3 {
-	   padding:20px 0 5px 0;
-	}
-	.wrapper p {
-	   padding:10px 0;
-	}
-	
-	.responsivecolumns section {
-		padding:0;
-	}
-
-	</style>
-	{% endif %}
 </head>
+
 <body class="{{ page.backgroundClass }}">
 
 	{% block content %}
@@ -133,7 +108,7 @@
 				      	rangelength: [6, 100]
 				    },
 				    companyName: {
-				      	required: false,
+				      	required: true,
 				      	maxlength: 100
 				    },
 				    website: {
@@ -163,6 +138,7 @@
 						maxlength: "Your password must be less than 100 characters"
 					},
 					companyName: {
+						required: "Please provide a company name",
 						maxlength: "Your company name must be less than 100 characters"
 					},
 					website: {
@@ -197,4 +173,3 @@
 
 </body>
 </html>
-

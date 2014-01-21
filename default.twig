@@ -2,40 +2,10 @@
 
 {% block content %}
 
-<header>
-    <div class="wrapper clearfix">
-        <div class="res-col columns span-20-80">
-            <div class="column span-20">
-                <div class="logo">
-                    <a href="/"><img src="{{asset('/images/logo.png')}}" class="bk-logo"></a>
-                </div>
-            </div>
-            <div class="column span-80">
-                <nav class="nav-desktop clearfix">
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/partners">Partners</a></li>
-                        <li>
-                            <a class="fade-out">Community<div class="arrow_box"><h4 class="h4white">Coming Soon</h4></div></a>
-                        </li>
-                    </ul>
-                </nav>
-                <nav class="nav-mob">
-                    <div id="dl-menu" class="dl-menuwrapper">
-                        <button class="dl-trigger dl-active">Open Menu</button>
-                        <ul class="dl-menu">
-                           <li><a href="/">Home</a></li>
-                            <li><a href="/partners">Partners</a></li>
-                            <li>
-                                <a class="fade-out">Community<div class="arrow_box"><h4 class="h4white">Coming Soon</h4></div></a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-</header>
+<div class="bk-pt-default">
+
+<!-- HEADER !-->
+{% include '/includes/header.twig' %}
 
 <!-- SUB NAV BAR !-->
 <section class="partners-subnav">
@@ -44,94 +14,17 @@
     </div>
 </section>
 
-<div class="wrapper">
+<div class="wrapper main">
+    {{widget('signupform', 'thisunqiuewidgetname', {'text': 'Send', 'label': 'Your Email', 'formTitle': 'Signup Form', 'email': 'profile'})|raw}}
     {{zone('main')|raw}}
 </div>
 
 <!-- PARTNER BAR !-->
-<section class="partner-bar bottom LightGrey">
-    <div class="wrapper">
-        <!-- BAR - DESKTOP !-->
-        <div class="desktop">
-            <div class="res-col columns span-12-21x3-27">
-                <div class="column span-five-first">
-                    {{widget('content', 'partnerbar1content1', {"content":'<h4 class="h4light">Proud to<br> Partner With</h4>'})|raw}}
-                </div>
-                <div class="column span-five">
-                    <img src="{{asset('/images/partner-logos/host-europe.png')}}">
-                </div>
-                <div class="column span-five">
-                    <img src="{{asset('/images/partner-logos/123-reg.png')}}" class="reg-logo">
-                </div>
-                <div class="column span-five">
-                    <img src="{{asset('/images/partner-logos/fasthosts.png')}}" class="enom-logo">
-                </div>
-                <div class="column span-five-last">
-                    <a href="/partners" class="button main-btn green">Become a Partner</a>
-                </div>
-            </div>
-        </div>
-        <!-- BAR - TABLET !-->
-        <div class="partner-res">
-            {{widget('content', 'partnerbar2content1', {"content":'<h3><span class="mobHide">Start your free, <span class="darkspan">no-risk</span>, BaseKit trial!</span><a href="/partners" class="button main-btn green">Become a Partner</a></h3>'})|raw}}
-        </div>
-    </div>
-</section>
+{% include '/includes/partner-bar.twig' %}
+
+</div>
 
 <!-- FOOTER !-->
-<footer>
-    <div class="wrapper">
-        <div class="res-col columns span-25x4">
-            <div class="column span-four">
-                <h4 class="h4white upsize">BaseKit <span class="tabHide">Platform</span></h3>
-                <ul class="footer-menu">
-                    <li><p><a href="/">Home</a></p></li>
-                    <li><p><a href="/partners">Partners</a></p></li>
-                    <!-- <li>{{widget('content', 'footercolumn1content3', {"content":'<p><a href="#">Tour</a></p>'})|raw}}</li> -->
-                    <!-- <li>{{widget('content', 'footercolumn1content4', {"content":'<p><a href="#">About</a></p>'})|raw}}</li> -->
-                    <li class="tabHide">
-                        <a class="fade-out">Community<div class="arrow_box"><h4 class="h4white">Coming Soon</h4></div></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="column span-four">
-                <h4 class="h4white upsize">Company</h4>
-                <ul class="footer-menu">
-                    <li><p><a href="/terms-and-conditions" class="desktop">Terms &amp; Conditions</a><a href="/terms-and-conditions" class="tablet">T's &amp; C's</a></p></li>
-                    <!-- <li><p><a href="#">Jobs</a></p></li> -->
-                    <li><p><a href="/partners">Contact</a></p></li>
-                    <li><p><a href="https://basekit.zendesk.com">Support</a></p></li>
-                </ul>
-            </div>
-            <div class="column span-four">
-                <h4 class="h4white upsize">Developers</h4>
-                <ul class="footer-menu">
-                    <li><p><a href="http://basekit-templates.github.io/template-docs/" class="desktop">Documentation<i class="fa fa-external-link"></i></a><a href="http://basekit-templates.github.io/template-docs/" class="tablet">Docs<i class="fa fa-external-link"></i></a></p></li>
-                    <li><p><a href="http://basekit-templates.github.io/template-docs/"><span class="tabHide">Join the </span>Community</a></p></li>
-                </ul>
-            </div>
-            <div class="column span-four">
-                <h4 class="h4white upsize">Social</h4>
-                <ul class="footer-menu half">
-                    <li><p><a href="https://www.facebook.com/TeamBaseKit">Facebook</a></p></li>
-                    <li><p><a href="https://twitter.com/basekit">Twitter</a></p></li>
-                </ul>
-                <ul class="footer-menu half">
-                    <li><p><a href="http://www.youtube.com/user/TeamBaseKit">YouTube</a></p></li>
-                    <li><p><a href="https://plus.google.com/108742094467162026595/posts">Google+</a></p></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer2 clearfix">
-            <div class="left">
-                <p><span class="mobHide">Copyright</span>&copy; BaseKit Platform {{ "now"|date("Y") }}. All Rights Reserved.</p>
-            </div>
-            <div class="right">
-                <p class="desktop">VAT Registration Number 339 0727 47 | Company Number 06669087</p>
-                <p class="tablet mobHide">VAT No. 339 0727 47&nbsp;|&nbsp;Company No. 06669087</p>
-            </div>
-        </div>
-    </div>
-</footer>
+{% include '/includes/footer.twig' %}
 
 {% endblock %}
