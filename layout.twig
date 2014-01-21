@@ -34,10 +34,7 @@
 
 	<!-- <link rel="stylesheet" type="text/css" href="{{asset('/js/navScroll/css/demo.css')}}" /> -->
 
-	{% if page.templateType == "default" %}
-	<!-- Include responsive columns for default template type -->
-	<link rel="stylesheet" href="//{{env.assetDomain}}/templates/common/responsive-columns.css" />
-	{% endif %}
+
 
 	{% block templatehead %}
 	{% endblock %}
@@ -149,14 +146,6 @@
 					$('.overlay').hide();
 				}
 			});
-	</script>
-
-	<!-- ROUNDABOUT !-->
-	<script type="text/javascript" src="{{asset('js/roundabout/jquery.roundabout.js')}}"></script>
-	<script type="text/javascript">
-	   $(document).ready(function() {
-	      $('ul.carousel').roundabout();
-	   });
 	</script>
 
 	<script src="{{asset('js/previewer/preview.js')}}"></script>

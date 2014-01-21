@@ -257,7 +257,6 @@ section.feature-bg {
 
     .feature {
     	width: 100%;
-
     	.feature-content {
     		display: table-cell;
     		vertical-align: middle;
@@ -271,7 +270,6 @@ section.feature-bg {
     		}
     	}
     }
-
     ul {
     	margin: 2em 0 0;
 
@@ -280,8 +278,6 @@ section.feature-bg {
     	}
 
     	li {
-
-
     		i {
     			color: @color-swatch3;
     			font-size: 0.6em;
@@ -293,16 +289,21 @@ section.feature-bg {
 
     .main-cta {
     	margin: 3.8em 0 0;
-
     	@media @tablet { 
     		margin: 2.3em 0 0;
     	}
     }
-
     .button {
 		@media @tablet { 
 			padding: 14px 18px;
 			font-size: 15px;
+			&.trans-btn {
+				&.trans-green {
+					margin: 28px 0 0;
+					display: block;
+					width: 168px;
+				}
+			}
 		}
     }
 

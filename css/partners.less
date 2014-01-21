@@ -912,60 +912,71 @@ section {
 				display: none;
 			}
 		}
-		tr {
-			&:last-child {
-				td {
-					border-bottom: 0;
+		&.mobile {
+			display: none;
+			@media @mobile {
+				display: table;
+			}
+		}
+		tbody {
+			width: 100%;
+			tr {
+				&:last-child {
+					td {
+						border-bottom: 0;
+					}
 				}
 			}
-		}
-		th, td {
-			background-color: #fff;
-			text-align: left;
-			padding-left: 30px;
-			.box-sizing;
-			@media @mobile {
-				width: 100%;
-				text-align: center!important;
+			th, td {
+				background-color: #fff;
+				text-align: left;
+				padding-left: 30px;
+				.box-sizing;
+				@media @mobile {
+					width: 100%;
+					text-align: center!important;
+				}
 			}
-		}
-		th {
-			height: 48px;
-			background-color: #fbfbfb;
-			border: 1px solid #eaeaea;
-			border-left: 0;
-			font-family: @font-swatch4-font-family;
-			text-transform: uppercase;
-			font-size: 14px;
-			color: @font-swatch4-color;
-			&:last-child {
-				border-right: 0;
-				width: 30%;
+			th {
+				height: 48px;
+				width: 42%;
+				background-color: #fbfbfb;
+				border: 1px solid #eaeaea;
+				border-left: 0;
+				font-family: @font-swatch4-font-family;
+				text-transform: uppercase;
+				font-size: 14px;
+				color: @font-swatch4-color;
+				&:last-child {
+					border-right: 0;
+					width: 30%;
+				}
+				&:first-child {
+					text-align: center;
+					width: 28.1%;
+				}
+				@media @mobile {
+					padding: 0;
+				}
 			}
-			&:first-child {
-				text-align: center;
+			td {
+				padding: 30px;
+				text-align: left;
+				border-right: 1px solid #eaeaea;
+				border-bottom: 1px solid #eaeaea;
+				&:first-child {
+					text-align: center
+				}
+				&:last-child {
+					border-right: 0;
+				}
 			}
-			@media @mobile {
-				padding: 0;
-			}
-		}
-		td {
-			padding: 30px;
-			text-align: left;
-			border-right: 1px solid #eaeaea;
-			border-bottom: 1px solid #eaeaea;
-			&:first-child {
-				text-align: center
-			}
-			&:last-child {
-				border-right: 0;
-			}
-		}
-		img {
-			max-width: 170px;
-			@media @tablet {
-				max-width: 140px;
-				margin: 0 0 12px;
+			img {
+				max-width: 170px;
+				@media @tablet {
+					max-width: 140px;
+					margin: 0 0 12px;
+				}
 			}
 		}
 		/* LINK COLOURS */
