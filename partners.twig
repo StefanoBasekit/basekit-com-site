@@ -359,3 +359,103 @@
 </div>
 
 {% endblock %}
+
+{% block templatebody %}
+<!-- Scripts for the Partner's Page Validator --> 
+<script src="{{asset('js/validator/jquery.validator.js')}}"></script>
+<script type="text/javascript">
+        var bkerror = "",
+            error = null,
+            p = null;
+            
+        function nl2br (str) {
+            var breakTag = '<br />';
+            return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
+        }
+
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results == null ? "" : nl2br(decodeURIComponent(results[1].replace(/\+/g, " ")));
+        }
+
+        bkerror = getParameterByName('error');
+        if(bkerror !== "") {
+            errors = bkerror.split('<br />');
+            $.each(errors, function (i, item) {
+                p = $("<p></p>");
+                p.text(item);
+                $('#sign-up-form-error span').append(p);
+            });
+            p = null;
+            $('#sign-up-form-error').show();
+        }
+
+        $('#submit').click(function(){
+            $('.overlay').show();
+        })
+
+        $('#partner-signup').validate({
+            rules: {
+                name: {
+                    required: true,
+                    rangelength: [1, 100]
+                },
+                telephone: {
+                    required: true,
+                    rangelength: [8, 100]
+                },
+                email: {
+                    required: true,
+                    email: true
+
+                },
+                password: {
+                    required: true,
+                    rangelength: [6, 100]
+                },
+                companyName: {
+                    required: true,
+                    maxlength: 100
+                },
+                website: {
+                    required: false,
+                    maxlength: 256
+                }
+            },
+            messages: {
+                name: {
+                    required: "Please enter your full name",
+                    minlength: "Your full name must consist of at least 1 character",
+                    maxlength: "Your full name must be less than 100 characters"
+                },
+                telephone: {
+                    required: "Please enter your telephone number",
+                    minlength: "Your telephone must consist of at least 8 characters",
+                    maxlength: "Your telephone must be less than 100 characters"
+                },
+                email: {
+                    required: "Please enter a valid email address",
+                    minlength: "Your email must consist of at least 5 characters",
+                    maxlength: "Your full name must be less than 100 characters"
+                },
+                password: {
+                    required: "Please provide a password",
+                    minlength: "Your password must be at least 5 characters long",
+                    maxlength: "Your password must be less than 100 characters"
+                },
+                companyName: {
+                    required: "Please provide a company name",
+                    maxlength: "Your company name must be less than 100 characters"
+                },
+                website: {
+                    maxlength: "Your website address must be less than 256 characters"
+                }
+            },
+            invalidHandler: function(event, validator) {
+                $('.overlay').hide();
+            }
+        });
+</script>
+{% endblock %}
