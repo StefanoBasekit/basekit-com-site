@@ -115,6 +115,35 @@
     </div>
 </section>
 
+<section class="under-blocks">
+    <div class="wrapper">
+        <!-- INFO BLOCKS !-->
+        <div class="info-blocks">
+            <div class="res-col columns span-30-31-30">
+                <div class="column span-three-left">
+                    {{widget('content', 'whybasekit-3block1', {"content":'<h4>Reduced Churn</h4><p>Our attractive websites and easy-to-use site editor help keep customers far longer than other, older products.</p>'})|raw}}
+                </div>
+                <div class="column span-three-middle">
+                    {{widget('content', 'whybasekit-3block2', {"content":'<h4>Increased Revenue</h4><p>We provide free marketing and packaging advice to help you achieve the best conversion rates in the business.</p>'})|raw}}
+                </div>
+                <div class="column span-three-right">
+                    {{widget('content', 'whybasekit-3block2', {"content":'<h4>Rapid Deployment</h4><p>A BaseKit integration can take less than an hour to set up and you can go live immediately.</p>'})|raw}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PARTNER BAR !-->
+{% include '/includes/partner-bar.twig' %}
+
+<!-- FOOTER !-->
+{% include '/includes/footer.twig' %}
+
+{% endblock %}
+
+
+{% block templatebody %}
 <script>
 var map = L.mapbox.map('map', 'richardhealy.h145di6d');
 
@@ -350,9 +379,7 @@ var geoJson = [
         "partners": "Nebula",
         "region": "Finland" 
     }
-}
-
-];
+}];
 
 // Add custom popups to each using our custom feature properties
 map.markerLayer.on('layeradd', function(e) {
@@ -375,32 +402,15 @@ map.markerLayer.on('layeradd', function(e) {
 
 // Add features to the map
 map.markerLayer.setGeoJSON(geoJson);
+map.markerLayer.on('click', function(e) {
+    map.panTo(e.layer.getLatLng());
+});
 map.setView([40.97, -36.56], 3);
+
+//map.dragging.disable();
+map.touchZoom.disable();
+map.doubleClickZoom.disable();
+map.scrollWheelZoom.disable();
 </script>
-
-<section class="under-blocks">
-    <div class="wrapper">
-        <!-- INFO BLOCKS !-->
-        <div class="info-blocks">
-            <div class="res-col columns span-30-31-30">
-                <div class="column span-three-left">
-                    {{widget('content', 'whybasekit-3block1', {"content":'<h4>Reduced Churn</h4><p>Our attractive websites and easy-to-use site editor help keep customers far longer than other, older products.</p>'})|raw}}
-                </div>
-                <div class="column span-three-middle">
-                    {{widget('content', 'whybasekit-3block2', {"content":'<h4>Increased Revenue</h4><p>We provide free marketing and packaging advice to help you achieve the best conversion rates in the business.</p>'})|raw}}
-                </div>
-                <div class="column span-three-right">
-                    {{widget('content', 'whybasekit-3block2', {"content":'<h4>Rapid Deployment</h4><p>A BaseKit integration can take less than an hour to set up and you can go live immediately.</p>'})|raw}}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- PARTNER BAR !-->
-{% include '/includes/partner-bar.twig' %}
-
-<!-- FOOTER !-->
-{% include '/includes/footer.twig' %}
-
 {% endblock %}
+
