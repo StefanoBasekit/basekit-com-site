@@ -1,0 +1,223 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<!-- HEADER !-->
+{% include '/includes/header.twig' %}
+
+<!-- SUB NAV BAR !-->
+<a id="#partner-signup"></a>
+<section class="partners-subnav">
+    <div class="wrapper">
+        <div class="res-col columns span-20-80">
+            <div class="column span-20">
+                <h2 class="hwhite">Product Tour</h2>
+            </div>
+            <div class="column span-80">
+                <ul class="clearfix">
+                    <li class="selected"><h5><a href="#partner-signup"><i class="fa fa-keyboard-o"></i>The Editor</a></h5></li>
+                    <li><h5><a href="#why-basekit"><i class="fa fa-question"></i>Templates</a></h5></li>
+                    <li><h5><a href="#get-started"><i class="fa fa-power-off"></i>Image Editor</a></h5></li>
+                    <li><h5><a href="#testimonials"><i class="fa fa-comments-o"></i>Get Started</a></h5></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="tour-page">
+
+    <!-- EDITOR !-->
+    <section class="editor green">
+        <div class="wrapper">
+            <h2 class="hwhite">A website editor built for speed and simplicity</h2>
+            <div class="green-browser">
+                <div class="editor-grc">
+                    <div class="controls">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <!-- CALLOUTS !-->
+                    <div class="callouts">
+                        <div class="publish">
+                            <div class="callout">
+                                <h4>Publish</h4>
+                                <p>Publish your site with just two clicks - <br>no extra steps to publish a mobile site.</p>
+                            </div>
+                        </div>
+                        <div class="widgets">
+                            <div class="callout widgets">
+                                <h4>Widgets</h4>
+                                <p>Add text, images, forms, maps, videos and social content to any page.</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="callout content">
+                                <h4>Content</h4>
+                                <p>Drag and drop widgets onto any page to customise the content and layout.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEMPLATES !-->
+    <section class="templates LightGrey">
+        <div class="wrapper">
+            <hgroup>
+                <h2 class="h2-36pad">Fantastic professional templates</h2>
+                <h5>As soon you complete the partner registration form, you can make BaseKit available to your customers without the need for complex technical or contractual setups.</h5>
+            </hgroup>
+            <!-- TEMPLATE THUMBS !-->
+            <ul>
+                <li class="template-holder">
+                    <div class="browser-bar">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="{{asset('/images/templates/sofia.jpg')}}">
+                    </div>
+                </li>
+                <li class="template-holder">
+                    <div class="browser-bar">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="{{asset('/images/templates/surf.jpg')}}">
+                    </div>
+                </li>
+                <li class="template-holder">
+                    <div class="browser-bar">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="{{asset('/images/templates/langkawi.jpg')}}">
+                    </div>
+                </li>
+                <li class="template-holder">
+                    <div class="browser-bar">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="{{asset('/images/templates/tukana.jpg')}}">
+                    </div>
+                </li>
+            </ul>
+            <!-- MORE TEMPLATES !-->
+            <div class="more-templates">
+                <div class="toggler" id="toggler-slideOne">
+                    <span class="expandSlider">
+                        <a class="button trans-btn trans-grey">View More Templates</a>
+                        <span class="collapseSlider"></span>
+                    </span>
+                </div>
+                <div class="slider" id="slideOne">
+                    <!-- TEMPLATE THUMBS !-->
+                    <ul>
+                        <li class="template-holder">
+                            <div class="browser-bar">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="browser-content">
+                                <img src="{{asset('/images/templates/sofia.jpg')}}">
+                            </div>
+                        </li>
+                        <li class="template-holder">
+                            <div class="browser-bar">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="browser-content">
+                                <img src="{{asset('/images/templates/surf.jpg')}}">
+                            </div>
+                        </li>
+                        <li class="template-holder">
+                            <div class="browser-bar">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="browser-content">
+                                <img src="{{asset('/images/templates/langkawi.jpg')}}">
+                            </div>
+                        </li>
+                        <li class="template-holder">
+                            <div class="browser-bar">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="browser-content">
+                                <img src="{{asset('/images/templates/tukana.jpg')}}">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIMPLE FEATURES !-->
+    <section class="simple-features">
+        <div class="wrapper">
+            <hgroup>
+                <h2 class="h2-36pad">Simple, easy to use features</h2>
+                <h5>As soon you complete the partner registration form, you can make BaseKit available to your customers without the need for complex technical or contractual setups.</h5>
+            </hgroup>
+            <!-- 3 BLOCKS !-->
+            <div class="feature-imgs">
+                <div class="res-col columns span-30-31-30">
+                    <div class="column span-three-left">
+                        <img src="{{asset('/images/simple-features/feature-1.svg')}}" style="margin-left: -10px">
+                        {{widget('content', 'simplefeaturescontent1', {"content":'<h4>From Your Desktop</h4><p>Use our simple partner signup form to become a partner in just a few minutes.</p>'})|raw}}
+                    </div>
+                    <div class="column span-three-middle">
+                        <img src="{{asset('/images/simple-features/feature-2.svg')}}">
+                        {{widget('content', 'simplefeaturescontent2', {"content":'<h4>Embed Media into your Site</h4><p>Use our simple partner signup form to become a partner in just a few minutes.</p>'})|raw}}
+                    </div>
+                    <div class="column span-three-right">
+                        <img src="{{asset('/images/simple-features/feature-3.svg')}}">
+                        {{widget('content', 'simplefeaturescontent3', {"content":'<h4>Twitter Integration</h4><p>Use our simple partner signup form to become a partner in just a few minutes.</p>'})|raw}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMAGE EDITOR !-->
+    <section class="image-editor">
+        <div class="wrapper">
+            <hgroup>
+                <h2 class="h2-36pad">Powerful image editor included</h2>
+                <h5>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <br>totam rem aperiam, eaque ipsa quae ab illo inventore veritatiset.</h5>
+            </hgroup>
+            <img src="{{asset('/images/image-editor.png')}}">
+        </div>
+    </section>
+
+    <!-- STOCK IMAGES !-->
+    <section class="stock-images">
+        <div class="wrapper">
+            <hgroup>
+                <h2 class="h2-36pad">Access to thousands of stock images</h2>
+                <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</h5>
+            </hgroup>
+            <ul>
+                <li>
+                    <div class="browser-bar">
+                        <span></span><span></span><span></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+</section>
+<!-- END TOUR PAGE !-->
+
+<!-- PARTNER BAR !-->
+{% include '/includes/partner-bar.twig' %}
+
+<!-- FOOTER !-->
+{% include '/includes/footer.twig' %}
+
+{% endblock %}
+
+
+

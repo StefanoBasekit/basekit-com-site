@@ -9,9 +9,11 @@
 	color: @font-swatch1-color;
 	text-decoration: none;
 	.rounded-corners;
-
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	&:hover {
 		color: @color-swatch1;
+		cursor: pointer;
 	}
 
 	/* GREEN */
@@ -78,5 +80,16 @@
 				border: 2px solid @color-swatch3;
 			}
 		}
+		&.trans-grey {
+			border: 2px solid #d7d7d7;
+			color: #8f8f8f;
+			font-size: 14px;
+			text-shadow: 0 1px 0 #fff;
+			&:hover {
+				border: 2px solid darken(#d7d7d7,10%);
+			}
+		}
 	}
 }
+
+
