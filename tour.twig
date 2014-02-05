@@ -5,27 +5,27 @@
 <!-- HEADER !-->
 {% include '/includes/header.twig' %}
 
-<!-- SUB NAV BAR !-->
-<a id="#partner-signup"></a>
-<section class="partners-subnav">
-    <div class="wrapper">
-        <div class="res-col columns span-20-80">
-            <div class="column span-20">
-                <h2 class="hwhite">Product Tour</h2>
-            </div>
-            <div class="column span-80">
-                <ul class="clearfix">
-                    <li class="selected"><h5><a href="#partner-signup"><i class="fa fa-keyboard-o"></i>The Editor</a></h5></li>
-                    <li><h5><a href="#why-basekit"><i class="fa fa-question"></i>Templates</a></h5></li>
-                    <li><h5><a href="#get-started"><i class="fa fa-power-off"></i>Image Editor</a></h5></li>
-                    <li><h5><a href="#testimonials"><i class="fa fa-comments-o"></i>Get Started</a></h5></li>
-                </ul>
+<section class="tour-page">
+
+    <!-- SUB NAV BAR !-->
+    <a id="#partner-signup"></a>
+    <section class="partners-subnav">
+        <div class="wrapper">
+            <div class="res-col columns span-20-80">
+                <div class="column span-20">
+                    <h2 class="hwhite">Tour</h2>
+                </div>
+                <div class="column span-80">
+                    <ul class="clearfix">
+                        <li><h5><a href="#partner-signup"><span class="icon ic-browser"></span>The Editor</a></h5></li>
+                        <li><h5><a href="#why-basekit"><span class="icon ic-templates"></span>Templates</a></h5></li>
+                        <li><h5><a href="#get-started"><span class="icon ic-brush"></span>Image Editor</a></h5></li>
+                        <li><h5><a href="#testimonials"><span class="icon ic-stock"></span>Stock Images</a></h5></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
-<section class="tour-page">
+    </section>
 
     <!-- EDITOR !-->
     <section class="editor green">
@@ -37,7 +37,7 @@
                         <span></span><span></span><span></span>
                     </div>
                     <!-- CALLOUTS !-->
-                    <div class="callouts">
+                    <div class="callouts desktop">
                         <div class="publish">
                             <div class="callout">
                                 <h4>Publish</h4>
@@ -57,6 +57,26 @@
                             </div>
                         </div>
                     </div>
+                    <!-- NUMBERS !-->
+                    <div class="numbers tablet">
+                        <ul class="tt-wrapper">
+                            <li>
+                                <a class="tt-publish">1<span><p>Publish your site with just two clicks - no extra steps to publish a mobile site.</p></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="tt-widgets">2<span><p>Add text, images, forms, maps, videos and social content to any page.</p></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="tt-zone">3<span><p>Drag and drop widgets onto any page to customise the content and layout.</p></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="number-info tablet">
+                        <h4>Press a number above for more information</h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,13 +85,35 @@
     <!-- TEMPLATES !-->
     <section class="templates LightGrey">
         <div class="wrapper">
+            <div class="hide-show-features mobile">
+                <h4 id="hide-editor" class="hide-show">View editor features</h4>
+                <div id="close" style="display:none">
+                    <ol class="mobile-numbers">
+                        <li class="publish">
+                            <div class="callout">
+                                <p><span>1.</span> <b>Publish</b> your site with just two clicks - no extra steps to publish a mobile site.</p>
+                            </div>
+                        </li>
+                        <li class="widgets">
+                            <div class="callout widgets">
+                                <p><span>2.</span> <b>Add widgets</b> - text, images, forms, maps, videos and social content to any page.</p>
+                            </div>
+                        </li>
+                        <li class="content">
+                            <div class="callout content">
+                                <p><span>3.</span> <b>Drag and drop</b> widgets onto any page to customise the content and layout.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
             <hgroup>
-                <h2 class="h2-36pad">Fantastic professional templates</h2>
-                <h5>As soon you complete the partner registration form, you can make BaseKit available to your customers without the need for complex technical or contractual setups.</h5>
+                <h2 class="h2-36pad">Designed by professional designers</h2>
+                <h5>Every design reflects the current state-of-the-art in modern, responsive web design. New designs are added frequently and you can change your design as often as you like.</h5>
             </hgroup>
             <!-- TEMPLATE THUMBS !-->
             <ul>
-                <li class="template-holder">
+                <li>
                     <div class="browser-bar">
                         <span></span><span></span><span></span>
                     </div>
@@ -79,7 +121,7 @@
                         <img src="{{asset('/images/templates/sofia.jpg')}}">
                     </div>
                 </li>
-                <li class="template-holder">
+                <li>
                     <div class="browser-bar">
                         <span></span><span></span><span></span>
                     </div>
@@ -87,7 +129,7 @@
                         <img src="{{asset('/images/templates/surf.jpg')}}">
                     </div>
                 </li>
-                <li class="template-holder">
+                <li>
                     <div class="browser-bar">
                         <span></span><span></span><span></span>
                     </div>
@@ -95,7 +137,7 @@
                         <img src="{{asset('/images/templates/langkawi.jpg')}}">
                     </div>
                 </li>
-                <li class="template-holder">
+                <li>
                     <div class="browser-bar">
                         <span></span><span></span><span></span>
                     </div>
@@ -106,49 +148,44 @@
             </ul>
             <!-- MORE TEMPLATES !-->
             <div class="more-templates">
-                <div class="toggler" id="toggler-slideOne">
-                    <span class="expandSlider">
-                        <a class="button trans-btn trans-light">View More Templates</a>
-                        <span class="collapseSlider"></span>
-                    </span>
-                </div>
-                <div class="slider" id="slideOne">
-                    <!-- TEMPLATE THUMBS !-->
-                    <ul>
-                        <li class="template-holder">
-                            <div class="browser-bar">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="browser-content">
-                                <img src="{{asset('/images/templates/sofia.jpg')}}">
-                            </div>
-                        </li>
-                        <li class="template-holder">
-                            <div class="browser-bar">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="browser-content">
-                                <img src="{{asset('/images/templates/surf.jpg')}}">
-                            </div>
-                        </li>
-                        <li class="template-holder">
-                            <div class="browser-bar">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="browser-content">
-                                <img src="{{asset('/images/templates/langkawi.jpg')}}">
-                            </div>
-                        </li>
-                        <li class="template-holder">
-                            <div class="browser-bar">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="browser-content">
-                                <img src="{{asset('/images/templates/tukana.jpg')}}">
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <a id="setup" class="button trans-btn trans-light">View More Designs</a>
+            </div>
+            <div id="closeable" style="display:none">
+                <!-- TEMPLATE THUMBS !-->
+                <ul>
+                    <li>
+                        <div class="browser-bar">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="browser-content">
+                            <img src="{{asset('/images/templates/sofia.jpg')}}">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="browser-bar">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="browser-content">
+                            <img src="{{asset('/images/templates/surf.jpg')}}">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="browser-bar">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="browser-content">
+                            <img src="{{asset('/images/templates/langkawi.jpg')}}">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="browser-bar">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="browser-content">
+                            <img src="{{asset('/images/templates/tukana.jpg')}}">
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -157,23 +194,23 @@
     <section class="simple-features">
         <div class="wrapper">
             <hgroup>
-                <h2 class="h2-36pad">Simple, easy to use features</h2>
-                <h5>As soon you complete the partner registration form, you can make BaseKit available to your customers without the need for complex technical or contractual setups.</h5>
+                <h2 class="h2-36pad">Simple to learn, easy to use</h2>
+                <h5>Every aspect of website creation and management is integrated into a single, easy to learn web app that is free of the complexity of older more complex systems.</h5>
             </hgroup>
             <!-- 3 BLOCKS !-->
             <div class="feature-imgs">
                 <div class="res-col columns span-30-31-30">
                     <div class="column span-three-left">
                         <img src="{{asset('/images/simple-features/feature-1.svg')}}" style="margin-left: -10px">
-                        {{widget('content', 'simplefeaturescontent1', {"content":'<h4>From Your Desktop</h4><p>Use our simple partner signup form to become a partner in just a few minutes.</p>'})|raw}}
+                        {{widget('content', 'simplefeaturescontent1', {"content":'<h4>Place text and images</h4><p>Drag and drop content into the page body to make each page unique.</p>'})|raw}}
                     </div>
                     <div class="column span-three-middle">
                         <img src="{{asset('/images/simple-features/feature-2.svg')}}">
-                        {{widget('content', 'simplefeaturescontent2', {"content":'<h4>Embed Media into your Site</h4><p>Use our simple partner signup form to become a partner in just a few minutes.</p>'})|raw}}
+                        {{widget('content', 'simplefeaturescontent2', {"content":'<h4>Be better connected</h4><p>Your site wil always be well connected with easy social media integrations.</p>'})|raw}}
                     </div>
                     <div class="column span-three-right">
                         <img src="{{asset('/images/simple-features/feature-3.svg')}}">
-                        {{widget('content', 'simplefeaturescontent3', {"content":'<h4>Twitter Integration</h4><p>Use our simple partner signup form to become a partner in just a few minutes.</p>'})|raw}}
+                        {{widget('content', 'simplefeaturescontent3', {"content":'<h4>Twitter integration</h4><p>Add a feed to any page and share your tweets with every visitor.</p>'})|raw}}
                     </div>
                 </div>
             </div>
@@ -185,7 +222,7 @@
         <div class="wrapper">
             <hgroup>
                 <h2 class="h2-36pad">Powerful image editor included</h2>
-                <h5>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <br>totam rem aperiam, eaque ipsa quae ab illo inventore veritatiset.</h5>
+                <h5>Enhance your images without having to buy additional software. Crop, resize or add special effects to any image without leaving your web browser.</h5>
             </hgroup>
             <img src="{{asset('/images/image-editor.png')}}">
         </div>
@@ -195,16 +232,33 @@
     <section class="stock-images">
         <div class="wrapper">
             <hgroup>
-                <h2 class="h2-36pad">Access to thousands of stock images</h2>
-                <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</h5>
+                <h2 class="h2-36pad">Choose from millions of top quality images</h2>
+                <h5>Our paid packages include free images from the worlds leading provider of professional imagery. Additional images can be purchased at minimal cost.</h5>
             </hgroup>
-            <ul>
-                <li>
+            <div class="stock-col">
+                <article>
                     <div class="browser-bar">
                         <span></span><span></span><span></span>
                     </div>
-                </li>
-            </ul>
+                    <div class="browser-content">
+                        <img src="{{asset('/images/stock-images.png')}}">
+                    </div>
+                </article>
+                <article>
+                    <h4>Easy to search</h4>
+                    <p class="p-spc">Type one or more words and you'll find a wide selection of images to choose from. Add any image to your site with just two clicks.</p>
+                    <h4>Huge Stock Library</h4>
+                    <p>Image categories include:</p>
+                    <ul class="stock-list">
+                        <li><p>Landscapes</p></li>
+                        <li><p>Arts &amp; Crafts</p></li>
+                        <li><p>Travel</p></li>
+                        <li><p>Illustrations (Vectors)</p></li>
+                        <li><p>Vehicles</p></li>
+                        <li><p>Portrait photography</p></li>
+                    </ul>
+                </article>
+            </div>
         </div>
     </section>
 

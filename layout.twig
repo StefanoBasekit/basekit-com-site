@@ -63,21 +63,32 @@
 	</script>
 
 	<script type="text/javascript">
-	function toggleSlides(){
-		$('.toggler').click(function(e){
-			var id=$(this).attr('id');
-			var widgetId=id.substring(id.indexOf('-')+1,id.length);
-			$('#'+widgetId).slideToggle();
-			$(this).toggleClass('sliderExpanded');
-			$('.closeSlider').click(function(){
-					$(this).parent().hide('slow');
-					var relatedToggler='toggler-'+$(this).parent().attr('id');
-					$('#'+relatedToggler).removeClass('sliderExpanded');
-			});
-		});
-	};
-	$(function(){
-		toggleSlides();
+	$(document).ready(function() {
+	    $("#setup").click(function() {
+	        $("#closeable").slideToggle(function() {
+	            if ($(this).is(":visible")) {
+	                $("#setup").text("View less designs");
+	            }
+	            else {
+	                $("#setup").text("View more designs");
+	            }
+	        });
+	    });
+	});
+	</script>
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+	    $("#hide-editor").click(function() {
+	        $("#close").slideToggle(function() {
+	            if ($(this).is(":visible")) {
+	                $("#hide-editor").text("Hide editor features");
+	            }
+	            else {
+	                $("#hide-editor").text("View editor features");
+	            }
+	        });
+	    });
 	});
 	</script>
 
