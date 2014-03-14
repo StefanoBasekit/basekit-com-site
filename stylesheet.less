@@ -193,7 +193,9 @@ header {
 	}
 	p.com-strap {
 		color: rgb(130,130,130);
-		padding-bottom: 2.5em;
+		font-size: 17px;
+		line-height: 31px;
+		padding: 0.2em 0 2em;
 		@media @mobile {
 			line-height: 22px;
 			padding-bottom: 1.5em;
@@ -1280,10 +1282,14 @@ section.editor-features {
 .com {
 	.signupform form {
 		input {
+			margin-bottom: 0;
 			margin-right: 2%;
 			width: 75%;
 			@media only screen and (max-width: 1058px) {
 				width: 100%;
+			}
+			&:focus {
+				background-color: #ffffff;
 			}
 		}
 		button {
