@@ -187,6 +187,25 @@ header {
 	}
 }
 
+.partners-subnav {
+	h2 {
+		padding-bottom: 5px;
+	}
+	p.com-strap {
+		color: rgb(130,130,130);
+		padding-bottom: 2.5em;
+		@media @mobile {
+			line-height: 22px;
+			padding-bottom: 1.5em;
+		}
+	}
+}
+
+.line {
+	border-bottom: 2px solid #e8e8e8;
+	display: inline-block;
+	padding-bottom: 5px;
+}
 
 /* ===============================
    FEATURE
@@ -394,6 +413,39 @@ section {
 	}
 }
 
+/* ===============================
+   FREE ACCOUNT FEATURE
+   =============================== */
+
+.feature-highlight {
+	display: block;
+	margin-top: 4em;
+	@media @tablet {
+		margin-top: 2em;
+	}
+	h4 {
+		background: white;
+		border: 1px solid gainsboro;
+		border-radius: 8px;
+		display: inline-block;
+		margin: 15px 0 0;
+		padding: 1.5em;
+		width: 50%;
+		@media @mobile {
+			position: relative;
+			margin: 0 auto;
+			padding: 1.5em 3.5em;
+		}
+		span {
+			color: #fc7720;
+		}
+		&:hover {
+			-webkit-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.07);
+			-moz-box-shadow:    0px 0px 12px 0px rgba(50, 50, 50, 0.07);
+			box-shadow:         0px 0px 12px 0px rgba(50, 50, 50, 0.07);
+		}
+	}
+}
 
 /* ===============================
    INTRO SECTION
@@ -833,7 +885,6 @@ section.template-slideshow {
 			}
 		}
 	}
-
 }
 
 
@@ -841,15 +892,14 @@ section.template-slideshow {
    DEVELOPER COMMUNITY
    =============================== */
 
-section.developer-community {
+section.developer-community, section.community-resources {
 	position: relative;
 
-	.developer-info {
+	.developer-info, .community-resources {
 		margin: 4em 0 0;
-
-		@media @tablet {
-			margin: 3em 0 0;
-		}
+	@media @tablet {
+		margin: 3em 0 0;
+	}
 
 		&.desktop {
 			display: block;
@@ -955,6 +1005,42 @@ section.developer-community {
 			}
 		}
 	}
+	.community-resources {
+		margin: 2em 0 0;
+		@media @tablet {
+			margin-top: 0.25em;
+		}
+	}
+}
+
+section.community-resources {
+	padding: 5em 0 6em;
+	@media @mobile {
+		padding: 3em 0 4em;
+	}
+}
+
+.community-resources {
+	.columns.span-30-31-30 {
+		.column {
+			&.span-three-left, &.span-three-middle, &.span-three-right {
+				@media @tablet {
+					margin: 1em 0;
+					width: 100% !important;
+				}
+				img {
+					margin-bottom: 2em;
+				}
+			}
+			&.span-three-middle {
+				@media @tablet {
+					margin-top: 2em;
+					margin-left: 0 !important;
+					margin-right: 0!important;
+				}
+			}
+		}
+	}
 }
 
 
@@ -1057,7 +1143,165 @@ section.editor-features {
 			}
 		}
 	}
+}
 
+/* ===============================
+   LOGIN - SIGNUP
+   =============================== */
+
+.signupform {
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    border: 1px solid #eaeaea;
+}
+
+.signupform h2 {
+    color: #ADADAD;
+    font-size: 18px;
+    padding: 16px 20px;
+    background-color: #eee;
+    border-bottom: 1px solid #E6E6E6;
+    -webkit-border-top-left-radius: 7px;
+    -webkit-border-top-right-radius: 7px;
+    -moz-border-radius-topleft: 7px;
+    -moz-border-radius-topright: 7px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.signupform h2 span {
+    color: #968E8E;
+}
+
+.signupform h3 {
+    color: #929292;
+    font-size: 15px;
+    text-align: left;
+    line-height: 24px;
+}
+
+.signupform h3 span {
+    color: #fd9652;
+}
+
+.login-page-header {
+    text-align: center;
+}
+
+.signupform form {
+    padding: 30px 30px;
+    @media @mobile {
+    	padding: 30px 20px;
+    }
+}
+
+.signupform fieldset {
+	border: none;
+}
+
+.signupform form label {
+    display: none;
+}
+
+.signupform form input {
+    background-color: #f8f8f8;
+    border: 0;
+    width: 100%;
+    height: 48px;
+    margin: 0 0 10px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    border: 1px solid #e6e6e6;
+    text-indent: 12px;
+    font-family: proxima-nova;
+    font-weight: inherit;
+    color: #929292;
+    line-height: 26px;
+    letter-spacing: inherit;
+    font-size: 14px;
+}
+
+.signupform form input:focus {
+    outline: none;
+    background-color: #f8f8f8;
+    border: 1px solid #63c6ae;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.signupform form button {
+    float: left;
+    position: relative;
+    right: -4px;
+    border: 0;
+    font-family: 'proxima-nova-semibold';
+    padding: 10px 20px 7px;
+    margin-top: 0.25em;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 2px;
+    background-color: #63c6ae;
+    box-shadow: 0 3px 0 #5abca4;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    text-transform: uppercase;
+}
+
+.signupform form button:focus, .signupform form button:hover  {
+	background-color: #5abca4;
+    outline: none;
+}
+
+@media only screen and (max-width: 470px) {
+    .form-container {
+        width: 90%;
+        height: 392px;
+        position: absolute;
+        left: 5%;
+        top: 30px;
+        margin: 0 auto;
+        display: block;
+    }
+    form.login-form input {
+        width: 100%;
+    }
+    .main-form h3 {
+        padding-bottom: 20px;
+    }
+}
+
+.com {
+	.signupform form {
+		input {
+			margin-right: 2%;
+			width: 75%;
+			@media only screen and (max-width: 1058px) {
+				width: 100%;
+			}
+		}
+		button {
+			float: none;
+			font-size: 14px;
+			padding: 10px 15px 7px;
+			right: 0;
+			@media only screen and (max-width: 1058px) {
+				padding: 9px 20px 6px;
+			}
+		}
+	}
+	&.column.span-two-right,  {
+		@media only screen and (max-width: 767px) {
+			margin-left: 0!important;
+			margin-top: 2.5em;
+			width: 100%!important;
+		}
+	}
 }
 
 
