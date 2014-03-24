@@ -8,6 +8,7 @@
 @import "@{templateLocal}/css/buttons.less";
 @import "@{templateLocal}/css/partners.less";
 @import "@{templateLocal}/css/tour.less";
+@import "@{templateLocal}/css/blog.less";
 @import "@{templateLocal}/css/fonts.less";
 @import "@{templateLocal}/css/rescols.less";
 
@@ -69,10 +70,13 @@
    =============================== */
 
 header {
-	padding: 1.7em 0;
+	padding: 0;
 	-webkit-font-smoothing:antialiased;
+	@media @tablet {
+		padding-bottom: 30px;
+	}
 	.logo {
-		margin-top: 4px;
+		margin-top: 30px;
 		img {
 			max-width: inherit;
 		}
@@ -80,7 +84,6 @@ header {
 	nav {		
 		width: 100%;
 		position: relative;
-
 		&.nav-desktop {
 			display: block;
 			@media @tablet {
@@ -91,37 +94,43 @@ header {
 			display: none;
 			@media @tablet {
 				display: block;
-			}
-			.arrow_box {
-				@media @mobileSml {
-					display: none;
-				}
+				margin: 27px 0 0;
 			}
 		}
 		ul {
 			float: right;
-			margin: .7em 0;
-
+			margin-top: 2px;
 			li {  
 				display: inline-block;
-				float: left;
-				list-style: none;
-				margin-left: 70px;
-				.box-sizing;
-				&:last-child {
-					margin-left: 50px;
-					@media @tablet {
-						margin-left: 30px;
-					}
-				}
-				&:first-child {
-					@media @tablet {
-						padding: 10px 0 0;
-					}
-				}
 				@media @tablet {
 					width: 80%;
-					margin: 10px 30px;
+				}
+				&:last-child {
+					a {
+						margin-left: 20px;
+					}
+				}
+				&.selected {
+					position: relative;
+					a {
+						color: #4d4d4d;
+						&:after {
+							content: '';
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							margin: 0 auto;
+							width: 0; 
+							height: 0; 
+							border-left: 7px solid transparent;
+							border-right: 7px solid transparent;
+							border-bottom: 7px solid #424242;
+							@media @tablet {
+								display: none;
+							}
+						}
+					}
 				}
 				a { 
 			    	font-family: @font-swatch6-font-family;
@@ -129,16 +138,19 @@ header {
 					color: @font-swatch6-color;
 					letter-spacing: @font-swatch6-letter-spacing;
 					text-decoration: none;
+					line-height: 90px;
+					padding: 0 25px;
+					@media @tablet {
+						line-height: 40px;
+					}
 					&:hover {
-						color: darken(@font-swatch6-color,20%); 
+						color: #4d4d4d;
 					}
 					&.fade-out {
 						color: #CACACA;
 					}
 					&.button {
-						font-size: 14px;
-					}
-					&.selected {
+						letter-spacing: 0;
 					}
 				}
 			}
@@ -1085,33 +1097,27 @@ section.website-editor {
    =============================== */
 
 section.editor-features {
-
 	@media @mobile {
 		padding: 4em 0 1em;
 	}
-
 	.feature-list {
-
 		&.desktop {
 			display: block;
 			@media @tablet {
 				display: none;
 			}
 		}
-
 		&.tablet {
 			display: none;
 			@media @tablet {
 				display: block;
 			}
 		}
-
 		.span-two-left {
 			@media @mobile {
 				margin: 0!important;
 			}
 		}
-
 		article {
 			.rounded-corners;
 			padding: 2em;
@@ -1126,7 +1132,6 @@ section.editor-features {
 				border-color: darken(@lightGrey,9%);
 			}
 		}
-
 		i {
 			float: left;
 			font-size: 1.3em;
@@ -1318,29 +1323,29 @@ section.editor-features {
 
 footer {
 	background-color: darken(@color-swatch7,5%);
-	padding: 6em 0 1.3em;
+	padding: 4em 0 1.3em;
 	@media @mobile {
-		padding: 4em 0 1em;
+		padding: 3em 0 1em;
 	}
 	h4.h4white {
 		width: 100%;
-		margin-bottom: 2.2em;
+		margin-bottom: 2em;
+		font-size: 18px;
+		line-height: 20px;
+		text-transform: none;
+		letter-spacing: 0;
 	}
 	.arrow_box {
 		background-color: #616161;
-
 		&:after {
 			border-right-color: #616161;
 		}
-
 		h4 {
 			margin-bottom: 0;
 			color: #B4B4B4;
 		}
 	}
-
 	.footer-menu {
-
 		li {
 			padding: 0 0 0.8em;
 
@@ -1368,7 +1373,6 @@ footer {
 				}
 			}
 		}
-
 		&.half {
 			width: 50%;
 			float: left;
@@ -1377,9 +1381,8 @@ footer {
 			}
 		}
 	}
-
 	.footer2 {
-		padding: 6em 0 0;
+		padding: 4em 0 0;
 		@media @mobile {
 			padding: 3em 0 0;
 		}
@@ -1395,7 +1398,6 @@ footer {
 		.left {
 			float: left;
 		}
-
 		.right {
 			float: right;
 			text-align: right;

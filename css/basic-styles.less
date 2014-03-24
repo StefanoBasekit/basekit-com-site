@@ -109,11 +109,39 @@ i {
 }
 
 
-/* ===============================
-   LESS CLASSES
-   =============================== */
+// ===========================
+// MIXINS
+// ===========================
 
 @lightGrey: #f8f8f8;
+@white: @color-swatch1;
+@green: @color-swatch3;
+@orange: @color-swatch2;
+@purple: #727ab2;
+@blue: #359ddd;
+
+// Colours
+.green {
+	color: @green;
+	&.underline {
+		padding-bottom: 5px;
+		border-bottom: 1px solid lighten(@green, 30%);
+	}
+}
+.purple {
+	color: @purple;
+	&.underline {
+		padding-bottom: 5px;
+		border-bottom: 1px solid lighten(@purple, 30%);
+	}
+}
+.orange {
+	color: @orange;
+	&.underline {
+		padding-bottom: 5px;
+		border-bottom: 1px solid lighten(@orange, 22%);
+	}
+}
 
 .rounded-corners {
 	-webkit-border-radius: 7px;
@@ -160,6 +188,27 @@ i {
 
 .text-center {
 	text-align: center;
+}
+
+.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+    -webkit-border-top-right-radius:    @topright;
+    -webkit-border-bottom-right-radius: @bottomright;
+    -webkit-border-bottom-left-radius:  @bottomleft;
+    -webkit-border-top-left-radius:     @topleft;
+
+    -moz-border-radius-topright:        @topright;
+    -moz-border-radius-bottomright:     @bottomright;
+    -moz-border-radius-bottomleft:      @bottomleft;
+    -moz-border-radius-topleft:         @topleft;
+
+    border-top-right-radius:            @topright;
+    border-bottom-right-radius:         @bottomright;
+    border-bottom-left-radius:          @bottomleft;
+    border-top-left-radius:             @topleft;
+
+    -moz-background-clip:    padding; 
+    -webkit-background-clip: padding-box; 
+    background-clip:         padding-box; 
 }
 
 /* ===============================
