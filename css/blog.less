@@ -1,0 +1,152 @@
+// ===========================
+// TOUR PAGE
+// ===========================
+
+.bk-pt-blog {
+	background-color: @lightGrey;
+}
+
+.blog {
+	padding: 2.5em 0 6em;
+	h5 {
+		padding: 5px 0 0;
+		font-size: 20px;
+		color: #6e6e6e;
+	}
+	// Breadcrumb 
+	ul {
+		&.breadcrumb {
+			display: inline-block;
+			float: right;
+			padding: 10px 12px;
+			background-color: #fdfdfd;
+			.border-radius(5px);
+			border: 1px solid #e7e7e7;
+			li {
+				display: inline-block;
+				vertical-align: middle;
+				&:after {
+					content: '»';
+					color: #d0d0d0;
+					padding: 0 5px 0 7px;
+				}
+				&:last-child {
+					&:after {
+						display: none;
+					}
+				}
+				a {
+					font-family: 'proxima-nova';
+					font-size: 15px;
+					color: @color-swatch5;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+					&.selected {
+						color: @blue;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Blog Search 
+.widget {
+	&.blogsearch {
+		position: relative;
+		width: 100%;
+		padding: 2em 0 0;
+		text-align: right;
+		label {
+			display: none;
+		}
+		input {
+			width: 40%;
+			height: 50px;
+			padding: 0 12px;
+			background-color: #383838;
+			border: 0;
+			.border-radius(5px);
+			box-shadow: inset 0 3px 4px rgba(0,0,0,0.07);
+			// Text
+			font-family: 'proxima-nova';
+			font-size: 15px;
+			color: #828282;
+			-webkit-font-smoothing: antialiased;
+			&:focus {
+				outline: none;
+				border: 1px solid #585858;
+				-webkit-transition: 0.5s;
+				-moz-transition: 0.5s;
+				transition: 0.5s;
+			}
+		}
+		button {
+			position: absolute;
+			right: 1px;
+			bottom: 1px;
+			width: 50px;
+			height: 48px;
+			background-color: #333;
+			background-image: image('/images/ic-search.png');
+		    background-repeat: no-repeat;
+		    background-position: center;
+		    .border-radiuses(@topright: 5px, @bottomright: 5px, @bottomleft: 0, @topleft: 0);
+			text-indent: -9999px;
+			&:hover {
+				background-color: darken(#333, 2%);
+				-webkit-transition: 0.5s;
+				-moz-transition: 0.5s;
+				transition: 0.5s;
+			}
+		}
+	}
+}
+
+// Blog Post List 
+.blog-post-list {
+	padding: 2.5em 0;
+	// Blog Item
+	.blog-post-item {
+		position: relative;
+		margin: 0 0 60px;
+		background-color: @white;
+		.border-radius(5px);
+		border: 1px solid #dfdfdf;
+		box-shadow: 0 0 10px rgba(150,150,150,0.1);
+	}
+	// Image 
+	.blog-post-feature-image-wrap {
+		position: absolute;
+		width: 25%;
+		height: 100%;
+	}
+	// Blog Content 
+	.blog-post-content {
+		display: inline-block;
+		padding: 46px;
+		margin-left: 25%;
+		.blog-post-title {
+			padding: 0 0 20px;
+			a {
+				font-family: 'din';
+				font-size: 30px;
+				color: @color-swatch4;
+				text-decoration: none;
+			}
+		}
+		.blog-post-date {
+			a {
+				color: #b3b3b3;
+				font-size: 16px;
+				text-decoration: none;
+			}
+		}
+		.blog-post-body {
+			padding: 0;
+		}
+	}
+}
+
