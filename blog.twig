@@ -99,16 +99,32 @@
                                 <a href="{{ postPermalink }}" class="blog-post-date">
                                     <time pubdate datetime="{{ post.publishedDate.date }}" class="blog-post-published-date">{{ post.publishedDate.date }}</time>
                                 </a>
-                                {% if post.summary|length > 0 %}
-                                    {% if data.postDisplayType == 'summary' %}
+                                <!--{% if post.summary|length > 0 %}
+                                    {% if data.postDisplayType == 'summary' %}-->
                                         <p class="blog-post-summary">{{ post.summary }}</p>
                                         <a href="{{ postPermalink }}" class="blog-post-more-link">Read more...</a>
-                                    {% else %}
+                                   <!--{ {% else %}-->
                                         <section class="blog-post-body">
                                             {{ post.content|raw }}
                                         </section>
                                     {% endif %}
                                 {% endif %}
+                                <!--<div class="blog-metadata {% if data.align %}{{data.align}}{% endif %}">
+                                    {% if data.showCategory and data.category|length %}
+                                    <div class="blog-category">
+                                        <span>{{ data.category }}</span>
+                                    </div>
+                                    {% endif %}
+                                    {% if data.showTags and data.tags|length %}
+                                    <div class="blog-tags">
+                                        {% set count = 0 %}
+                                        {% for tag in data.tags %}
+                                        {% set count = count + 1 %}
+                                        <span class="tag">{{ tag }}{% if count < data.tags|length %},{% endif %}</span>
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}-->
+                                </div>
                             </div>
                         </article>
                     {% endfor%}

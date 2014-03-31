@@ -149,6 +149,29 @@
 		margin-left: 5%;
 	}
 
+	/* === 65 x 30 === */
+
+	.columns {
+		&.span-65-30 {
+			.column {
+				&.span-65 {
+					width: 65%;
+					margin-right: 5%;
+					@media @mobile {
+						width: 100%;
+						margin: 0 0 3em;
+					}
+				}
+				&.span-30 {
+					width: 30%;
+					@media @mobile {
+						width: 100%;
+						margin: 0 0 3em;
+					}
+				}
+			}
+		}
+	}
 
 /*  ==============================
 	THREE COLUMNS
