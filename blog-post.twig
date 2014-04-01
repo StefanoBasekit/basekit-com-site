@@ -103,17 +103,13 @@
                                     <img class="blog-post-feature-image" src="{{ featureImg.url }}" alt="">
                                 </div>
                             {% endif %}
-
                             {% if plugins.blog.posts[0].summary|length  %}
                                 <p class="blog-post-summary">{{ plugins.blog.posts[0].summary }}</p>
                             {% endif %}
-                         
                             <section class="blog-post-content">
                                 {{ plugins.blog.posts[0].content|raw }}
                             </section>
-
                             {{widget('disqus', 'thisunqiuewidgetname', {'align': 'left'})|raw}}
-
                         </article>
                         {% else %}
                             <p>You haven’t added any posts yet.</p>
@@ -128,14 +124,18 @@
                         <div class="recent-posts">
                             <h3>Recent Posts</h3>
                             <p>Check out some of our recent blog posts:</p>
+                            <ul>
+                                <li><a href="{{ postPermalink }}">{{ plugins.blog.posts[1].title|raw }}</a></li>
+                                <li><a href="{{ postPermalink }}">{{ plugins.blog.posts[2].title|raw }}</a></li>
+                                <li><a href="{{ postPermalink }}">{{ plugins.blog.posts[3].title|raw }}</a></li>
                         </div>
                         <div class="community-quick-links">
                             <h3>Developer Community</h3>
                             <p>Become a Basekit Developer today! Visit our useful docspage for more info:</p>
                             <ul>
-                                <li>Documentation Site</li>
-                                <li>Questions &amp; Answers</li>
-                                <li>User Workshops</li>
+                                <li><a href-"/developers">Documentation Site</a></li>
+                                <li><a href-"http://knowledge.basekit.com">Questions &amp; Answers</a></li>
+                                <li><a href-"#">User Workshops</a></li>
                             </ul>
                         </div>
                     </div><!--end span-30-->

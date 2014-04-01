@@ -1,5 +1,5 @@
 // ===========================
-// TOUR PAGE
+// BLOG PAGE
 // ===========================
 
 .bk-pt-blog {
@@ -8,6 +8,9 @@
 
 .blog-post-head {
 	margin-top: 35px;
+	@media @mobile {
+		margin-top: 0;
+	}
 }
 
 .blog-post-subnav {
@@ -16,13 +19,16 @@
 		margin-bottom: 10px;
 	}
 	ul li {
-		color: #359ddd;
 		padding-bottom: 18px;
+		a {
+			color: #359ddd;
+			text-decoration: none;
+		}
 		&:first-child {
 			margin-top: 25px;
 		}
 		&:hover {
-
+			text-decoration: underline;
 		}
 	}
 	.signupform form button {
@@ -37,8 +43,19 @@
 	padding-bottom: 30px;
 }
 
+.blog-post-summary, .blog-post-content p {
+	color: #a5a5a5;
+	strong {
+		color: @font-swatch2-color;
+		font-weight: 400;
+	}
+}
+
 .blog {
 	padding: 2.5em 0 6em;
+	@media @tablet {
+		padding-bottom: 2em;
+	}
 	h5 {
 		padding: 5px 0 0;
 		font-size: 20px;
@@ -60,10 +77,11 @@
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			@media @mobile {
+			@media @tablet {
 				display: block;
 				float: none;
-				margin-top: 40px;
+				margin-top: 5px;
+				max-width: 100%;
 			}
 			li {
 				display: inline-block;
@@ -160,9 +178,12 @@
 	.blog-post-content {
 		padding: 0;
 	}
+	@media @tablet {
+		margin-bottom: 0;
+	}
 	.blog-post-title {
 		font-size: 30px;
-		padding: 0 0 20px;
+		padding: 0 0 22px;
 		&:hover:after {
 			color: #359ddd;
 			-webkit-transition: color .4s linear;  
@@ -192,7 +213,14 @@
 		}
 	}
 	.blog-post-feature-image-wrap {
+		background-size: cover;
+		background-position: center;
+		position: absolute;
 		margin: 1.8em 0;
+		max-height: 450px;
+		img {
+			display: none;
+		}
 	}
 	p {
 		font-size: 16px;
@@ -227,6 +255,9 @@
 // Blog Post List 
 .blog-post-list {
 	padding: 2.5em 0;
+	@media @tablet {
+		padding: 0;
+	}
 	// Blog Item
 	.blog-post-item {
 		position: relative;
@@ -246,6 +277,7 @@
 		background-position: center;
 		position: absolute;
 		margin: 0;
+		max-height: 100%;
 		width: 25%;
 		height: 100%;
 		@media @tablet {
@@ -324,6 +356,15 @@
 				width: 100%;
 			}
 		}
+		.blog-post-more-link {
+			background-color: @blue;
+			.border-radius(4px);
+			color: #fff;
+			display: inline-block;
+			padding: 10px 10px 8px;
+			margin-top: 10px;
+			text-decoration: none;
+		}
 	}
 }
 
@@ -391,7 +432,7 @@ footer.blog-list-footer {
 
 footer.blog-post-metadata {
 	background: transparent;
-	padding: 0;
+	padding: 5px 0 0;
 	a {
 		text-decoration: none;
 		&:hover {
@@ -399,15 +440,24 @@ footer.blog-post-metadata {
 	}
 	.blog-post-tag {
 		display: inline-block;
-		padding-right: 2px;
+		padding-right: 1px;
 		&:first-child:before {
 			background-image: image('/images/blog-icons.png');
 			background-repeat: no-repeat;
+			background-position: 0 -17px;
 			content: "";
 			display: inline-block;
 			padding-right: 12px;
-			height: 13px;
+			height: 14px;
 			width: 14px;
+		}
+		&:after {
+			content: ",";
+		}
+		&:last-child {
+			&:after {
+				display: none;
+			}
 		}
 		a {
 			color: #359ddd;

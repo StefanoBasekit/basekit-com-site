@@ -58,14 +58,14 @@
         <div class="wrapper">
             <!-- INTRO - BREADCRUMB !-->
             <div class="intro-bread">
-                <div class="res-col columns span-70-30">
-                    <div class="column span-70">
+                <div class="res-col columns span-65-30">
+                    <div class="column span-65">
                         {{widget('content', 'subavheader', {"content":'<h5>Stay up to date with the latest <span class="green underline">product</span>, <span class="purple underline">community</span> and <span class="orange underline">technical</span> news.</h5>'})|raw}}
                     </div>
                     <div class="column span-30">
                         <ul class="breadcrumb">
                             <li><a href="/blog">Basekit Blog</a></li>
-                            <li><a href="/blog" class="selected">Home</a></li>
+                            <li><a href="/home" class="selected">Home</a></li>
                         </ul>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                                         </section>
                                     {% endif %}
                                 {% endif %}
-                                <!--<div class="blog-metadata {% if data.align %}{{data.align}}{% endif %}">
+                                <div class="blog-metadata {% if data.align %}{{data.align}}{% endif %}">
                                     {% if data.showCategory and data.category|length %}
                                     <div class="blog-category">
                                         <span>{{ data.category }}</span>
@@ -123,7 +123,7 @@
                                         <span class="tag">{{ tag }}{% if count < data.tags|length %},{% endif %}</span>
                                         {% endfor %}
                                     </div>
-                                    {% endif %}-->
+                                    {% endif %}
                                 </div>
                             </div>
                         </article>
@@ -143,9 +143,8 @@
                 {% else %}
                     <p>There aren't any posts to display.</p>
                 {% endif %}
-                </div>
+        </div>
     </section>
-
 </div>
 
 <!-- FOOTER !-->
