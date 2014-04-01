@@ -56,11 +56,12 @@
     <!-- BLOG !-->
     <section class="main blog">
         <div class="wrapper">
+
             <!-- INTRO - BREADCRUMB !-->
             <div class="intro-bread">
                 <div class="res-col columns span-65-30">
                     <div class="column span-65">
-                        {{widget('content', 'subavheader', {"content":'<h5>Stay up to date with the latest <span class="green underline">product</span>, <span class="purple underline">community</span> and <span class="orange underline">technical</span> news.</h5>'})|raw}}
+                        {{widget('content', 'newsheader', {"content":'<h5>Stay up to date with the latest <span class="green underline">product</span>, <span class="purple underline">community</span> and <span class="orange underline">technical</span> news.</h5>'})|raw}}
                     </div>
                     <div class="column span-30">
                         <ul class="breadcrumb">
@@ -70,6 +71,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- MAIN BLOG !-->
             {% if plugins.blog.posts %}
             <div class="blog-post-head clearfix">
@@ -114,7 +116,7 @@
                         {% else %}
                             <p>You haven’t added any posts yet.</p>
                         {% endif %}
-                    </div><!--end span-80-->
+                    </div><!--end span-65-->
                     <div class="column span-30 blog-post-subnav">
                         <div class="email-signup">
                             <h3>Email Signup</h3>
@@ -128,6 +130,7 @@
                                 <li><a href="{{ postPermalink }}">{{ plugins.blog.posts[1].title|raw }}</a></li>
                                 <li><a href="{{ postPermalink }}">{{ plugins.blog.posts[2].title|raw }}</a></li>
                                 <li><a href="{{ postPermalink }}">{{ plugins.blog.posts[3].title|raw }}</a></li>
+                            </ul>
                         </div>
                         <div class="community-quick-links">
                             <h3>Developer Community</h3>
@@ -139,9 +142,11 @@
                             </ul>
                         </div>
                     </div><!--end span-30-->
-                </div>
-            </div>
+                </div><!--end div res col-->
+            </div><!--end blog-post-header-->
+        </div><!--end wrapper-->
     </section>
+    
 </div>
 
 <!-- FOOTER !-->
