@@ -5,58 +5,25 @@
 <div class="bk-pt-blog">
 
     <!-- HEADER !-->
-    <header>
-        <div class="wrapper clearfix">
-            <div class="res-col columns span-20-80">
-                <div class="column span-20">
-                    <div class="logo">
-                        <a href="/"><img src="{{asset('/images/logo.png')}}" class="bk-logo"></a>
-                    </div>
-                </div>
-                <div class="column span-80">
-                    <nav class="nav-desktop clearfix">
-                        <ul>
-                            <li><a href="/tour">Tour</a></li>
-                            <li><a href="/partners">Partners</a></li>
-                            <li><a href="/developers">Developers</a></li>
-                            <li class="selected"><a href="/blog">Blog</a></li>
-                            <li><a href="http://partners.basekit.com" class="button small-btn orange">Login</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="nav-mob">
-                        <div id="dl-menu" class="dl-menuwrapper">
-                            <button class="dl-trigger dl-active">Open Menu</button>
-                            <ul class="dl-menu">
-                                <li><a href="/tour">Tour</a></li>
-                                <li><a href="/partners">Partners</a></li>
-                                <li><a href="/developers">Developers</a></li>
-                                <li class="selected"><a href="/blog">Blog</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
+    {% include '/includes/header.twig' %}
 
     <!-- SUB NAV BAR !-->
     <section class="partners-subnav">
         <div class="wrapper">
-            <div class="res-col columns span-20-80">
-                <div class="column span-20">
-            	   {{widget('content', 'subavheader', {"content":'<h2 class="hwhite">Basekit Blog</h2>'})|raw}}
+            <div class="res-col columns span-30-70">
+                <div class="column span-30">
+                   {{widget('content', 'subavheader', {"content":'<h2 class="hwhite">Basekit Blog</h2>'})|raw}}
                 </div>
-                <div class="column span-80">
+                <div class="column span-70">
                     {{widget('blogsearch', 'blogsearch', {})|raw}}
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BLOG !-->
+    <!--BLOG LIST !-->
     <section class="main blog">
         <div class="wrapper">
-
             <!-- INTRO - BREADCRUMB !-->
             <div class="intro-bread">
                 <div class="res-col columns span-65-30">
@@ -65,59 +32,20 @@
                     </div>
                     <div class="column span-30">
                         <ul class="breadcrumb">
-                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/blog">Basekit Blog</a></li>
                             <li><a href="{{ postPermalink }}" class="selected">{{ plugins.blog.posts[0].title|raw }}</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-
-            <!-- MAIN BLOG !-->
-            {% if plugins.blog.posts %}
-            <div class="blog-post-head clearfix">
-                <div class="res-col columns span-65-30">
-                    <div class="column span-65">
-                        <article class="blog-post-item{% if plugins.blog.posts[0].featureImageAssetRef is not null %} has-image{% endif %}">
-                            <h2 class='blog-post-title'>{{ plugins.blog.posts[0].title|raw }}</h2>
-                            {% if plugins.blog.posts[0].publishedDate %}
-                                <time pubdate datetime="{{ plugins.blog.posts[0].publishedDate.date }}" class="blog-post-publish-date">{{ plugins.blog.posts[0].publishedDate.date }}</time>
-                            {% endif %}
-                            <footer class="blog-post-metadata">
-                                {% if plugins.blog.posts[0].tags|length %}
-                                    <div class="blog-post-tags">
-                                        <ol class="blog-post-tags-list">
-                                            {% set tags = plugins.blog.posts[0].tags %}
-                                            {% set count = 0 %}
-                                            {% for tag in tags %}
-                                                {% set count = count + 1 %}
-                                                <li class="blog-post-tag">
-                                                    <a href="/{{ plugins.blog.directory }}/tags/{{ tag|url_encode }}">{{ tag }}</a>
-                                                </li>
-                                            {% endfor %}
-                                        </ol>
-                                    </div>
-                                {% endif %}
-                            </footer>
-                            {% if plugins.blog.posts[0].featureImageAssetRef is not null %}
-                                {% set assetRef = plugins.blog.posts[0].featureImageAssetRef %}
-                                {% set featureImg = plugins.assets.images[assetRef] %}
-                                <div class="blog-post-feature-image-wrap" style="background-image:url('{{ featureImg.url }}')">
-                                    <img class="blog-post-feature-image" src="{{ featureImg.url }}" alt="">
-                                </div>
-                            {% endif %}
-                            {% if plugins.blog.posts[0].summary|length  %}
-                                <p class="blog-post-summary">{{ plugins.blog.posts[0].summary }}</p>
-                            {% endif %}
-                            <section class="blog-post-content">
-                                {{ plugins.blog.posts[0].content|raw }}
-                            </section>
-                            {{widget('disqus', 'thisunqiuewidgetname', {'align': 'left'})|raw}}
-                        </article>
-                        {% else %}
-                            <p>You haven’t added any posts yet.</p>
-                        {% endif %}
-                    </div><!--end span-65-->
-                    <div class="column span-30 blog-post-subnav">
+        </div>
+        <div class="wrapper">
+            <div class="res-col columns span-65-30">
+                <div class="column span-65">
+                    {{widget('blogpost', 'blogpost1', {})|raw}}
+                </div>
+                <div class="column span-30">
+                    <div class="blog-post-sidenav">
                         <div class="email-signup">
                             <h3>Email Signup</h3>
                             <p>Get blog updates and resources delivered straight to your inbox.</p>
@@ -141,12 +69,11 @@
                                 <li><a href-"#">User Workshops</a></li>
                             </ul>
                         </div>
-                    </div><!--end span-30-->
-                </div><!--end div res col-->
-            </div><!--end blog-post-head-->
-        </div><!--end wrapper-->
+                    </div>
+                </div>
+            </div>
     </section>
-
+    
 </div>
 
 <!-- FOOTER !-->
