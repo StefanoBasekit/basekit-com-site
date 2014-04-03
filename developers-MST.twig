@@ -1,87 +1,26 @@
 {% extends "layout.twig" %}
+{% block templatehead %}
+	<!-- Include responsive columns for default template type -->
+	<link rel="stylesheet" href="//{{env.assetDomain}}/templates/common/responsive-columns.css" />
+
+{% endblock %}
 
 {% block content %}
 
-<!-- PACMAN FEATURE !-->
-<section class="pacman-feature">
+<div class="bk-pt-default">
+
+<!-- HEADER !-->
+{% include '/includes/header.twig' %}
+
+<!-- SUB NAV BAR !-->
+<section class="partners-subnav">
     <div class="wrapper">
-        <header class="pm-header">
-            <div class="res-col columns span-20-80">
-                <div class="column span-20">
-                    <div class="logo">
-                        <a href="/"><img src="{{asset('/images/pacman/logo.png')}}" class="bk-logo"></a>
-                    </div>
-                </div>
-                <div class="column span-80">
-                    <nav class="nav-desktop clearfix">
-                        <ul>
-                            <li><a href="/tour">Tour</a></li>
-                            <li><a href="/partners">Partners</a></li>
-                            <li><a href="/developers" class="selected">Developers</a></li>
-                            <li><a href="http://partners.basekit.com" class="button small-btn orange">Login</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="nav-mob">
-                        <div id="dl-menu" class="dl-menuwrapper">
-                            <button class="dl-trigger dl-active">Open Menu</button>
-                            <ul class="dl-menu">
-                                <li><a href="/tour">Tour</a></li>
-                                <li><a href="/partners">Partners</a></li>
-                                <li><a href="/developers" class="selected">Developers</a></li>
-                                <li><a href="/blog">Blog</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </header>
-    </div>
-    <div class="pacman-bg">
-        <div class="wrapper">
-            <div class="title">
-                <h1>FOWD Pacman Competition!</h1>
-            </div>
-            <!-- LEADERBOARD !-->
-            <div class="leaderboard">
-                <div class="section-title">
-                    <h4>Leaderboard</h4>
-                </div>
-                <div class="pm-content">
-                    <div class="res-col columns span-50-50">
-                        <div class="column span-two-left">
-                            <ul>
-                                <li class="intro">
-                                    <i class="pm-icon"></i>
-                                    <p class="p-intro">We’re at the Future of Web Design conference in London this week. If you’re about, come and get your Pac-Man game on at our stand - highest scorer will win an iPad.</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="column span-two-right">
-                            <ul class="podium">
-                                <li><i class="gold"></i>{{widget('content', 'podium-gold', {"content":'<h3>@RichardHealy - <span>2400</span></h3>'})|raw}}</li>
-                                <li><i class="silver"></i>{{widget('content', 'podium-silver', {"content":'<h3>@SimonBest - <span>1500</span></h3>'})|raw}}</li>
-                                <li><i class="bronze"></i>{{widget('content', 'podium-bronze', {"content":'<h3>@DominicHickey - <span>3</span></h3>'})|raw}}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- TWITTER FEED !-->
-            <div class="section-title">
-                <h4>Twitter Feed</h4>
-            </div>
-            <div class="pm-content">
-                <div class="twitter-feed">
-                    <h2>@BaseKitDevs - #BKHighScore</h2>
-                    {{widget('twitter', 'twitter-feed', {'searchKey': 'basekitDevs', 'searchType': 'username'})|raw}}
-                </div>
-            </div>
-            <a href="#register" class="register-interest"><h4>Register Interest</h4></a>
-        </div>
+    	{{widget('content', 'subavheader', {"content":'<h2 class="com-header hwhite">The developer community is coming…</h2>'})|raw}}
+        {{widget('content', 'communitystrapline', {"content":'<p class="com-strap">Create fully responsive templates using CSS, LESS, Github and other familiar technologies.</p>'})|raw}}
     </div>
 </section>
 
-<!-- DEVELOPER COMMUNITY - DESKTOP ! -->
+<!-- DEVELOPER COMMUNITY - DESKTOP !-->
 <section class="community-resources LightGrey">
     <div class="wrapper">
         {{widget('content', 'developercomminitycontent1', {"content":'<h2 class="h2-36pad text-center">Community Resources</h2>'})|raw}}
@@ -154,6 +93,8 @@
         </div>
     </div>
 </section>
+
+</div>
 
 <!-- FOOTER !-->
 {% include '/includes/footer.twig' %}
