@@ -34,11 +34,6 @@
 
 	<!-- <link rel="stylesheet" type="text/css" href="{{asset('/js/navScroll/css/demo.css')}}" /> -->
 
-
-
-	{% block templatehead %}
-	{% endblock %}
-
 	{% include basekit.headScript %}
 
 </head>
@@ -90,6 +85,13 @@
 	        });
 	    });
 	});
+	</script>
+
+	<script type="text/javascript">
+	    $(".pacman-feature").css("height", $(window).height());
+	        $(window).bind("resize",function() {
+	            $(".pacman-feature").css("height", $(window).height());
+	        });
 	</script>
 
 	{% block templatebody %}
