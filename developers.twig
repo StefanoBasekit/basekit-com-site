@@ -15,22 +15,22 @@
                 <div class="column span-80">
                     <nav class="nav-desktop clearfix">
                         <ul>
-                            <li><a href="/tour">Documentation</a></li>
+                            <li><a href="http://developers.basekit.com">Documentation</a></li>
                             <li><a href="http://knowledge.basekit.com">Knowledge</a></li>
                             <li><a href="/developers" class="selected">Developers</a></li>
-                            <li><a href="#" class="button small-btn green">Signup</a></li>
-                            <li><a href="http://partners.basekit.com" class="button small-btn orange">Login</a></li>
+                            <li><a href="#signup-form" class="button small-btn green">Signup</a></li>
+                            <li><a href="/developer-login" class="button small-btn orange">Login</a></li>
                         </ul>
                     </nav>
                     <nav class="nav-mob">
                         <div id="dl-menu" class="dl-menuwrapper">
                             <button class="dl-trigger dl-active">Open Menu</button>
                             <ul class="dl-menu">
-                                <li><a href="/tour">Documentation</a></li>
+                                <li><a href="http://developers.basekit.com">Documentation</a></li>
                                 <li><a href="http://knowledge.basekit.com">Knowledge</a></li>
                                 <li><a href="/developers" class="selected">Developers</a></li>
-                                <li><a href="#" class="button small-btn green">Signup</a></li>
-                                <li><a href="http://partners.basekit.com" class="button small-btn orange">Login</a></li>
+                                <li><a href="#signup-form" class="button small-btn green">Signup</a></li>
+                                <li><a href="/developer/login" class="button small-btn orange">Login</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -78,7 +78,7 @@
                     {{widget('twitter', 'twitter-feed', {'searchKey': 'basekitDevs', 'searchType': 'username'})|raw}}
                 </div>
             </div>
-            <a href="#register" class="register-interest"><h4>Register Interest</h4></a>
+            <a href="#signup-form" class="register-interest"><h4>Register Interest</h4></a>
         </div>
     </div>
 </section>
@@ -113,6 +113,7 @@
 </section>
 
 <!-- SIGNUP FORM !-->
+<a id="signup-form"></a>
 <section class="register-form">
     <div class="wrapper clearfix">
         <div class="res-col columns span-54-46">
@@ -121,7 +122,31 @@
                 {{widget('content', 'registercontent', {"content":'<p>Interested in our developer community? Sign up today, stay informed and get the latest updates on everything BaseKit.</p>'})|raw}}
             </div>
             <div class="com column span-two-right LightGrey">
-                {{widget('signupform', 'bk-signup', {'text': 'Send', 'label': 'Your Email', 'formTitle': 'Signup Form', 'email': 'profile'})|raw}}
+                {# {{widget('signupform', 'bk-signup', {'text': 'Send', 'label': 'Your Email', 'formTitle': 'Signup Form', 'email': 'profile'})|raw}} #}
+                <div id="page-zones__main-widgets__buynow" class="widget buynow">    
+                    <form class="widget-buynow-container">
+                        <ul class="widget-buynow-container-list">
+                            <li>
+                                <span class="widget-buynow-title">Your details</span>
+                                <div>
+                                    <label title="Account">Account</label>
+                                    <input type="email" name="Account" class="widget-buynow-email bk-standard-input" title="Account" placeholder="me@example.com">
+                                    <span class="filed-error-email errors"></span>
+                                </div>
+                                <div>
+                                    <label title="Password">Password</label>
+                                    <input type="password" class="password" title="Password" placeholder="Password">
+                                    <span class="filed-error-password errors"></span>
+                                    <button class="password-mask-toggle" type="button" aria-controls="password">Show</button>
+                                </div>
+                            </li>
+                        </ul>
+                        <label class="widget-buynow-newsletter-text">Don't send me emails
+                            <input type="checkbox" class="widget-buynow-newsletter" name="newsletter" title="newsletter">
+                        </label>
+                        <button class="widget-buynow-make-payment" title="Register" type="submit" disabled="disabled">Register</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
