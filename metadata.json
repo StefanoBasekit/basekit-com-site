@@ -2,7 +2,7 @@
 	"name":"BaseKit Site",
 	"thumbnail":"basekit.png",
 	"screenshot":"basekit.png",
-    "pageTypes":[ "developers","blogpost", "bloglistposts", "partners","our-partners","tour", "developers-pacman"],
+    "pageTypes":["login","partners","our-partners","tour", "developers", "thankyou"],
     "tags": {
     "en": ["minimal", "clean", "floral", "modern", "creative", "typography", "simple", "contemporary", "flexible", "florist", "studio", "portfolio", "designer", "sans-serif"],
     "es": ["minimalista", "limpio", "decorativo", "moderno", "creativo", "tipográfico", "simple", "contemporaneo", "flexible", "florista", "estudio", "portafolio", "diseñador", "sans-serif"],

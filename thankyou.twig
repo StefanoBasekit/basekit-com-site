@@ -1,0 +1,80 @@
+{% extends "layout.twig" %}
+{% block templatehead %}
+	<!-- Include responsive columns for default template type -->
+	<link rel="stylesheet" href="//{{env.assetDomain}}/templates/common/responsive-columns.css" />
+
+{% endblock %}
+
+{% block content %}
+
+<div class="bk-pt-default">
+
+<!-- HEADER !-->
+{% include '/includes/header.twig' %}
+
+<!-- SUB NAV BAR !-->
+<section class="partners-subnav">
+    <div class="wrapper">
+    	{{widget('content', 'subavheader', {"content":'<h2 class="hwhite">Developer community</h2>'})|raw}}
+    </div>
+</section>
+
+<!-- THANK YOU - DESKTOP !-->
+<section class=" thankyou LightGrey">
+    <div class="wrapper">
+        <div class="form-success">
+            <span>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 width="200px" height="150px" viewBox="-48.641 -51.976 200 150" enable-background="new -48.641 -51.976 200 150"
+                 xml:space="preserve">
+                <polyline class="check" fill="none" stroke="#FFFFFF" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="5" points="
+                -25.023,22.098 27.315,74.436 130.14,-28.389 "/>
+            </svg>
+            </span>
+            {{widget('content', 'thankyoutext', {"content":'<h2 class="h2-36pad text-center">Thank you for registering an interest!</h2>'})|raw}}
+        </div>
+    </div>
+</section>
+
+<!-- PARTNER BAR !-->
+<section class="partner-bar bottom white">
+    <div class="wrapper">
+        <!-- BAR - DESKTOP !-->
+        <div class="desktop">
+            <div class="res-col columns span-12-21x3-27">
+                <div class="column span-five-first">
+                    {{widget('content', 'partnerbar1content1', {"content":'<h4 class="h4light">Proud to<br> Partner With</h4>'})|raw}}
+                </div>
+                <div class="column span-five">
+                    <img src="{{asset('/images/partner-logos/host-europe.png')}}">
+                </div>
+                <div class="column span-five">
+                    <img src="{{asset('/images/partner-logos/123-reg.png')}}" class="reg-logo">
+                </div>
+                <div class="column span-five">
+                    <img src="{{asset('/images/partner-logos/fasthosts.png')}}" class="enom-logo">
+                </div>
+                <div class="column span-five-last">
+                    <a href="/partners" class="button main-btn green">Become a Partner</a>
+                </div>
+            </div>
+        </div>
+        <!-- BAR - TABLET !-->
+        <div class="partner-res">
+            {{widget('content', 'partnerbar2content1', {"content":'<h3><span class="mobHide">Start your free, <span class="darkspan">no-risk</span>, BaseKit trial!</span><a href="/partners" class="button main-btn green">Become a Partner</a></h3>'})|raw}}
+        </div>
+    </div>
+</section>
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.check').css('stroke-dashoffset', 0);
+    });
+</script>
+
+<!-- FOOTER !-->
+{% include '/includes/footer.twig' %}
+
+{% endblock %}
