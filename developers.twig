@@ -122,7 +122,7 @@
                 {{widget('content', 'registercontent', {"content":'<p>Interested in our developer community? Sign up today, stay informed and get the latest updates on everything BaseKit.</p>'})|raw}}
             </div>
             <div class="com column span-two-right LightGrey">
-                {{zone('main')|raw}}
+                {{widget('signupform', 'bk-signup', {'text': 'Send', 'label': 'Your Email', 'formTitle': 'Signup Form', 'email': 'profile'})|raw}}
             </div>
         </div>
     </div>
@@ -161,14 +161,4 @@
 <!-- FOOTER !-->
 {% include '/includes/footer.twig' %}
 
-{% endblock %}
-
-
-
-{% block templatebody %}
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $('.widget.buynow .widget-buynow-make-payment').text('Sign Up!');
-    });
-    </script>
 {% endblock %}
