@@ -1399,7 +1399,9 @@ footer {
 		}
 	}
 	.footer-clear {
-		clear: both;
+		@media @mobile {
+			clear: both;
+		}
 	}
 }
 
