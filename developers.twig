@@ -122,31 +122,7 @@
                 {{widget('content', 'registercontent', {"content":'<p>Interested in our developer community? Sign up today, stay informed and get the latest updates on everything BaseKit.</p>'})|raw}}
             </div>
             <div class="com column span-two-right LightGrey">
-                {{widget('signupform', 'bk-signup', {'text': 'Send', 'label': 'Your Email', 'formTitle': 'Signup Form', 'email': 'profile'})|raw}}
-                <!-- <div id="page-zones__main-widgets__buynow" class="widget buynow">    
-                    <form class="widget-buynow-container">
-                        <ul class="widget-buynow-container-list">
-                            <li>
-                                <span class="widget-buynow-title">Your details</span>
-                                <div>
-                                    <label title="Account">Account</label>
-                                    <input type="email" name="Account" class="widget-buynow-email bk-standard-input" title="Account" placeholder="me@example.com">
-                                    <span class="filed-error-email errors"></span>
-                                </div>
-                                <div>
-                                    <label title="Password">Password</label>
-                                    <input type="password" class="password" title="Password" placeholder="Password">
-                                    <span class="filed-error-password errors"></span>
-                                    <button class="password-mask-toggle" type="button" aria-controls="password">Show</button>
-                                </div>
-                            </li>
-                        </ul>
-                        <label class="widget-buynow-newsletter-text">Don't send me emails
-                            <input type="checkbox" class="widget-buynow-newsletter" name="newsletter" title="newsletter">
-                        </label>
-                        <button class="widget-buynow-make-payment" title="Register" type="submit" disabled="disabled">Register</button>
-                    </form>
-                </div> -->
+                {{widget('buynow', 'bk-signup', {})|raw}}
             </div>
         </div>
     </div>
@@ -185,4 +161,14 @@
 <!-- FOOTER !-->
 {% include '/includes/footer.twig' %}
 
+{% endblock %}
+
+
+
+{% block templatebody %}
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.widget.buynow .widget-buynow-make-payment').text('Sign Up!');
+    });
+    </script>
 {% endblock %}
