@@ -12,7 +12,7 @@
         <div class="wrapper">
             <div class="res-col columns span-30-70">
                 <div class="column span-30">
-                   {{widget('content', 'subavheader', {"content":'<h2 class="hwhite">Basekit Blog</h2>'})|raw}}
+                   {{widget('content', 'subnavheader', {"content":'<h2 class="hwhite">Basekit Blog</h2>'})|raw}}
                 </div>
                 <div class="column span-70">
                     {{widget('blogsearch', 'blogsearch', {})|raw}}
@@ -32,8 +32,10 @@
                     </div>
                     <div class="column span-30">
                         <ul class="breadcrumb">
-                            <li><a href="/blog">Basekit Blog</a></li>
-                            <li><a href="{{ postPermalink }}" class="selected">{{ plugins.blog.posts[0].title|raw }}</a></li>
+                            <li><a href="/bloglistposts">Basekit Blog</a></li>
+                            <span class="gradient"></span>
+                            <li><a href="{{ postPermalink }}" class="selected">
+                                {{ plugins.blog.posts[0].title|raw }}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -55,9 +57,9 @@
                             <h3>Recent Posts</h3>
                             <p>Check out some of our recent blog posts:</p>
                             <ul>
+                                <li><a href="{{ postPermalink }}">{{ plugins.blog.posts[0].title|raw }}</a></li>
                                 <li><a href="{{ postPermalink }}">{{ plugins.blog.posts[1].title|raw }}</a></li>
                                 <li><a href="{{ postPermalink }}">{{ plugins.blog.posts[2].title|raw }}</a></li>
-                                <li><a href="{{ postPermalink }}">{{ plugins.blog.posts[3].title|raw }}</a></li>
                             </ul>
                         </div>
                         <div class="community-quick-links">

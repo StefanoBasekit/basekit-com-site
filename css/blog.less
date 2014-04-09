@@ -8,7 +8,9 @@
 
 .partners-subnav {
 	.columns.span-30-70 .column.span-70 {
-		display: none;
+		@media @mobile {
+			display: none;
+		}
 	}
 }
 
@@ -165,6 +167,7 @@
 			}
 			li {
 				display: inline-block;
+				position: relative;
 				vertical-align: middle;
 				&:after {
 					content: '»';
@@ -188,6 +191,18 @@
 						color: @blue;
 					}
 				}
+			}
+			.gradient {
+				background-image: -webkit-gradient(linear, right top, left top, color-stop(0.05, #FFFFFF), color-stop(0.75, rgba(255,255,255, 0)));
+				background-image: -webkit-linear-gradient(top right, #FFFFFF 5%, rgba(255,255,255, 0) 75%);
+				position: relative;
+				width: 50%;
+				z-index: 999;
+				height: 15px;
+				display: block;
+				overflow: hidden;
+				float: right;
+				right: -12px;
 			}
 		}
 	}
@@ -299,9 +314,10 @@
 	.blog-post-feature-image-wrap {
 		background-size: cover;
 		background-position: center;
-		position: absolute;
-		margin: 1.8em 0;
-		max-height: 450px;
+		position: relative;
+		margin: 0 0 2.2em;
+		height: 250px;
+		width: 100%;
 		img {
 			display: none;
 		}

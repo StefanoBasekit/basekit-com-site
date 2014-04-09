@@ -33,7 +33,9 @@
                     <div class="column span-30">
                         <ul class="breadcrumb">
                             <li><a href="/blog">Basekit Blog</a></li>
-                            <li><a href="/home" class="selected">Home</a></li>
+                            <span class="gradient"></span>
+                            <li><a href="{{ postPermalink }}" class="selected">
+                                {{ plugins.blog.posts[0].title|raw }}</a></li>
                         </ul>
                     </div>
                 </div>
