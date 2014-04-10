@@ -280,6 +280,9 @@
 	@media @tablet {
 		margin-bottom: 0;
 	}
+	@media @mobile {
+		padding: 1.5em;
+	}
 	.blog-post-title {
 		font-size: 30px;
 		padding: 0 0 15px;
@@ -432,7 +435,13 @@
 	}
 	p {
 		font-size: 16px;
-		margin: 20px 0;
+		margin: 15px 0 20px;
+		&.blog-post-summary {
+			margin-left: 30%;
+			@media @tablet {
+				margin: 20px 30px;
+			}
+		}
 	}
 	.blog-metadata {
 		border-top: 1px solid gainsboro;
@@ -486,8 +495,12 @@
 		color: #fff;
 		display: inline-block;
 		padding: 10px 10px 8px;
-		margin-top: 10px;
+		margin-left: 30%;
+		margin-top: 15px;
 		text-decoration: none;
+		@media @tablet {
+			margin: 15px 30px 25px;
+		}
 	}
 }
 
