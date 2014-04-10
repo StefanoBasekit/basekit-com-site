@@ -57,9 +57,9 @@
                             <h3>Recent Posts</h3>
                             <p>Check out some of our recent blog posts:</p>
                             <ul>
-                                <li><a href="{{ postPermalink }}">{{ plugins.blog.posts[0].title|raw }}</a></li>
-                                <li><a href="{{ postPermalink }}">{{ plugins.blog.posts[1].title|raw }}</a></li>
-                                <li><a href="{{ postPermalink }}">{{ plugins.blog.posts[2].title|raw }}</a></li>
+                                <li><a href="{{plugins.blog.pathFormat}}{{plugins.blog.posts[0].slug}}">{{ plugins.blog.posts[0].title|raw }}</a></li>
+                                <li><a href="{{plugins.blog.pathFormat}}{{plugins.blog.posts[0].slug}}">{{ plugins.blog.posts[1].title|raw }}</a></li>
+                                <li><a href="{{plugins.blog.pathFormat}}{{plugins.blog.posts[0].slug}}">{{ plugins.blog.posts[2].title|raw }}</a></li>
                             </ul>
                         </div>
                         <div class="community-quick-links">
