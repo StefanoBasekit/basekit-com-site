@@ -10,7 +10,30 @@
 <div class="bk-pt-default">
 
 <!-- HEADER !-->
-{% include '/includes/header.twig' %}
+<header>
+    <div class="wrapper clearfix">
+        <div class="res-col columns span-20-80">
+            <div class="column span-20">
+                <div class="logo">
+                    <a href="/"><img src="{{asset('/images/logo.png')}}" class="bk-logo"></a>
+                </div>
+            </div>
+            <div class="column span-80">
+                <nav class="nav">
+                    <a href="#" class="menu-icon"></a>
+                    <ul>
+                        <li><a href="/tour">Tour</a></li>
+                        <li><a href="/partners">Partners</a></li>
+                        <li class="selected"><a href="/developers">Developers</a></li>
+                        <li ><a href="/blog">Blog</a></li>
+                        <li><a href="#signup-form" class="button small-btn green">Free Signup</a></li>
+                        <li><a href="http://partners.basekit.com" class="button small-btn orange">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
 
 <!-- SUB NAV BAR !-->
 <section class="partners-subnav">
@@ -50,6 +73,7 @@
 </section>
 
 <!-- SIGNUP FORM !-->
+<a id="signup-form"></a>
 <section class="register-form">
     <div class="wrapper clearfix">
         <div class="res-col columns span-54-46">
@@ -58,7 +82,7 @@
                 {{widget('content', 'registercontent', {"content":'<p>Interested in our developer community? Sign up today, stay informed and get the latest updates on everything BaseKit.</p>'})|raw}}
             </div>
             <div class="com column span-two-right LightGrey">
-                {{widget('signupform', 'bk-signup', {'text': 'Send', 'label': 'Your Email', 'formTitle': 'Signup Form', 'email': 'profile'})|raw}}
+                {{widget('buynow', 'bk-signup', {'brandRef':1,'currencyRef':1})|raw}}
             </div>
         </div>
     </div>

@@ -9,6 +9,7 @@
 @import "@{templateLocal}/css/tour.less";
 @import "@{templateLocal}/css/blog.less";
 @import "@{templateLocal}/css/pacman.less";
+@import "@{templateLocal}/css/login.less";
 @import "@{templateLocal}/css/fonts.less";
 @import "@{templateLocal}/css/rescols.less";
 @import "@{templateLocal}/css/basic-styles.less";
@@ -79,90 +80,126 @@ header {
 	background: white;
 	padding: 0;
 	-webkit-font-smoothing:antialiased;
-	@media @tablet {
-		padding-bottom: 30px;
+	@media screen and (max-width: 890px) {
+		padding-bottom: 20px;
 	}
 	.logo {
-		margin-top: 30px;
+		margin-top: 28px;
 		img {
 			max-width: inherit;
 		}
 	}
-	nav {		
-		width: 100%;
-		position: relative;
-		&.nav-desktop {
-			display: block;
-			@media @tablet {
-				display: none;
-			}
-		}
-		&.nav-mob {
-			display: none;
-			@media @tablet {
-				display: block;
-				margin: 27px 0 0;
-			}
-		}
-		ul {
-			float: right;
-			margin-top: 2px;
-			li {  
-				display: inline-block;
-				@media @tablet {
-					width: 80%;
-				}
-				&:last-child {
-					a {
-						margin-left: 20px;
-					}
-				}
-				&.selected {
-					position: relative;
-					a {
-						color: #4d4d4d;
-						&:after {
-							content: '';
-							position: absolute;
-							bottom: 0;
-							left: 0;
-							right: 0;
-							margin: 0 auto;
-							width: 0; 
-							height: 0; 
-							border-left: 7px solid transparent;
-							border-right: 7px solid transparent;
-							border-bottom: 7px solid #424242;
-							@media @tablet {
-								display: none;
-							}
-						}
-					}
-				}
-				a { 
-			    	font-family: @font-swatch6-font-family;
-					font-size: @font-swatch6-font-size;
-					color: @font-swatch6-color;
-					letter-spacing: @font-swatch6-letter-spacing;
-					text-decoration: none;
-					line-height: 90px;
-					padding: 0 25px;
-					@media @tablet {
-						line-height: 40px;
-					}
-					&:hover {
-						color: #4d4d4d;
-					}
-					&.fade-out {
-						color: #CACACA;
-					}
-					&.button {
-						letter-spacing: 0;
-					}
-				}
-			}
-		}
+	nav.nav {       
+	    display: inline-block;
+	    float: right;
+	    position: relative;
+	    ul {
+	        li {  
+	            display: inline-block;
+	            &.selected {
+	                position: relative;
+	                a {
+	                    color: #4d4d4d;
+	                    &:after {
+	                        content: '';
+	                        position: absolute;
+	                        bottom: 0;
+	                        left: 0;
+	                        right: 0;
+	                        margin: 0 auto;
+	                        width: 0; 
+	                        height: 0; 
+	                        border-left: 7px solid transparent;
+	                        border-right: 7px solid transparent;
+	                        border-bottom: 7px solid #424242;
+							@media screen and (max-width: 890px) {
+	                            border: 0;
+	                        }
+	                    }
+	                }
+	            }
+	            a { 
+	                font-family: 'proxima-nova-semibold', helvetica, sans-serif;
+	                -webkit-font-smoothing: antialiased;
+	                font-size: 16px;
+	                color: #a2a2a2;
+	                text-decoration: none;
+	                padding: 0 25px;
+	                line-height: 90px;
+	                &:hover {
+	                    color: #4d4d4d;
+	                }
+					@media screen and (max-width: 890px) {
+	                    line-height: 40px;
+	                    padding: 0;
+	                }
+	            }
+	        }
+	    }
+	    .green {
+        	margin-left: 20px;
+	    }
+	    .orange {
+	        margin-left: 4px;
+	    }
+		@media screen and (max-width: 890px) {
+	        .green,
+	        .orange {
+	            margin-left: 0;
+	        }
+	    }
 	}
+}
+
+// Nav Icon
+.menu-icon {
+    display: none;
+    margin-top: 25px;
+    width: 38px;
+    height: 38px;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 4px;
+        background: #747474;
+        margin: auto;
+        right: 0;
+        left: 0;
+        top: 7px;
+        box-shadow: 0 9px 0 #747474, 0 18px 0 #747474;
+        &:hover {
+            background-color: @green;
+            box-shadow: 0 9px 0 @green, 0 18px 0 @green;
+        }
+    }
+	@media screen and (max-width: 890px) {
+        position: relative;
+        z-index: 9999;
+        display: inline-block;
+        border: 1px solid #ddd;
+        .border-radius(3px);
+    }
+}
+@media screen and (max-width: 890px) {
+    nav.nav ul, nav.nav:active ul { 
+        display: none;
+        position: absolute;
+        z-index: 9999;
+        width: 120px;
+        padding: 20px 40px;
+        background: @white;
+        .border-radius(3px);
+        border: 1px solid #e5e5e5;
+        right: 0;
+        box-shadow: 0 0px 3px rgba(0,0,0,0.1);
+        li {
+        	width: 100%;
+        }
+    }
+    nav.nav:hover ul {
+        display: block;
+    }
 }
 
 .partners-subnav {
@@ -1404,6 +1441,4 @@ footer {
 		}
 	}
 }
-
-@import "@{templateLocal}/css/login.less";
 
