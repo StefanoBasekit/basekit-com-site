@@ -32,9 +32,9 @@
                     </div>
                     <div class="column span-30">
                         <ul class="breadcrumb">
-                            <li><a href="/bloglistposts">Basekit Blog</a></li>
+                            <li><a href="/blog">Basekit Blog</a></li>
                             <span class="gradient"></span>
-                            <li><a href="{{ postPermalink }}" class="selected">
+                            <li><a href="{{plugins.blog.pathFormat}}{{plugins.blog.posts[0].slug}}" class="selected">
                                 {{ plugins.blog.posts[0].title|raw }}</a></li>
                         </ul>
                     </div>
@@ -57,18 +57,18 @@
                             <h3>Recent Posts</h3>
                             <p>Check out some of our recent blog posts:</p>
                             <ul>
-                                <li><a href="{{ postPermalink }}">{{ plugins.blog.posts[0].title|raw }}</a></li>
-                                <li><a href="{{ postPermalink }}">{{ plugins.blog.posts[1].title|raw }}</a></li>
-                                <li><a href="{{ postPermalink }}">{{ plugins.blog.posts[2].title|raw }}</a></li>
+                                <li><a href="{{plugins.blog.pathFormat}}{{plugins.blog.posts[0].slug}}">{{ plugins.blog.posts[0].title|raw }}</a></li>
+                                <li><a href="{{plugins.blog.pathFormat}}{{plugins.blog.posts[1].slug}}">{{ plugins.blog.posts[1].title|raw }}</a></li>
+                                <li><a href="{{plugins.blog.pathFormat}}{{plugins.blog.posts[2].slug}}">{{ plugins.blog.posts[2].title|raw }}</a></li>
                             </ul>
                         </div>
                         <div class="community-quick-links">
                             <h3>Developer Community</h3>
                             <p>Become a Basekit Developer today! Visit our useful docspage for more info:</p>
                             <ul>
-                                <li><a href-"/developers">Documentation Site</a></li>
-                                <li><a href-"http://knowledge.basekit.com">Questions &amp; Answers</a></li>
-                                <li><a href-"#">User Workshops</a></li>
+                                <li><a href="/developers">Documentation Site</a></li>
+                                <li><a href="http://knowledge.basekit.com">Questions &amp; Answers</a></li>
+                                <!--<li><a href-"#">User Workshops</a></li>-->
                             </ul>
                         </div>
                     </div>
