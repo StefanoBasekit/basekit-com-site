@@ -15,20 +15,22 @@
                 <div class="column span-80">
                     <nav class="nav-desktop clearfix">
                         <ul>
-                            <li><a href="/tour">Tour</a></li>
-                            <li><a href="/partners">Partners</a></li>
+                            <li><a href="http://developers.basekit.com">Documentation</a></li>
+                            <li><a href="http://knowledge.basekit.com">Knowledge</a></li>
                             <li><a href="/developers" class="selected">Developers</a></li>
-                            <li><a href="http://partners.basekit.com" class="button small-btn orange">Login</a></li>
+                            <li><a href="#signup-form" class="button small-btn green">Signup</a></li>
+                            <li><a href="/developer-login" class="button small-btn orange">Login</a></li>
                         </ul>
                     </nav>
                     <nav class="nav-mob">
                         <div id="dl-menu" class="dl-menuwrapper">
                             <button class="dl-trigger dl-active">Open Menu</button>
                             <ul class="dl-menu">
-                                <li><a href="/tour">Tour</a></li>
-                                <li><a href="/partners">Partners</a></li>
+                                <li><a href="http://developers.basekit.com">Documentation</a></li>
+                                <li><a href="http://knowledge.basekit.com">Knowledge</a></li>
                                 <li><a href="/developers" class="selected">Developers</a></li>
-                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="#signup-form" class="button small-btn green">Signup</a></li>
+                                <li><a href="/developer/login" class="button small-btn orange">Login</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -76,7 +78,7 @@
                     {{widget('twitter', 'twitter-feed', {'searchKey': 'basekitDevs', 'searchType': 'username'})|raw}}
                 </div>
             </div>
-            <a href="#register" class="register-interest"><h4>Register Interest</h4></a>
+            <a href="#signup-form" class="register-interest"><h4>Register Interest</h4></a>
         </div>
     </div>
 </section>
@@ -111,6 +113,7 @@
 </section>
 
 <!-- SIGNUP FORM !-->
+<a id="signup-form"></a>
 <section class="register-form">
     <div class="wrapper clearfix">
         <div class="res-col columns span-54-46">
@@ -119,7 +122,7 @@
                 {{widget('content', 'registercontent', {"content":'<p>Interested in our developer community? Sign up today, stay informed and get the latest updates on everything BaseKit.</p>'})|raw}}
             </div>
             <div class="com column span-two-right LightGrey">
-                {{widget('signupform', 'bk-signup', {'text': 'Send', 'label': 'Your Email', 'formTitle': 'Signup Form', 'email': 'profile'})|raw}}
+                {{widget('buynow', 'bk-signup', {'brandRef':1,'currencyRef':1})|raw}}
             </div>
         </div>
     </div>
