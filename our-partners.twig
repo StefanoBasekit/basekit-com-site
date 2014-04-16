@@ -8,7 +8,28 @@
 {% block content %}
 
 <!-- HEADER !-->
-{% include '/includes/header.twig' %}
+<header>
+    <div class="wrapper clearfix">
+        <div class="res-col columns span-20-80">
+            <div class="column span-20">
+                <div class="logo">
+                    <a href="/"><img src="{{asset('/images/logo.png')}}" class="bk-logo"></a>
+                </div>
+            </div>
+            <div class="column span-80">
+                <nav class="nav">
+                    <a href="#" class="menu-icon"></a>
+                    <ul>
+                        <li><a href="/tour">Tour</a></li>
+                        <li><a href="/partners">Partners</a></li>
+                        <li><a href="/developers">Developers</a></li>
+                        <li ><a href="/blog">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
 
 <!-- SUB NAV BAR !-->
 <a id="#partner-signup"></a>
