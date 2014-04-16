@@ -78,8 +78,15 @@
     <div class="wrapper clearfix">
         <div class="res-col columns span-54-46">
             <div class="column span-two-left">
-                {{widget('content', 'registerheader', {"content":'<h2 class="h2-36pad">Register your interest</h2>'})|raw}}
-                {{widget('content', 'registercontent', {"content":'<p>Interested in our developer community? Sign up today, stay informed and get the latest updates on everything BaseKit.</p>'})|raw}}
+                {{widget('content', 'registerheader', {"content":'<h2 class="h2-36pad">Interested in a free developer account?</h2>'})|raw}}
+                {# {{widget('content', 'registercontent', {"content":'<p>Interested in our developer community? Sign up today, stay informed and get the latest updates on everything BaseKit.</p>'})|raw}} #}
+                <ul class="bullets">
+                    <li><p>Create beautiful and responsive sites and templates</p></li>
+                    <li><p>Use familiar code and technologies</p></li>
+                    <li><p>Read, watch and share online resources</p></li>
+                    <li><p>Gain first access to BaseKit features </p></li>
+                    <li><p>Beta-test new products</p></li>
+                </ul>
             </div>
             <div class="com column span-two-right LightGrey">
                 {{widget('buynow', 'bk-signup', {'brandRef':1,'currencyRef':1})|raw}}
