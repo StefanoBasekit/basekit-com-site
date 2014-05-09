@@ -2,6 +2,10 @@
 // CSS RESETS / BASIC SETTINGS
 // ===============================
 
+html, body {
+	height: 100%;
+}
+
 body {
   background-color: @color-swatch1;
   font-family: 'proxima-nova';
@@ -35,6 +39,9 @@ a {
 	font-family: 'proxima-nova';
 	color: @color-swatch3;
 	text-decoration: underline;
+	&.blue {
+		color: @blue;
+	}
 }
 
 a:hover {
@@ -72,12 +79,20 @@ section {
 	margin: 6em 0;
 	height: 2px;
 	background-color: #f2f2f2;
-
 	@media @tablet { 
 		margin: 4em 0;
 	}
 	@media @mobile { 
 		margin: 2.7em 0;
+	}
+	&.alt {
+		height: 1px;
+		margin: 4em 0;
+		background-color: #dfdfdf;
+		box-shadow: 0 1px 0 #fff;
+		@media @tablet {
+			margin: 3em 0;
+		}
 	}
 }
 
@@ -119,7 +134,7 @@ i {
 @green: @color-swatch3;
 @orange: @color-swatch2;
 @purple: #727ab2;
-@blue: #359ddd;
+@blue: #5eaee4;
 
 // Colours
 .green {
@@ -142,6 +157,9 @@ i {
 		padding-bottom: 5px;
 		border-bottom: 1px solid lighten(@orange, 22%);
 	}
+}
+.white {
+	color: @white;
 }
 
 .rounded-corners {

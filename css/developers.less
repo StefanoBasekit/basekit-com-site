@@ -1,0 +1,403 @@
+// ===========================
+// DEVELOPERS PAGE
+// ===========================
+
+// Developer Signup
+.developer-signup {
+	// Flex
+	display: -webkit-flexbox;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	// Styles
+	width: 100%;
+	height: 750px;
+	padding: 0;
+	background: image('/images/developers/developer-bg.jpg') no-repeat;
+	.bg-cover;
+	.box-sizing;
+	@media @tablet {
+		height: 520px;
+	}
+	@media @mobile {
+		display: block;
+		height: initial;
+		padding: 3em 0 4em;
+		text-align: center;
+	}
+}
+
+// Developer Feature Content
+.dev-feat-content {
+	// Buy Now Widget (Signup)
+	.signup-form {
+		float: left;
+		width: 40%;
+		max-width: 406px;
+		padding: 36px 30px;
+		.box-sizing;
+		.border-radius(7px);
+		border: 1px solid #eaeaea;
+		background-color: @white;
+		box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1);
+		@media @tablet {
+			width: 50%;
+			padding: 26px 20px;
+		}
+		@media @mobile {
+			float: right;
+			width: 100%;
+		}
+		h3, p {
+			text-align: center;
+		}
+		h3 {
+			font-size: 30px;
+			letter-spacing: -0.04em;
+			margin-bottom: 32px;
+			@media @tablet {
+				font-size: 28px;
+				margin-bottom: 22px;
+			}
+		}
+		// Signup Form
+		.buynow {
+			label {
+				display: none;
+			}
+			input,
+			button {
+				width: 100%;
+				height: 48px;
+				.border-radius(6px);
+				font-family: 'proxima-nova';
+			}
+			input {
+				background-color: #f8f8f8;
+				border: 1px solid #e6e6e6;
+				text-indent: 12px;
+				font-size: 15px;
+				line-height: 26px;
+				color: #929292;
+				font-size: 14px;
+				margin-bottom: 16px;
+				&:focus {
+					border: 1px solid @green;
+					outline: none;
+					-webkit-transition: all 0.2s ease-in-out;
+					transition: all 0.2s ease-in-out;
+				}
+			}
+			button {
+				margin-bottom: 26px;
+				background-color: @green;
+				font-family: 'proxima-nova-semibold';
+				-webkit-font-smoothing: antialiased;
+				font-size: 20px;
+				color: @white;
+				text-decoration: none;
+				box-shadow: 0 3px 0 #42b498;
+				text-shadow: 0 1px 1px #3ba189;
+				&:hover {
+					background-color: #42b498;
+					-webkit-transition: all 0.2s ease-in-out;
+					transition: all 0.2s ease-in-out;
+				}
+			}
+			.widget-buynow-title,
+			.password-mask-toggle,
+			.widget-buynow-newsletter-text,
+			span,
+			.widget-buynow-container-list ul,
+			.xwidget-buynow-paymentMethods {
+				display: none;
+			}
+		}
+	}
+	// Dev Feature Text
+	.dev-feat-text {
+		float: right;
+		width: 54%;
+		margin-left: 5%;
+		vertical-align: top;
+		margin-top: 30px;
+		@media @tablet {
+			width: 44%;
+			.h2sub {
+				line-height: 26px;
+			}
+		}
+		@media @mobile {
+			float: left;
+			width: 100%;
+			margin: 0;
+			.h2sub {
+				font-size: 18px;
+				margin-bottom: 2.5em;
+			}
+		}
+		h5 {
+			margin: 20px 0 40px;
+			@media @tablet {
+				margin: 14px 0 30px;
+				font-size: 15px;
+				line-height: 24px;
+			}
+			@media @mobile {
+				display: none;
+			}
+		}
+	}
+	.button {
+		padding: 13px 20px 13px 50px;
+		background: image('/images/developers/get-started-arrow.png') no-repeat left center;
+		background-position: 20px;
+		@media @tablet {
+			display: none;
+		}
+	}
+}
+
+// Usage Steps
+.become-partner {
+	padding-bottom: 6em;
+	&.developer {
+		hgroup {
+			text-align: center;
+			h5 {
+				max-width: 56%;
+				@media @laptop {
+					max-width: 100%;
+				}
+			}
+		}
+		.step {
+			background-color: #5eaee4;
+			box-shadow: 0 3px 0 #4f97c7;
+			margin-bottom: 40px;
+		}
+		.partner-steps {
+			bottom: 0;
+			margin: 6em 0 0;
+			@media @tablet {
+				margin: 4em 0 2em 0;
+			}
+			@media @mobile {
+				margin-top: -2em;
+				.bk-content-text {
+					max-width: 85%;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}
+
+// Developer Roof
+.developer-roof {
+	.circle-graphics {
+		margin: 6em 0 0;
+		text-align: center;
+		@media @mobile {
+			margin: 3em 0 0;
+		}
+		h3 {
+			margin-bottom: 16px;
+		}
+		img {
+			margin-bottom: 2em;
+		}
+	}
+}
+
+// Account Info
+.account-info {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	margin: 0 0 0 -30px;
+	.component {
+		// Flex
+		-ms-flex: 1 0 190px;
+		-webkit-flex: 1 0 190px;
+		flex: 1 0 190px;
+		// Styles
+		margin: 0px 0 30px 30px;
+		padding: 26px 20px 30px;
+		border: 1px solid gainsboro;
+		background-color: @white;
+		.border-radius(6px);
+		text-align: center;
+		&:hover {
+			-webkit-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.07);
+			-moz-box-shadow:    0px 0px 12px 0px rgba(50, 50, 50, 0.07);
+			box-shadow:         0px 0px 12px 0px rgba(50, 50, 50, 0.07);
+		}	
+	}
+	i {
+		display: block;
+		width: 46px;
+		height: 46px;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin: 0 auto 16px;
+		&.free {
+			background-image: image('/images/developers/ic-free.png');
+		}
+		&.publish {
+			background-image: image('/images/developers/ic-publish.png');
+		}
+		&.access {
+			background-image: image('/images/developers/ic-access.png');
+		}
+		&.testing {
+			background-image: image('/images/developers/ic-lab.png');
+		}
+	}
+	h3 {
+		font-size: 20px;
+		margin-bottom: 14px;
+	}
+	p {
+		font-size: 14px;
+		color: #929292;
+		line-height: 22px;
+	}
+}
+
+// Account Info
+.flex-col {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	margin: 0 0 1em -30px;
+	@media @tablet {
+		display: block;
+		margin-bottom: 3em;
+	}
+	.component {
+		// Flex
+		-ms-flex: 1.35 0 0;
+		-webkit-flex: 1.35 0 0;
+		flex: 1.35 0 0;
+		// Styles
+		margin: 0px 0 30px 30px;
+		&:last-child {
+			-ms-flex: 4.4 0 0;
+			-webkit-flex: 4.4 0 0;
+			flex: 4.4 0 0;
+		}
+	}
+	h3 {
+		display: inline-block;
+		border-bottom: 2px solid #e8e8e8;
+		@media @tablet {
+			display: table;
+			margin: 0 auto;
+		}
+	}
+	p {
+		max-width: 90%;
+		@media @tablet {
+			text-align: center;
+			margin: 0 auto;
+		}
+	}
+}
+
+// Good Company
+.good-company {
+	background-image: image('/images/developers/team-photo.jpg');
+	background-color: @blue;
+	background-position: center;
+	.bg-cover;
+	hgroup.section-title {
+		h5 {
+			max-width: 48%;
+			@media @tablet {
+				max-width: 90%;
+			}
+		}
+	}
+	// Company USPs
+	.company-usps {
+		margin: 6em 0 0 -30px;
+		@media @tablet {
+			margin-top: 4em;
+		}
+		.component {
+			padding: 50px 30px;
+			.border-radius(6px);
+			box-shadow: 0 0 5px rgba(41,108,148,0.4);
+			border: 0;
+			text-align: center;
+			h2 {
+				display: inline-block;
+				padding-bottom: 6px;
+				border-bottom: 2px solid;
+				margin-bottom: 30px;
+				font-size: 32px;
+				letter-spacing: -1px;
+			}
+			h5 {
+				line-height: 30px;
+			}
+			&.green {
+				background-color: @green;
+				h2 {
+					border-color: #b1e3d7;
+				}
+			}
+			&.white {
+				background-color: @white;
+				h2 {
+					border-color: #86c8f5;
+				}
+			}
+			&.blue {
+				background-color: #43b5f9;
+				h2 {
+					border-color: #82cdf9;
+				}
+			}
+		}
+	}
+}
+
+// Developer Partner Bar 
+.partner-bar {
+	&.developer {
+		a.button {
+			top: -1px;
+		}
+		@media @tablet {
+			h5,
+			span {
+				display: none;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

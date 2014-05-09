@@ -112,6 +112,31 @@
 		}
 	}
 
+	/* === 20 x 80 === */
+
+	.columns {
+		&.span-20-80 {
+			.column {
+				&.span-two-left {
+					width: 25%;
+					margin-right: 2.5%;
+					@media @mobile {
+						width: 100%;
+						// margin: 0 0 3em;
+					}
+				}
+				&.span-two-right {
+					width: 47.5%;
+					margin-left: 2.5%;
+					@media @mobile {
+						width: 100%;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
 	/* === 54 x 46 === */
 
 	.columns {

@@ -523,8 +523,7 @@ section {
    BECOME A PARTNER
    =============================== */
 
-section.become-partner {
-	text-align: center;
+.become-partner {
 	padding: 6em 0 0;
 	@media @tablet {
 		padding: 4em 0 0;
@@ -559,7 +558,7 @@ section.become-partner {
 			background-color: @color-swatch3;
 			.rounded-corners;
 			box-shadow: 0 3px 0px darken(@color-swatch3,10%);
-
+			text-align: center;
 			@media @tablet {
 				padding: 2em 0;
 			}
@@ -574,18 +573,19 @@ section.become-partner {
 
 			.number {
 				position: absolute;
-				top: -20px;
+				top: -16px;
 				left: -18px;
 				background-color: lighten(@color-swatch7,7%);
-				height: 40px;
-				width: 40px;
+				height: 36px;
+				width: 36px;
 				.p-font;
 				line-height: 40px;
 				color: @color-swatch1;
-				font-size: 22px;
+				font-size: 21px;
 				-webkit-border-radius: 50%;
 				-moz-border-radius: 50%;
 				border-radius: 50%;
+				box-shadow: 0 0 0 4px rgba(110,110,110,0.1);
 				@media @tablet {
 					line-height: 38px;
 					font-size: 19px;
