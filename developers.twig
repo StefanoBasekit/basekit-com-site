@@ -95,90 +95,206 @@
     </div>
 </section>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".tab_content").hide();
+        $(".tab_content:first").show();
+
+         /* if in tab mode */
+        $("ul.tabs li").click(function() {
+            
+          $(".tab_content").hide();
+          var activeTab = $(this).attr("rel"); 
+          $("#"+activeTab).fadeIn();        
+            
+          $("ul.tabs li").removeClass("active");
+          $(this).addClass("active");
+
+          $(".tab_drawer_heading").removeClass("d_active");
+          $(".tab_drawer_heading[rel^='"+activeTab+"']").addClass("d_active");
+          
+        });
+        /* if in drawer mode */
+        $(".tab_drawer_heading").click(function() {
+          
+          $(".tab_content").hide();
+          var d_activeTab = $(this).attr("rel"); 
+          $("#"+d_activeTab).fadeIn();
+          
+          $(".tab_drawer_heading").removeClass("d_active");
+          $(this).addClass("d_active");
+          
+          $("ul.tabs li").removeClass("active");
+          $("ul.tabs li[rel^='"+d_activeTab+"']").addClass("active");
+        });
+    });
+</script>
+
 <!-- EDITOR !-->
 <section class="ui-graphic green">
     <div class="editor">
         <div class="wrapper">
             <h2 class="hwhite">Provide clients with an easy-to-use, responsive CMS.</h2>
-            <div class="green-browser developer">
-                <div class="editor-grc slide-widgets">
-                    <div class="controls">
-                        <span></span><span></span><span></span>
-                    </div>
-                    <!-- CALLOUTS !-->
-                    <div class="callouts desktop">
-                        <div class="hard-code">
-                            <div class="callout dark">
-                                <h4>Hard-coded elements</h4>
-                                <p>In development, you can choose whether to use a widget or hard- code elements onto a page.</p>
+
+            <!-- TABBED CONTENT !-->
+            <div class="tabbed-content">
+                <ul class="tabs clearfix">
+                    <li class="active" rel="tab1">Widgets</li>
+                    <li rel="tab2">Responsive</li>
+                    <li rel="tab3">Live Editing</li>
+                </ul>
+                <div class="tab-container">
+                    <!-- TAB 1 !-->
+                    <h3 class="d_active tab_drawer_heading" rel="tab1">Tab 1</h3>
+                    <div id="tab1" class="tab_content">
+                        <div class="green-browser developer">
+                            <div class="editor-grc slide-widgets">
+                                <div class="controls">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <!-- CALLOUTS !-->
+                                <div class="callouts desktop">
+                                    <div class="hard-code">
+                                        <div class="callout dark">
+                                            <h4>Hard-coded elements</h4>
+                                            <p>In development, you can choose whether to use a widget or hard- code elements onto a page.</p>
+                                        </div>
+                                    </div>
+                                    <div class="editable">
+                                        <div class="callout dark">
+                                            <h4>Widgets</h4>
+                                            <p>In this example, the ‘Feature’ has been inserted as a widget - this means the user is able to edit the widget settings.</p>
+                                        </div>
+                                    </div>
+                                    <div class="zone">
+                                        <div class="callout dark">
+                                            <h4>Content zone</h4>
+                                            <p>The content ‘zone’ is where a user can drag/drop and delete widgets. There is only 1 zone per page.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- NUMBERS !-->
+                                <div class="numbers tablet">
+                                    <ul class="tt-wrapper">
+                                        <li>
+                                            <a class="tt-hard-code">1<span class="dark"><p>In development, you can choose whether to use a widget or hard- code elements onto a page.</p></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="tt-editable">2<span class="dark"><p>In this example, the ‘Feature’ has been inserted as a widget - this means the user is able to edit the widget settings.</p></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="tt-zone1">3<span class="dark"><p>The content ‘zone’ is where a user can drag/drop and delete widgets. There is only 1 zone per page.</p></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="number-info tablet">
+                                    <h4>Press a number above for more information</h4>
+                                </div>
                             </div>
                         </div>
-                        <div class="editable">
-                            <div class="callout dark">
-                                <h4>Widgets</h4>
-                                <p>In this example, the ‘Feature’ has been inserted as a widget - this means the user is able to edit the widget settings.</p>
-                            </div>
-                        </div>
-                        <div class="zone">
-                            <div class="callout dark">
-                                <h4>Content zone</h4>
-                                <p>The content ‘zone’ is where a user can drag/drop and delete widgets. There is only 1 zone per page.</p>
+                    </div>
+                    <!-- TAB 2 -->
+                    <h3 class="tab_drawer_heading" rel="tab2">Tab 2</h3>
+                    <div id="tab2" class="tab_content">
+                        <div class="green-browser developer">
+                            <div class="editor-grc slide-responsive">
+                                <div class="controls">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <!-- CALLOUTS !-->
+                                <div class="callouts desktop">
+                                    <div class="hard-code">
+                                        <div class="callout dark">
+                                            <h4>Responsive Views</h4>
+                                            <p>Clients can live preview and edit their site on multiple devices.</p>
+                                        </div>
+                                    </div>
+                                    <div class="editable">
+                                        <div class="callout dark">
+                                            <h4>Visual Device Aids</h4>
+                                            <p>In this example, the ‘Feature’ has been inserted as a widget - this means the user is able to edit the widget settings.</p>
+                                        </div>
+                                    </div>
+                                    <div class="zone">
+                                        <div class="callout dark">
+                                            <h4>Adaptable Content</h4>
+                                            <p>The content ‘zone’ is where a user can drag/drop and delete widgets. There is only 1 zone per page.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- NUMBERS !-->
-                    <div class="numbers tablet">
-                        <ul class="tt-wrapper">
-                            <li>
-                                <a class="tt-publish">1<span><p>Publish your site with just two clicks - no extra steps to publish a mobile site.</p></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="tt-widgets">2<span><p>Add text, images, forms, maps, videos and social content to any page.</p></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="tt-zone">3<span><p>Drag and drop widgets onto any page to customise the content and layout.</p></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="number-info tablet">
-                        <h4>Press a number above for more information</h4>
+                    <!-- TAB 3 -->
+                    <h3 class="tab_drawer_heading" rel="tab3">Tab 3</h3>
+                    <div id="tab3" class="tab_content">
+                        <div class="green-browser developer">
+                            <div class="editor-grc slide-live-editing">
+                                <div class="controls">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <!-- CALLOUTS !-->
+                                <div class="callouts desktop">
+                                    <div class="hard-code">
+                                        <div class="callout dark">
+                                            <h4>Edit / Preview Modes</h4>
+                                            <p>In development, you can choose whether to use a widget or hard- code elements onto a page.</p>
+                                        </div>
+                                    </div>
+                                    <div class="editable">
+                                        <div class="callout dark">
+                                            <h4>Instant Publishing</h4>
+                                            <p>In this example, the ‘Feature’ has been inserted as a widget - this means the user is able to edit the widget settings.</p>
+                                        </div>
+                                    </div>
+                                    <div class="zone">
+                                        <div class="callout dark">
+                                            <h4>Live Site Editing</h4>
+                                            <p>The user can drag, drop and add widgets from the 'contents' menu with the editor in the UI.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- END TABBED CONTENT !-->
+
         </div>
     </div>
 </section>
 
 <!-- TEMPLATES !-->
-<!-- <section class="templates LightGrey">
-    <div class="wrapper">
-        <div class="hide-show-features mobile">
-            <h4 id="hide-editor" class="hide-show">View editor features</h4>
-            <div id="close" style="display:none">
-                <ol class="mobile-numbers">
-                    <li class="publish">
-                        <div class="callout">
-                            <p><span>1.</span> <b>Publish</b> your site with just two clicks - no extra steps to publish a mobile site.</p>
-                        </div>
-                    </li>
-                    <li class="widgets">
-                        <div class="callout widgets">
-                            <p><span>2.</span> <b>Add widgets</b> - text, images, forms, maps, videos and social content to any page.</p>
-                        </div>
-                    </li>
-                    <li class="content">
-                        <div class="callout content">
-                            <p><span>3.</span> <b>Drag and drop</b> widgets onto any page to customise the content and layout.</p>
-                        </div>
-                    </li>
-                </ol>
-            </div>
-        </div>
-    </div>
-</section> -->
+                        <section class="templates LightGrey">
+                            <div class="wrapper">
+                                <div class="hide-show-features mobile">
+                                    <h4 id="hide-editor" class="hide-show">View editor features</h4>
+                                    <div id="close" style="display:none">
+                                        <ol class="mobile-numbers">
+                                            <li class="publish">
+                                                <div class="callout">
+                                                    <p><span>1.</span> <b>Publish</b> your site with just two clicks - no extra steps to publish a mobile site.</p>
+                                                </div>
+                                            </li>
+                                            <li class="widgets">
+                                                <div class="callout widgets">
+                                                    <p><span>2.</span> <b>Add widgets</b> - text, images, forms, maps, videos and social content to any page.</p>
+                                                </div>
+                                            </li>
+                                            <li class="content">
+                                                <div class="callout content">
+                                                    <p><span>3.</span> <b>Drag and drop</b> widgets onto any page to customise the content and layout.</p>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
 
 <!-- DEVELOPER ROOF !-->
 <section class="developer-roof LightGrey">

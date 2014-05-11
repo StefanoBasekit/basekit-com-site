@@ -395,6 +395,75 @@
 	}
 }
 
+// Editor GRC - Tabbed Content
+.tabbed-content {
+	ul.tabs {
+		display: table;
+		margin: 2.8em auto 3em;
+		text-align: center;
+		@media @tablet {
+			margin-top: 1.8em;
+		}
+		@media @mobile {
+			width: 100%;
+		}
+		li {
+			float: left;
+			width: 160px;
+			margin: 0 10px;
+			padding: 13px 0;
+			overflow: hidden;
+			position: relative;
+			cursor: pointer;
+			background-color: #409882;
+			.box-sizing;
+			.border-radius(40px);
+			// Styles
+			font-family: 'proxima-nova-semibold';
+			font-size: 14px;
+			color: #c5ede5;
+			text-transform: uppercase;
+			text-align: center;
+			-webkit-font-smoothing: antialiased;
+			letter-spacing: 0.1em;
+			@media @tablet {
+				width: 140px;
+				padding: 10px 0;
+			}
+			@media @mobile {
+				width: 80%;
+				padding: 10px 0;
+				margin-bottom: 10px;
+			}
+			&:hover {
+				background-color: #fff;
+				color: #3f9781;
+				-webkit-transition: all .2s ease-in-out;
+				transition: all .2s ease-in-out;
+			}
+			&:active {
+				display: block;
+				background-color: #fff;
+				color: #3f9781;
+			}
+		}
+	}
+	.green-browser {
+		margin-top: 0;
+	}
+	.tab_container {
+		float: left;
+		width: 100%;
+		overflow: auto;
+	}
+	.tab_content {
+		display: none;
+	}
+	.tab_drawer_heading { 
+		display: none; 
+	}
+}
+
 
 
 
