@@ -2,99 +2,6 @@
 
 {% block content %}
 
-<!-- HEADER !-->
-<header class="dev-header">
-    <div class="wrapper clearfix">
-        <div class="res-col columns span-20-80">
-            <div class="column span-20">
-                <div class="logo">
-                    <a href="/developers"><img src="{{asset('/images/logo.png')}}" class="bk-logo"></a>
-                </div>
-            </div>
-            <div class="column span-80">
-                <nav class="nav">
-                    <a href="#" class="menu-icon"></a>
-                    <ul>
-                        <li class="selected"><a href="/">Developers</a></li>
-                        <li><a href="http://developers.basekit.com">Docs</a></li>
-                        <li><a href="http://knowledge.basekit.com/">Knowledge</a></li>
-                        <li><a href="http://developers.basekit.com/blog">Blog</a></li>
-                        <li><a class="button small-btn green switch">Free Signup</a></li>
-                        <li><a href="/landing/login" class="button small-btn orange">Login</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- DEVELOPER SIGNUP !-->
-<section class="developer-signup">
-    <div class="wrapper">
-        <div class="dev-feat-content clearfix">
-            <!-- INTRO TEXT !-->
-            <div class="dev-feat-text">
-                <h1>Let&#39;s build better</h1>
-                <h2 class="h2sub">Put the pleasure back into creating valuable websites</h2>
-                <h5>Create fully responsive templates using our Template Devlopment Kit - use familiar technologies such as HTML, CSS, LESS, Github and more.</h5>   
-                <script type="text/javascript">
-                    $(document).ready(function() {
-                        $('.switch').click(function() {
-                        $('.widget-buynow-email').focus();
-                        });
-                    });
-                </script>
-                <a class="button trans-btn trans-grey switch">Get Started</a>
-            </div>
-            <!-- SIGNUP FORM !-->
-            <div class="signup-form">
-                <h3>Developer Signup</h3>
-                {{widget('buynow', 'bk-signup', {'brandRef':1,'currencyRef':1})|raw}}
-                <p>Have an account? <a href="/landing/login" class="blue">Login</a> here.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- BECOME A PARTNER !-->
-<section class="become-partner developer LightGrey">
-    <div class="wrapper">
-        <hgroup>
-            <h2 class="h2-36pad">Simple setup - without the setbacks</h2>
-            <h5>We understand that the one thing busy devs don’t have time for, is time. That’s why our setup process is swift and straightforward.</h5>
-        </hgroup>
-        <!-- PARTNER STEPS !-->
-        <div class="partner-steps">
-            <div class="res-col columns span-30-31-30">
-                <div class="column span-three-left">
-                    <div class="step">
-                        <div class="number">1</div>
-                        <h3 class="hwhite">Create an Account</h3>
-                        <img src="{{asset('/images/developers/step-account.png')}}">
-                    </div>
-                    {{widget('content', 'becomepartnersubstep1', {"content":'<h4>Simple, free signup process</h4><p>Use the <a href="#signup" class="blue">signup form</a> above to become a BaseKit Developer in just a few minutes.'})|raw}}
-                </div>
-                <div class="column span-three-middle">
-                    <div class="step">
-                        <div class="number">2</div>
-                        <h3 class="hwhite">Install the TDK</h3>
-                        <img src="{{asset('/images/step2.png')}}">
-                    </div>
-                    {{widget('content', 'becomepartnersubstep2', {"content":'<h4>Download the TDK repository</h4><p>Download our TDK from <a href="http://github.com/basekit-templates" class="blue">GitHub</a> to get started, then choose a developer template.</p>'})|raw}}
-                </div>
-                <div class="column span-three-right">
-                    <div class="step">
-                        <div class="number">3</div>
-                        <h3 class="hwhite">Start Building</h3>
-                        <img src="{{asset('/images/developers/step-sublime.png')}}">
-                    </div>
-                    {{widget('content', 'becomepartnersubstep3', {"content":'<h4>Start developing a template</h4><p>Start building your template using any text editor - then upload it to BaseKit.</p>'})|raw}}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <script type="text/javascript">
     $(document).ready(function() {
         $(".tab_content").hide();
@@ -267,34 +174,6 @@
         </div>
     </div>
 </section>
-
-<!-- TEMPLATES !-->
-                        <section class="templates LightGrey">
-                            <div class="wrapper">
-                                <div class="hide-show-features mobile">
-                                    <h4 id="hide-editor" class="hide-show">View editor features</h4>
-                                    <div id="close" style="display:none">
-                                        <ol class="mobile-numbers">
-                                            <li class="publish">
-                                                <div class="callout">
-                                                    <p><span>1.</span> <b>Publish</b> your site with just two clicks - no extra steps to publish a mobile site.</p>
-                                                </div>
-                                            </li>
-                                            <li class="widgets">
-                                                <div class="callout widgets">
-                                                    <p><span>2.</span> <b>Add widgets</b> - text, images, forms, maps, videos and social content to any page.</p>
-                                                </div>
-                                            </li>
-                                            <li class="content">
-                                                <div class="callout content">
-                                                    <p><span>3.</span> <b>Drag and drop</b> widgets onto any page to customise the content and layout.</p>
-                                                </div>
-                                            </li>
-                                        </ol>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
 
 <!-- DEVELOPER ROOF !-->
 <section class="developer-roof LightGrey">

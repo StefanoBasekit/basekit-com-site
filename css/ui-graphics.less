@@ -53,10 +53,20 @@
 				max-width: 960px;
 				margin-left: auto;
 				margin-right: auto;
+				@media @mobile {
+					height: 282px;
+				}
 				.editor-grc {
 					padding-top: 67%;
 					@media @mobile {
-						padding-top: 22%;
+						padding-top: 0;
+					}
+					.callouts {
+						h4 {
+							@media @laptop {
+								display: block;
+							}
+						}
 					}
 					.callout.dark {
 						background-color: #3a3a3a;
@@ -65,6 +75,11 @@
 						}
 						p {
 							color: @white;
+						}
+					}
+					@media @mobile {
+						.tt-wrapper li a span {
+							display: block;
 						}
 					}
 					// Slide 1 - Widgets
@@ -94,7 +109,7 @@
 								top: 39%;
 								@media @laptop {
 									right: -3%;
-									top: 40.5%;
+									top: 38.5%;
 								}
 								&:before {
 									top: 40.5%;
@@ -102,6 +117,16 @@
 									border-top: 11px solid transparent;
 									border-bottom: 11px solid transparent; 
 									border-right: 11px solid #3a3a3a; 
+								}
+								@media @laptopSml {
+									top: 18.5%;
+									&:before {
+										top: 110px;
+										left: 50px;
+										border-left: 11px solid transparent;
+										border-right: 11px solid transparent;
+										border-top: 11px solid #3a3a3a;
+									}
 								}
 							}
 						}
@@ -119,6 +144,10 @@
 									border-top: 11px solid transparent;
 									border-bottom: 11px solid transparent; 
 									border-right: 11px solid #3a3a3a; 
+								}
+								@media @laptopSml {
+									bottom: 6%;
+									right: 13%;
 								}
 							}
 						}
@@ -270,7 +299,7 @@
 					}
 				}
 			}
-			/* CALLOUT NUMBERS */
+			// Callout Numbers
 			.numbers {
 				position: absolute;
 				top: 12px;
@@ -400,13 +429,14 @@
 		@media @mobileSml {
 			right: 14%;
 		}
+		@media @mobile {
+			right: 64%;
+		}
 		span {
 			left: 50px;
 			bottom: -21px;
 		}
 	}
-	right: 44%;
-bottom: 23%;
 	&:hover {
 		span {
 			opacity: 1;

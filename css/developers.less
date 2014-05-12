@@ -402,7 +402,7 @@
 		margin: 2.8em auto 3em;
 		text-align: center;
 		@media @tablet {
-			margin-top: 1.8em;
+			margin: 1.8em auto -1em;
 		}
 		@media @mobile {
 			width: 100%;
@@ -431,9 +431,12 @@
 				padding: 10px 0;
 			}
 			@media @mobile {
+				display: table;
+				margin: 0 auto;
 				width: 80%;
 				padding: 10px 0;
 				margin-bottom: 10px;
+				float: none;
 			}
 			&:hover {
 				background-color: #fff;
