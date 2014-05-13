@@ -3,6 +3,116 @@
    PARTNER PAGE STYLES
    =============================== */
 
+   .partner-logos {
+	width: 70%;
+	@media @tablet {
+		width: 100%;
+	}
+	h4 {
+		background-color: @lightGrey;
+		border-bottom: 1px solid #eaeaea;;
+		border-top: 1px solid #eaeaea;
+		display: block;
+		margin-bottom: 0;
+		padding: 16px 30px 14px;
+		text-align: left;
+	}
+	ul {
+		display: table;
+		width: 100%;
+		li {
+			border-right: 1px solid #eaeaea;
+			border-bottom: 1px solid #eaeaea;
+			margin: 0 -1px;
+			display: inline-block;
+			text-align: center;
+	   		vertical-align: middle;
+	   		height: 107px;
+	   		width: 33.5%;
+	   		&:nth-child(3n) {
+	   			border-right: 0;
+	   		}
+	   		@media @laptop {
+	   			width: 49.8%;
+	   			&:nth-child(2n) {
+	   				border-right: 0;
+	   			}
+	   			&:nth-child(3n) {
+	   				border-right: 1px solid #eaeaea;
+	   			}
+	   		}
+	   		@media @mobile {
+	   			border-right: 0;
+	   			width: 100%;
+	   		}
+			&#sitejam {
+				background: image('/images/partner-logos/partnerlist/sitejam.png') 50% 0 no-repeat;
+				&:hover {
+					background-position: 50% -107px;
+				}
+			}
+			&#names {
+				background: image('/images/partner-logos/partnerlist/names.png') 50% 0 no-repeat;
+				&:hover {
+					background-position: 50% -107px;
+				}
+			}
+			&#hostamania {
+				background: image('/images/partner-logos/partnerlist/hostmania.png') 50% 0 no-repeat;
+				&:hover {
+					background-position: 50% -107px;
+				}
+			}
+			&#home-pl{
+				background: image('/images/partner-logos/partnerlist/home-pl.png') 50% 0 no-repeat;
+				&:hover {
+					background-position: 50% -107px;
+				}
+			}
+			&#tso-host {
+				background: image('/images/partner-logos/partnerlist/tso-host.png') 50% 0 no-repeat;
+				&:hover {
+					background-position: 50% -107px;
+				}
+			}
+			&#reg-365 {
+				background: image('/images/partner-logos/partnerlist/reg-365.png') 50% 0 no-repeat;
+				&:hover {
+					background-position: 50% -107px;
+				}
+			}
+			&#nebula {
+				background: image('/images/partner-logos/partnerlist/nebula.png') 50% 0 no-repeat;
+				&:hover {
+					background-position: 50% -107px;
+				}
+			}
+			&#open-cloud {
+				background: image('/images/partner-logos/partnerlist/open-cloud.png') 50% 0 no-repeat;
+				&:hover {
+					background-position: 50% -107px;
+				}
+			}
+			&#trio-pages {
+				background: image('/images/partner-logos/partnerlist/triopages.png') 50% 0 no-repeat;
+				&:hover {
+					background-position: 50% -107px;
+				}
+			}
+			&#libersy-web {
+				background: image('/images/partner-logos/partnerlist/libersy-web.png') 50% 0 no-repeat;
+				&:hover {
+					background-position: 50% -107px;
+				}
+			}
+			a {
+				display: block;
+				height: 107px;
+			}
+		}
+	}
+}
+
 
 /* ===============================
    SUBNAV
@@ -343,8 +453,8 @@ section.signup-form {
 			width: 100%;
 			padding: 40px 30px 20px;
 			.box-sizing;
-			P {
-				margin: 1.8em 0;
+			p {
+				margin: .8em 0;
 			}
 		}
 	}
@@ -958,7 +1068,6 @@ section {
 			}
 			th {
 				height: 48px;
-				width: 42%;
 				background-color: #fbfbfb;
 				border: 1px solid #eaeaea;
 				border-left: 0;
@@ -966,13 +1075,9 @@ section {
 				text-transform: uppercase;
 				font-size: 14px;
 				color: @font-swatch4-color;
-				&:last-child {
-					border-right: 0;
-					width: 30%;
-				}
 				&:first-child {
+					border-right: 0;
 					text-align: center;
-					width: 28.1%;
 				}
 				@media @tablet {
 					padding: 0;

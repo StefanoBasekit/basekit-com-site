@@ -47,75 +47,38 @@
             {{widget('content', 'partnerlist-title', {"content":'<h3 class="hwhite upsize">Over 100 partners have already chosen BaseKit</h3>'})|raw}}
         </div>
         <!-- PARTNER LIST CONTAINER !-->
-        <div class="standout-container">
+        <div class="standout-container op">
             <div class="res-col columns span-70-30">
                 <div class="column span-70">
                     <div class="left-content partnerlist">
                         <div class="partnerlist-intro">
-                            {{widget('content', 'partnerlistcontent1', {"content":'<h5 class="h5dark">Discover the benefits of partnership</h5><p>When you offer your customers the best websites and the best website editor you will quickly see benefits including reduced churn, higher satisfaction ratings and improved revenue.</p>'})|raw}}
+                            {{widget('content', 'partnerlistcontent2', {"content":'<h5 class="h5dark">Looking to create a website?</h5><p>Try out the latest version of BaseKit by clicking any of our partner links listed below. </p>'})|raw}}
                         </div>
                     </div>
                 </div>
                 <div class="column span-30">
                     <div class="right-content">
-                        {{widget('content', 'partnerlistcontent2', {"content":'<h5 class="h5dark">Looking for a website?</h5><p class="psub14">Try the latest version of BaseKit with any of the partners listed below. </p>'})|raw}}
-                    </div>
+                        {{widget('content', 'partnerlistcontent1', {"content":'<h5 class="h5dark">Discover the benefits of partnership</h5><p>When you offer your customers the best websites and the best website editor you will quickly see benefits including reduced churn, higher satisfaction ratings and improved revenue.</p>'})|raw}}
+                    </div>    
                 </div>
             </div>
             <!-- PARTNER TABLE !-->
             <div class="partner-table">
-                <table class="desktop">
-                    <tr>
-                        <th style="padding: 0">Recent Partners</th>
-                        <th>Website</th>
-                        <th>Try It Now</th>
-                    </tr>
-                    <tr>
-                        <td><img src="{{asset('/images/partner-logos/partnerlist/sitejam-logo.png')}}"></td>
-                        <td><a href="http://www.sitejam.com">http://www.sitejam.com</a></td>
-                        <td><a href="http://www.sitejam.com" class="button stan-btn sj">Get Started</a></td>
-                    </tr>
-                    <tr>
-                        <td><img src="{{asset('/images/partner-logos/partnerlist/namesco.png')}}"></td>
-                        <td><a href="http://www.names.co.uk/create-a-website/cloudsite">http://www.names.co.uk/create-a-website/cloudsite</a></td>
-                        <td><a href="http://www.names.co.uk/create-a-website/cloudsite" class="button stan-btn names">Get Started</a></td>
-                    </tr>
-                    <tr>
-                        <td><img src="{{asset('/images/partner-logos/partnerlist/hostamania.png')}}"></td>
-                        <td><a href="http://www.hostamania.com">http://www.hostamania.com</a></td>
-                        <td><a href="http://www.hostamania.com" class="button stan-btn hosta">Get Started</a></td>
-                    </tr>
-                    <tr>
-                        <td><img src="{{asset('/images/partner-logos/partnerlist/homepl.png')}}"></td>
-                        <td><a href="https://home.pl/strony">https://home.pl/strony</a></td>
-                        <td><a href="https://home.pl/strony" class="button stan-btn homepl">Get Started</a></td>
-                    </tr>
-                </table>
-                <table class="mobile">
-                    <tr>
-                        <th>Website</th>
-                    </tr>
-                    <tr>
-                        <td><img src="{{asset('/images/partner-logos/partnerlist/sitejam-logo.png')}}">
-                            <a href="http://www.sitejam.com">http://www.sitejam.com</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="{{asset('/images/partner-logos/partnerlist/namesco.png')}}">
-                            <a href="http://www.sitejam.com">http://www.names.co.uk</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="{{asset('/images/partner-logos/partnerlist/hostamania.png')}}">
-                            <a href="http://www.hostamania.com">http://www.hostamania.com</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="{{asset('/images/partner-logos/partnerlist/homepl.png')}}">
-                            <a href="https://home.pl/strony">https://home.pl/strony</a>
-                        </td>
-                    </tr>
-                </table>
+                <div class="partner-logos">
+                    <h4>Recent Partners</h4>
+                    <ul>
+                        <li id="sitejam"><a href="http://www.sitejam.com" title="Get started with Sitejam"></a></li>
+                        <li id="names"><a href="http://www.names.co.uk/create-a-website/cloudsite" title="Get started with Names"></a></li>
+                        <li id="hostamania"><a href="http://www.hostamania.com" title="Get started with Hostmania"></a></li>
+                        <li id="home-pl"><a href="https://home.pl/strony" title="Get started with Home"></a></li>
+                        <li id="tso-host"><a href="https://www.tsohost.com/website-builder" title="Get started with TSO"></a></li>
+                        <li id="reg-365"><a href="http://www.register365.com/create-a-website/cloudsite" title="Get started with Register 365"></a></li>
+                        <li id="nebula"><a href="http://www.nebula.fi/palvelut/pilvipalvelut/kotisivutyokalu" title="Get started with Nebula"></a></li>
+                        <li id="open-cloud"><a href="https://www.opencloudstore.nl/cloud-solutions/catalogus/applications/web-domains/basekit" title="Get started with Open Cloud"></a></li>
+                        <li id="trio-pages"><a href="http://www.triopages.com" title="Get started with Triopages"></a></li>
+                        <li id="libersy-web"><a href="http://websalons.nl/" title="Get started with Libersy Websalon"></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -183,7 +146,7 @@ var geoJson = [
     type: 'Feature',
     "geometry": { "type": "Point", "coordinates": [-0.1198244, 51.47796179607124]},
     "properties": {
-        "partners": "123-Reg, AON Website, Creative Web, Domain Monster, Heart Internet, HostDime,  Kulao, Netcetera, Pickaweb, UK2 Group, WebHosting.co.uk, Central Nic, Fast Hosts, Paragon Internet, Enix, Names.co.uk, SiteJam",
+        "partners": "123-Reg, AON Website, Creative Web, Domain Monster, Heart Internet, HostDime,  Kulao, Netcetera, Pickaweb, UK2 Group, WebHosting.co.uk, Central Nic, Fast Hosts, Paragon Internet, Enix, Names.co.uk, SiteJam, TSO Host, Triopages",
         "region": "United Kingdom" 
     }
 }, 
@@ -295,7 +258,7 @@ var geoJson = [
     type: 'Feature',
     "geometry": { "type": "Point", "coordinates": [5.2912660, 52.1326330]},
     "properties": {
-        "partners": "KPN Netherlands",
+        "partners": "KPN Netherlands, Libersy Websalon",
         "region": "Netherlands" 
     }
 },
@@ -303,7 +266,7 @@ var geoJson = [
     type: 'Feature',
     "geometry": { "type": "Point", "coordinates": [-8.2438900, 53.4129100]},
     "properties": {
-        "partners": "Lets Host",
+        "partners": "Lets Host, Register 365",
         "region": "Ireland" 
     }
 },
