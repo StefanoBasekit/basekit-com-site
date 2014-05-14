@@ -76,6 +76,22 @@
 	h2 {
 		text-align: center;
 	}
+	h5.light-green {
+		position: relative;
+		top: -7em;
+		text-align: center;
+		font-size: 21px;
+		color: #d2faf0;
+		margin: .8em 0 0;
+		letter-spacing: 0;
+		@media @tablet {
+			top: -6.2em;
+			font-size: 17px;
+		}
+		@media @mobile {
+			display: none;
+		}
+	}
 	.green-browser {
 		position: relative;
 		max-width: 1024px;
@@ -91,7 +107,7 @@
 		border-top-right-radius: 7px;
 		box-shadow: 0 22px 27px rgba(19,54,27,0.3);
 		@media @tablet {
-			margin-top: 3em;
+			margin-top: 0;
 			padding-top: 12px;
 		}
 		@media @mobile {

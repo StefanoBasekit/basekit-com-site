@@ -397,13 +397,15 @@
 .tabbed-content {
 	ul.tabs {
 		display: table;
-		margin: 2.8em auto 3em;
+		// margin: 2.4em auto 3em;
+		margin: 5.4em auto 2em;
 		text-align: center;
 		@media @tablet {
-			margin: 1.8em auto 0;
+			margin: 4em auto 0;
 		}
 		@media @mobile {
 			width: 100%;
+			margin: 3em auto 3em;
 		}
 		li {
 			float: left;
@@ -452,19 +454,19 @@
 	.green-browser {
 		margin-top: 0;
 	}
-	.tab_container {
-		float: left;
-		width: 100%;
-		overflow: auto;
-	}
-	.tab_content {
-		display: none;
-	}
-	.tab_drawer_heading { 
-		display: none; 
-	}
 }
 
+.tab_container {
+	float: left;
+	width: 100%;
+	overflow: auto;
+}
+.tab_content {
+	display: none;
+}
+.tab_drawer_heading { 
+	display: none; 
+}
 
 
 
