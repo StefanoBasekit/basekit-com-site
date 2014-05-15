@@ -51,10 +51,10 @@
                 <h3>Developer Signup</h3>
                 <script type="text/javascript">
                     $(document).ready(function() {
-                        $('#buynow').find('.widget-buynow-make-payment').text('Signup for Free');
+                        $('#page-zones__main-widgets__buynow').find('.widget-buynow-make-payment').text('Signup for Free');
                     });
                 </script>
-                {{zone('main')|raw}}
+                {{widget('buynow', 'buynow')|raw}}
                 <p>Have an account? <a href="/landing/login" class="blue">Login</a> here.</p>
             </div>
         </div>
