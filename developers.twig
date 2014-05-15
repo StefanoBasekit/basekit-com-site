@@ -51,7 +51,9 @@
                 <h3>Developer Signup</h3>
                 <script type="text/javascript">
                     $(document).ready(function() {
-                        $('#page-zones__main-widgets__buynow').find('.widget-buynow-make-payment').text('Signup for Free');
+                        window.setTimeout(function(){
+                            $('#page-zones__main-widgets__buynow').find('.widget-buynow-make-payment').text('Signup for Free');
+                        },500);
                     });
                 </script>
                 {{zone('main')|raw}}
